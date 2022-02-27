@@ -1,9 +1,14 @@
-import React from 'react'
+import {NavLink, Link} from 'react-router-dom';
 
-function index() {
+
+const NavBar = () => {
   return (
-    <div>index</div>
+    <>
+      <div>
+          <h2>Here's a test heading.</h2>
+      </div>
+    </>
   )
 }
 
-export default index
+export default NavBar;
