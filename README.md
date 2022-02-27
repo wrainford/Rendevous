@@ -4,15 +4,18 @@ Rendevous is a social media platform that provides a space to share content for 
 <br/>
 
 ## Table of Contents
-[Get Started](https://github.com/PredatorR10/Rendevous/#getstarted) 
+[Get Started](https://github.com/PredatorR10/Rendevous/#get-started) 
 |
 [Brainstorming](https://github.com/PredatorR10/Rendevous/#brainstorming) 
 |
-[Technologies Used](https://github.com/PredatorR10/Rendevous/#technologiesused)
+[Technologies Used](https://github.com/PredatorR10/Rendevous/#technologies-used)
 |
-[Unsolved Problems](https://github.com/PredatorR10/Rendevous/#unsolvedproblems)
+[Unsolved Problems](https://github.com/PredatorR10/Rendevous/#unsolved-problems)
 |
-[Future Enhancements](https://github.com/PredatorR10/Rendevous/#futureenhancements)
+[Future Enhancements](https://github.com/PredatorR10/Rendevous/#future-enhancements)
+
+
+
 
 ## Get Started
 See our deployed app here: 
