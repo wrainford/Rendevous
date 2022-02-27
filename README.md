@@ -1,4 +1,24 @@
 # renDEVous
+Rendevous is a social media platform that provides a space to share content for developers by developers. It aims to connect professionals of different skill levels and backgrounds, to foster a learning environment of different skill levels, and to uplift the spirit of community in a rapidly progressing age of technology. The app strives to create a casual collaborative and  networking environment, where developers have an opportunity to connect and share their mini portfolio projects with each other and exchange ideas.
+
+<br/>
+
+## Table of Contents
+[Get Started](https://github.com/PredatorR10/Rendevous/#getstarted) 
+|
+[Brainstorming](https://github.com/PredatorR10/Rendevous/#brainstorming) 
+|
+[Technologies Used](https://github.com/PredatorR10/Rendevous/#technologiesused)
+|
+[Unsolved Problems](https://github.com/PredatorR10/Rendevous/#unsolvedproblems)
+|
+[Future Enhancements](https://github.com/PredatorR10/Rendevous/#futureenhancements)
+
+## Get Started
+See our deployed app here: 
+
+## Brainstorming
+Our UX survey research revealed that our target users are primarily younger developers starting out in their career who already have social media integrated into their lives. Users showed interest in sharing their GitHub or Youtube links (or their other portfolios), seeing different code tips and tricks, and a reliable privacy policy. With the most popular type of media content being photo, our app utilizes upload image function to easily share visualizations.
 
 ### User Story
 - As a new user, I want to sign up for an account
@@ -21,3 +41,16 @@
 
 ### Data ERD 
 ![ERD](rendevousERD.png)
+
+## Technologies Used:
+- MongoDB
+- Express
+- React
+- Node.js
+- Axios
+- JsonWebToken
+- Bcrypt
+
+## Unsolved Problems:
+
+## Future Enhancements:
