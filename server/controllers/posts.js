@@ -14,6 +14,20 @@ const index = (req, res) => {
         });
 };
 
+const show = (req, res) => {
+    db.Post.findById(req.params.id, (err, foundPost) => {
+        if(err)
+            return res.status(400).json({
+                message: "Failed to find a post",
+                error: err,
+            });
+            return res.status(200).json({
+                message: "Successfully retrieved a post",
+                data: foundPost,
+            });
+    });
+};
+
 const create = (req, res) => {
     db.Post.create(req.body, (err, savedPost) => {
         if(err)
@@ -78,6 +92,40 @@ const newComment = (req, res) => {
     });
 };
 
+const editComment = (req, res) => {
+    db.Post.findOne({"comment._id":req.params.id}, (err, post) => {
+        const compost = post.comment.id(req.params.id);
+        const context = {comment: compost};
+            if(err)
+            return res.status(400).json({
+                message: "Failed to show comment",
+                error: err,
+            });
+            return res.status(200).json({
+                message: "Successfully retrieved comment info",
+                data: context,
+            });
+    });
+};
+
+const updateComment = (req, res) => {
+    db.Post.findOne({"comment._id":req.params.id}, (err, com) => {
+        const compost = com.comment.id(req.params.id);
+        compost.set(req.body);
+        com.save(function() {
+            if(err)
+                return res.status(400).json({
+                    message: "Failed to update comment",
+                    error: err,
+                });
+                return res.status(200).json({
+                    message: "Successfully updated comment",
+                    data: com,
+                });
+        });
+    });
+};
+
 const deleteComment = (req, res) => {
     db.Post.findOne({"comment._id":req.params.id}, (err, com) => {
         const commentDoc = com.comment.id(req.params.id);
@@ -99,9 +147,12 @@ const deleteComment = (req, res) => {
 
 module.exports = {
     index,
+    show,
     create,
     update,
     destroy,
     newComment,
+    editComment,
+    updateComment,
     deleteComment,
 }
