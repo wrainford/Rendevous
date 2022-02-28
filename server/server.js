@@ -15,9 +15,7 @@ const config = require("@rendevous/config");
 /* ==== Middleware ==== */
 app.use(cors());
 app.use(express.static(path.join("build")));
-
 app.use(express.urlencoded({ extended: true }));
-
 app.use(express.json());
 
 /* ====  Routes & Controllers  ==== */
