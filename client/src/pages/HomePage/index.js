@@ -48,7 +48,8 @@ const Home = () => {
 			    <Post
                 title={post.title}
                 body={post.body}
-                key={post._id} />
+                key={post._id} 
+				/>
                 )
                 })}
         </div>
