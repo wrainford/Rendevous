@@ -8,6 +8,7 @@ function Post(props) {
 			<h1>Title: {props.title}</h1>
 			<div>
 				<p>{props.body}</p>
+				
 			</div>
 		</>
 	);
