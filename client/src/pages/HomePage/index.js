@@ -1,24 +1,11 @@
-// import NavBar from "../../components/NavBar";
-// // import { Routes, Route } from "react-router-dom";
-// // import * as postService from "../../api/post.service";
-
-
-// const Home = () => {
-    
-//     return (
-//         <div>
-//             <NavBar/>
-//         </div>
-//     )
-// }
-
-// export default Home;
-
 import { useState, useEffect } from "react";
 import Post from "../../components/Post";
+import User from "../../components/User";
 import PostForm from "../../components/PostForm";
 import NavBar from "../../components/NavBar";
 import * as postService from "../../api/post.service";
+import * as userService from "../../api/user.service";
+
 
 // take all of the posts from the db
 // render them out in reverse chronological order
@@ -35,9 +22,21 @@ const Home = () => {
 		});
 	};
 
+    const [users, setUsers] = useState([]);
+
+	const fetchUsers = async () => {
+		await userService.getAllUser().then((res) => {
+			console.log(res);
+			setUsers(res.data.data);
+		});
+	};
+
 	useEffect(() => {
 		fetchPosts();
+        fetchUsers();
 	}, []);
+
+
 
 	return (
         <div>
@@ -48,7 +47,20 @@ const Home = () => {
 			    <Post
                 title={post.title}
                 body={post.body}
+                // comment = {post.comment[0].content}
                 key={post._id} 
+				/>
+                )
+                })}
+
+            {users.map((user) => {
+					return (
+			    <User
+                userName={user.userName}
+                name={user.name}
+                email={user.email}
+                project={user.project.title}
+                key={user._id} 
 				/>
                 )
                 })}
