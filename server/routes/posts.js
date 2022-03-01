@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const {posts} = require("../controllers");
-// const authRequired = require("../middleware/auth.required");
+const authRequired = require("../middleware/auth.required");
 
 
 router.get("/", posts.index);
