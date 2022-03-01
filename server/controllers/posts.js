@@ -1,6 +1,6 @@
 const db = require("../models")
 
-const index = (req, res) => {
+const indexPost = (req, res) => {
     db.Post.find().exec((err, allPosts) => {
         if(err)
             return res.status(400).json({
@@ -14,7 +14,7 @@ const index = (req, res) => {
         });
 };
 
-const show = (req, res) => {
+const showPost = (req, res) => {
     db.Post.findById(req.params.id, (err, foundPost) => {
         if(err)
             return res.status(400).json({
@@ -28,7 +28,7 @@ const show = (req, res) => {
     });
 };
 
-const create = (req, res) => {
+const createPost = (req, res) => {
     db.Post.create(req.body, (err, savedPost) => {
         if(err)
             return res.status(400).json({
@@ -42,7 +42,7 @@ const create = (req, res) => {
     });
 }
 
-const update = (req, res) => {
+const updatePost = (req, res) => {
     db.Post.findByIdAndUpdate(
         req.params.id,
         req.body,
@@ -61,7 +61,7 @@ const update = (req, res) => {
     );
 };
 
-const destroy = (req, res) => {
+const destroyPost = (req, res) => {
     db.Post.findByIdAndDelete(req.params.id, (err, deletedPost) =>{
         if(err)
         return res.status(400).json({
@@ -146,11 +146,11 @@ const deleteComment = (req, res) => {
   
 
 module.exports = {
-    index,
-    show,
-    create,
-    update,
-    destroy,
+    indexPost,
+    showPost,
+    createPost,
+    updatePost,
+    destroyPost,
     newComment,
     editComment,
     updateComment,
