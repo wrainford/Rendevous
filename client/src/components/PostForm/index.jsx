@@ -6,6 +6,8 @@ const PostForm = ({ refreshPosts }) => {
 	const [title, setTitle] = useState("");
 	const [body, setBody] = useState("");
 
+
+
 	const handleSubmit = async () => {
 		let newPost = { title, body };
 		let res = await postService.createPost(newPost).then(() => {
@@ -14,6 +16,8 @@ const PostForm = ({ refreshPosts }) => {
 			refreshPosts();
 			console.log(newPost);
 		});
+
+	
 
 		console.log(res);
 		// 201 = create

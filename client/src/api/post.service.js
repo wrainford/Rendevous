@@ -21,8 +21,8 @@ const createComment = (id, data) => {
 }
 
 //Unsure how to pass in 2 req.params.id - need to figure out later
-const editComment = (id1, id2, data) => {
-    return apiClient.get(`/posts/${id1}/comments/${id2}/edit`, data);
+const editComment = (postId, commentId, data) => {
+    return apiClient.get(`/posts/${postId}/comments/${commentId}/edit`, data);
 }
 
 const updateComment = (id, data) => {
@@ -33,5 +33,9 @@ const deleteComment = (id) => {
     return apiClient.delete(`/posts/comments/${id}`);
 }
 
+const addImage = (id) => {
+    return apiClient.post(`${id}/image`);
+}
 
-export {getAllPost, createPost, updatePost, destroyPost, createComment, editComment, updateComment, deleteComment};
+
+export {getAllPost, createPost, updatePost, destroyPost, createComment, editComment, updateComment, deleteComment, addImage};

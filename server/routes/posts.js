@@ -11,6 +11,7 @@ router.post("/:id/comments", posts.newComment);
 router.get("/:id/comments/:id/edit", posts.editComment);
 router.put("/comments/:id", posts.updateComment);
 router.delete("/comments/:id", posts.deleteComment);
+router.post("/:id/image", posts.addImage);
 
 // router.get("/profile", authRequired, users.show)
 

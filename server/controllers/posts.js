@@ -1,4 +1,5 @@
 const db = require("../models")
+const cloudinary = require('cloudinary').v2;
 
 const indexPost = (req, res) => {
     db.Post.find().exec((err, allPosts) => {
@@ -143,6 +144,35 @@ const deleteComment = (req, res) => {
         });
     });
 };
+
+const addImage = (req, res) => {
+    const photo = req.files.image;
+    photo.mv(`./uploads/postImages/${photo.name}`);
+    const result = cloudinary.uploader.upload(`./uploads/${photo.name}`);
+    req.body.image = result.secure_url;   
+    db.Post.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new : true},
+        (err, photo) => {
+            if(err)
+                return res.status(400).json({
+                    message: "Failed to upload image",
+                    error: err,
+                });
+                return res.status(200).json({
+                    message: "Successfully added an image",
+                    data: photo,
+        });
+    });
+}     
+   
+    // if(err)
+    // return res.status(400).json({
+    //     message: "Failed to upload image to post.",
+    //     error: err,
+    // });
+
   
 
 module.exports = {
@@ -155,4 +185,5 @@ module.exports = {
     editComment,
     updateComment,
     deleteComment,
+    addImage,
 }
