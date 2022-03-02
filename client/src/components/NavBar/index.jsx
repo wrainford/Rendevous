@@ -5,7 +5,21 @@ const NavBar = () => {
   return (
     <>
       <div>
-          <h2>Here's a test heading.</h2>
+         <NavLink to="/" className="link"
+         style={({isActive})=>
+        ({color: isActive ? "black" : "blue"})
+      }>Home Page</NavLink>
+
+         <NavLink to="/users" className="link" style={({isActive})=>
+         ({color: isActive ? "black" : "blue"})}
+         >My Profile</NavLink>
+
+         <NavLink to="/privacy" className="link" style={({isActive})=>
+         ({color: isActive ? "black" : "blue"})}>Privacy Page</NavLink>
+
+         <NavLink to="/logout" className="link" style={({isActive})=>
+         ({color: isActive ? "black" : "blue"})}>
+           Log Out </NavLink>
       </div>
     </>
   )

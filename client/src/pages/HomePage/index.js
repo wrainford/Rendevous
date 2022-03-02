@@ -3,8 +3,11 @@ import Post from "../../components/Post";
 import User from "../../components/User";
 import PostForm from "../../components/PostForm";
 import NavBar from "../../components/NavBar";
+import Privacy from "../../components/Privacy";
+import LogOut from "../../components/LogOut";
 import * as postService from "../../api/post.service";
 import * as userService from "../../api/user.service";
+import { Routes, Route } from "react-router-dom";
 
 
 // take all of the posts from the db
@@ -41,6 +44,10 @@ const Home = () => {
 	return (
         <div>
             <NavBar />
+<Routes>
+
+<Route path="/" element={
+	<>
             <PostForm refreshPosts={() => fetchPosts()}/>
             {posts.map((post) => {
 					return (
@@ -52,7 +59,12 @@ const Home = () => {
 				/>
                 )
                 })}
+	</>
+}
+></Route>
 
+<Route path="users" element={
+	<>
             {users.map((user) => {
 					return (
 			    <User
@@ -64,7 +76,15 @@ const Home = () => {
 				/>
                 )
                 })}
-        </div>
+			 </>
+}
+></Route>
+
+    <Route path="privacy" element={<Privacy />}></Route>
+    <Route path="logout" element={<LogOut />}></Route>
+
+ </Routes>
+        </div> 
     )};	
 
 	
