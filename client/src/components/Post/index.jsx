@@ -3,12 +3,17 @@ import React from "react";
 //import { string } from "prop-types";
 
 function Post(props) {
+	// console.log(props.comment[0].content)
 	return (
 		<>
 			<h1>Title: {props.title}</h1>
 			<div>
 				<p>{props.body}</p>
-				{/* <p>{props.comment}</p> */}
+					{props.comment.map((comment) => {
+					return (
+						<h4>comment: {comment.content}</h4>
+					)
+					})}
 			</div>
 		</>
 	);
