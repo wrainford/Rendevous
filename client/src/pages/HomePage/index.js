@@ -17,7 +17,7 @@ const Home = () => {
 
 	const fetchPosts = async () => {
 		await postService.getAllPost().then((res) => {
-			console.log(res);
+			// console.log(res);
 			setPosts(res.data.data.reverse());
 		});
 	};
@@ -26,7 +26,7 @@ const Home = () => {
 
 	const fetchUsers = async () => {
 		await userService.getAllUser().then((res) => {
-			console.log(res);
+			// console.log(res);
 			setUsers(res.data.data);
 		});
 	};
@@ -47,8 +47,8 @@ const Home = () => {
 			    <Post
                 title={post.title}
                 body={post.body}
-                // comment = {post.comment[0].content}
-                key={post._id} 
+                comment = {post.comment}
+                key={[post._id]} 
 				/>
                 )
                 })}
