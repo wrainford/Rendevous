@@ -30,7 +30,12 @@ const showPost = (req, res) => {
 };
 
 const createPost = (req, res) => {
-    db.Post.create(req.body, (err, savedPost) => {
+    const postData = {
+       title: req.body.title,
+       body: req.body.body,
+       image: req.file.originalname,
+    }
+    db.Post.create(postData, (err, savedPost) => {
         if(err)
             return res.status(400).json({
                 message: "Failed to create post",
@@ -145,27 +150,29 @@ const deleteComment = (req, res) => {
     });
 };
 
-const addImage = (req, res) => {
-    const photo = req.files.image;
-    photo.mv(`./uploads/postImages/${photo.name}`);
-    const result = cloudinary.uploader.upload(`./uploads/${photo.name}`);
-    req.body.image = result.secure_url;   
-    db.Post.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        {new : true},
-        (err, photo) => {
-            if(err)
-                return res.status(400).json({
-                    message: "Failed to upload image",
-                    error: err,
-                });
-                return res.status(200).json({
-                    message: "Successfully added an image",
-                    data: photo,
-        });
-    });
-}     
+
+
+// const addImage = (req, res) => {
+//     const photo = req.files.image;
+//     photo.mv(`./uploads/postImages/${photo.name}`);
+//     const result = cloudinary.uploader.upload(`./uploads/${photo.name}`);
+//     req.body.image = result.secure_url;   
+//     db.Post.findByIdAndUpdate(
+//         req.params.id,
+//         req.body,
+//         {new : true},
+//         (err, photo) => {
+//             if(err)
+//                 return res.status(400).json({
+//                     message: "Failed to upload image",
+//                     error: err,
+//                 });
+//                 return res.status(200).json({
+//                     message: "Successfully added an image",
+//                     data: photo,
+//         });
+//     });
+// }     
    
     // if(err)
     // return res.status(400).json({
@@ -185,5 +192,5 @@ module.exports = {
     editComment,
     updateComment,
     deleteComment,
-    addImage,
+    // addImage,
 }
