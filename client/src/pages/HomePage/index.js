@@ -20,7 +20,7 @@ const Home = () => {
 
 	const fetchPosts = async () => {
 		await postService.getAllPost().then((res) => {
-			// console.log(res);
+			console.log(res);
 			setPosts(res.data.data.reverse());
 		});
 	};
@@ -55,6 +55,7 @@ const Home = () => {
                 title={post.title}
                 body={post.body}
                 comment = {post.comment}
+                image={post.image}
                 key={[post._id]} 
 				/>
                 )

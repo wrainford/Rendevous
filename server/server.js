@@ -3,6 +3,7 @@ require("dotenv").config({ path: "../.env" });
 /* ==== External Modules ==== */
 const express = require("express");
 const cors = require("cors");
+
 /* ==== Internal Modules ==== */
 
 /* ==== Instanced Modules  ==== */
@@ -16,13 +17,13 @@ app.use(express.static(path.join("build")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
 /* ====  Routes & Controllers  ==== */
 app.use("/api", routes);
 
 app.all("/api/*", (req, res, next) => {
 	res.send("Invalid API Route");
 });
-
 
 
 app.use((req, res, next) => {
