@@ -33,7 +33,7 @@ const createPost = (req, res) => {
     const postData = {
        title: req.body.title,
        body: req.body.body,
-       image: req.file.originalname,
+       image: req.file.fileName,
     }
     db.Post.create(postData, (err, savedPost) => {
         if(err)

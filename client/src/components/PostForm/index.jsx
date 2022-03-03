@@ -20,8 +20,6 @@ const PostForm = ({ refreshPosts }) => {
 			console.log(formData);
 		});
 
-	
-
 		console.log(res);
 		// 201 = create
 		if (!res === 201) {
