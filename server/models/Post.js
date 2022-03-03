@@ -23,7 +23,7 @@ const postSchema = new Schema({
 },
 
     image:{
-     type:[String],
+     type: [String],
 },
     //this one for the post "who made the post"
     // user: {

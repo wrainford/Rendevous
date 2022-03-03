@@ -6,40 +6,21 @@ import * as postService from "../../api/post.service";
 
 
 
-
 const Post = (props) => {
 
-	
-	const [image, setImage] = useState("");
-	
-	const handleSubmit = async () => {
-		let newImage = { image };
-		let res = await postService.addImage(newImage).then(() => {
-			setImage("");
-			console.log(newImage);
-		});
-		if(!res === 200) {
-			alert(`Failed Image Upload: ${res.status}`);
-		}
-	}
 	// console.log(props.comment[0].content)
 	return (
 		<>
 			<h1>Title: {props.title}</h1>
 			<div>
+                <img src = {`/uploads/postImages/${props.image}`} alt="..." style= {{width: "60%"}}/>
 				<p>{props.body}</p>
 					{props.comment.map((comment) => {
 					return (
 						<h4>comment: {comment.content}</h4>
 					)
 					})}
-				<form>
-					<label>
-						Upload A Photo
-						<input type="file"/>
-						<button onClick={handleSubmit}>Upload</button>
-					</label>
-				</form>
+		
 			</div>
 		</>
 	);

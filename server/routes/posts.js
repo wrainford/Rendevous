@@ -4,7 +4,7 @@ const multer = require("multer");
 const authRequired = require("../middleware/auth.required");
 
 const limits = {
-    files: 1,
+    files: 4,
     filesize: 1024 * 1024,
 };
 
@@ -30,7 +30,6 @@ router.post("/:id/comments", posts.newComment);
 router.get("/:id/comments/:id/edit", posts.editComment);
 router.put("/comments/:id", posts.updateComment);
 router.delete("/comments/:id", posts.deleteComment);
-// router.post("/:id/image", posts.addImage);
 
 // router.get("/profile", authRequired, users.show)
 
