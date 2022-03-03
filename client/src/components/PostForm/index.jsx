@@ -5,16 +5,19 @@ import * as postService from "../../api/post.service";
 const PostForm = ({ refreshPosts }) => {
 	const [title, setTitle] = useState("");
 	const [body, setBody] = useState("");
-
-
+	const [fileName, setFileName] = useState("");
 
 	const handleSubmit = async () => {
-		let newPost = { title, body };
-		let res = await postService.createPost(newPost).then(() => {
+		const formData = new FormData();
+		formData.append("title", title);
+		formData.append("body", body);
+		formData.append("image", fileName);
+		let res = await postService.createPost(formData).then(() => {
 			setTitle("");
 			setBody("");
+			setFileName("");
 			refreshPosts();
-			console.log(newPost);
+			console.log(formData);
 		});
 
 	
@@ -28,7 +31,8 @@ const PostForm = ({ refreshPosts }) => {
 
 	return (
 		<div>
-			<form>
+			{/* Used for returning the form data */}
+			<form encType="multipart/form-data">
 				<label>
 					Post Title:
 					<input
@@ -47,6 +51,14 @@ const PostForm = ({ refreshPosts }) => {
 						type="text"
 						name="body"
 						placeholder="BODY"
+					/>
+				</label>
+				<label>
+					Upload an image:
+					<input
+						onChange={(e) => setFileName(e.target.files[0])}
+						filename="image"
+						type="file"
 					/>
 				</label>
 			</form>
