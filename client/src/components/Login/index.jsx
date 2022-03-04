@@ -2,19 +2,17 @@ import {useState} from 'react'
 import * as authService from "../../api/auth.service"
 
 const Login = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [successMsg, setSuccessMsg] = useState("");
-    
+    let [email, setEmail] = useState("");
+    let [password, setPassword] = useState("");
+   
     const handleSubmit = async(e) => {
-        e.preventDevault();
+        e.preventDefault();
         await authService.login(email, password).then(() => {
-            setEmail("");
-            setPassword("");
+            setEmail = "";
+            setPassword = "";
 
-        })
-        setSuccessMsg("Hallelujah it works bruh");
-    }
+        });
+    };
 
 
   return (
@@ -41,10 +39,9 @@ const Login = () => {
                 />
             </label>
             <button onClick={handleSubmit}>Sign In</button>
-            <h1>{successMsg}</h1>
         </form>
     </div>
   )
 }
 
-export default Login
+export default Login;

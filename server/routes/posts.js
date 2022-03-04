@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const {posts} = require("../controllers");
 const multer = require("multer");
-const authRequired = require("../middleware/auth.required");
+// const authRequired = require("../middleware/auth.required");
 
 const limits = {
     files: 4,
@@ -22,7 +22,7 @@ const upload = multer({
     limits: limits,
 });
 
-router.get("/", authRequired, posts.indexPost);
+router.get("/", posts.indexPost);
 router.post("/", upload.single("image"), posts.createPost);
 router.put("/:id", posts.updatePost);
 router.delete("/:id", posts.destroyPost);

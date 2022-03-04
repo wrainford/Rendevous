@@ -11,30 +11,21 @@ import * as userService from "../../api/user.service";
 import * as authService from "../../api/auth.service";
 import { Routes, Route } from "react-router-dom";
 
-
-
-// take all of the posts from the db
-// render them out in reverse chronological order
-// make sure new posts render when created
-// usestate, and useeffect for our posts, then map it out
+const initialState = {
+	posts: [],
+	isLoggedIn: false,
+}
 
 const reducer = (prevState, action) => {
 	switch(action.type) {
 		case "setPosts":
-			return{...prevState, posts:action.payload}
+			return{...prevState, posts: action.payload}
 		case "isLoggedIn":
 			return {...prevState, isLoggedIn: action.payload}
 		default:
 			return prevState;
 	}
 }
-
-const initialState = {
-	posts: [],
-	isLoggedIn: false,
-}
-
-
 
 const Home = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -47,32 +38,30 @@ const Home = () => {
 	// 		setPosts(res.data.data.reverse());
 	// 	});
 	// };
+	const userActive = () => {
+		if(authService.currentUser()) {
+			dispatch({ type: "isLoggedIn", payload: true})
+		} else
+			dispatch({ type: "isLoggedIn", payload: false})
+	}
 
 		const fetchPosts = async () => {
 		await postService.getAllPost().then((res) => {
 				dispatch({ type: "setPosts", payload: res.data.data.reverse()});
 		});
 	};
-
-		const userActive = () => {
-			if(authService.currentUser()){
-				dispatch({ type: "isLoggedIn", payload: true})
-			} else
-				dispatch({ type: "isLoggedIn", payload: false})
-		}
-  
-
-	const fetchUsers = async () => {
-		await userService.getAllUser().then((res) => {
-			// console.log(res);
-			setUsers(res.data.data);
-		});
-	};
+	
+		const fetchUsers = async () => {
+			await userService.getAllUser().then((res) => {
+				setUsers(res.data.data);
+			});
+		};
 
 	useEffect(() => {
+		userActive();
 		fetchPosts();
         fetchUsers();
-		userActive();
+
 	}, []);
 
 
