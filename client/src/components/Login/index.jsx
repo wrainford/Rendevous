@@ -9,8 +9,8 @@ const Login = () => {
     const handleSubmit = async(e) => {
         e.preventDevault();
         await authService.login(email, password).then(() => {
-            setEmail=("");
-            setPassword=("");
+            setEmail("");
+            setPassword("");
 
         })
         setSuccessMsg("Hallelujah it works bruh");
