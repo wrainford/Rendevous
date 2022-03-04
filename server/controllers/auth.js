@@ -53,6 +53,7 @@ const login = async (req, res) => {
                 return res.status(200).json({
                     status: 200,
                     message: "Login credentials are valid. Welcome to Rendevous.",
+                    token,
                 })
             } else {
                 return res.status(400).json({

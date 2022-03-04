@@ -8,6 +8,7 @@ const apiClient = axios.create({
     baseURL: `${backendAPI}`,
     headers: {
         "Content-type": "multipart/form-data",
+        "content-type": "application/json",
         authorization: `Bearer ${user}`,
     },
 
