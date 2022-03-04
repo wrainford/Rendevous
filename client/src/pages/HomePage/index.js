@@ -11,11 +11,6 @@ import * as userService from "../../api/user.service";
 import * as authService from "../../api/auth.service";
 import { Routes, Route } from "react-router-dom";
 
-// take all of the posts from the db
-// render them out in reverse chronological order
-// make sure new posts render when created
-// usestate, and useeffect for our posts, then map it out
-
 const initialState = {
 	posts: [],
 	isLoggedIn: false,
@@ -31,7 +26,6 @@ const reducer = (prevState, action) => {
 			return prevState;
 	}
 }
-
 
 const Home = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -59,7 +53,6 @@ const Home = () => {
 	
 		const fetchUsers = async () => {
 			await userService.getAllUser().then((res) => {
-				// console.log(res);
 				setUsers(res.data.data);
 			});
 		};
