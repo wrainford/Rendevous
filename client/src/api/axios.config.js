@@ -7,7 +7,7 @@ const user = JSON.parse(localStorage.getItem("user"));
 const apiClient = axios.create({
     baseURL: `${backendAPI}`,
     headers: {
-        "Content-type": "multipart/form-data",
+        "Content-type": "application/json",
         authorization: `Bearer ${user}`,
     },
 
