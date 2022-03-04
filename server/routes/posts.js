@@ -22,7 +22,7 @@ const upload = multer({
     limits: limits,
 });
 
-router.get("/", posts.indexPost);
+router.get("/", authRequired, posts.indexPost);
 router.post("/", upload.single("image"), posts.createPost);
 router.put("/:id", posts.updatePost);
 router.delete("/:id", posts.destroyPost);
