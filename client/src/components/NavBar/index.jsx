@@ -1,10 +1,10 @@
-import {NavLink, Link} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <>
       <div>
-         <NavLink to="/" className="link"
+         <NavLink to="/posts" className="link"
          style={({isActive})=>
         ({color: isActive ? "black" : "blue"})
       }>Home Page</NavLink>
