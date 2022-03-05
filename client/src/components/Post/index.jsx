@@ -13,7 +13,7 @@ const Post = (props) => {
 
     const fetchComs = async () => {
         await postService.showPost().then((res) => {
-            console.log(res.data.data) 
+            //console.log(res.data.data) 
             setComs(res.data.data);
 
         });
@@ -23,15 +23,21 @@ const Post = (props) => {
         fetchComs();
     }, []);
 
+
+
 	return (
 		<>
         <div className="post-container">
             <h3>Post Component</h3>
+            <button onClick={props.deletePosts}>Delete</button>
+
+
 			<h1>Title: {props.title}</h1>
 			
                 Image:
                 <img src = {`/uploads/postImages/${props.image}`} alt="..." style= {{width: "80%"}}/>
 				<p>Body: {props.body}</p>
+                <p> ID: {props.id} </p>
                 
             <CommentForm refreshcoms={() => fetchComs()} /> 
                 {props.comment.map((comment) => {
