@@ -8,18 +8,35 @@ import "./index.css"
 
 
 const CommentForm = (props) => {
+	const [content, setContent] = useState("");
 
-	// console.log(props.comment[0].content)
+	const handleSubmit = async () => {
+		const formData = new FormData();
+		formData.append("content", content);
+		let res = await postService.createComment(props.id, formData).then(() => {
+			setContent("");
+			props.refreshPosts();
+		});
+
+		console.log(res);
+		// 201 = create
+		if (!res === 201) {
+			alert(`Yikes: ${res.status}`);
+		}
+	};
+
 	return (
 		<>
 			<div className="commentform-container">
-				<form> 
+				<form encType="multipart/form-data"> 
 					<input
+						onChange={(e) => setContent(e.target.value)}
+						value={content}
 						type="text"
 						name="content"
 						placeholder="Add a comment..."
 					/>
-					<button>Post</button>
+					<button onClick={handleSubmit}>Post</button>
 				</form>
 			</div>
 		</>

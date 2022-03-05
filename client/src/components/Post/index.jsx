@@ -11,6 +11,7 @@ import "./index.css"
 const Post = (props) => {
     const [coms, setComs] = useState([]); 
 
+
     const fetchComs = async () => {
         await postService.showPost().then((res) => {
             console.log(res.data.data) 
@@ -28,12 +29,10 @@ const Post = (props) => {
         <div className="post-container">
             <h3>Post Component</h3>
 			<h1>Title: {props.title}</h1>
-			
                 Image:
                 <img src = {`/uploads/postImages/${props.image}`} alt="..." style= {{width: "80%"}}/>
 				<p>Body: {props.body}</p>
-                
-            <CommentForm refreshcoms={() => fetchComs()} /> 
+            <CommentForm id={props.id} refreshcoms={() => fetchComs()} /> 
                 {props.comment.map((comment) => {
                     return(
                         <Comment
