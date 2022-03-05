@@ -48,4 +48,8 @@ letter-spacing: 0.4rem;
   width: 30vw;
   height: 55vh;
 }
+
 `;
+
+export const WelcomeText = styled.h1`
+margin: 6rem 0rem 0;`;

@@ -34,7 +34,6 @@ const LoginPage = () => {
 
     return (
         <div>
-            <h1>This is the LogInPage</h1>
             <Login />
             </div>
     )
