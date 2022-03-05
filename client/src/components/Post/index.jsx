@@ -37,13 +37,13 @@ const Post = (props) => {
                 Image:
                 <img src = {`/uploads/postImages/${props.image}`} alt="..." style= {{width: "80%"}}/>
 				<p>Body: {props.body}</p>
-                <p> ID: {props.id} </p>
-            <CommentForm id={props.id} refreshcoms={() => fetchComs()} /> 
+                <p> ID: {props.postId} </p>
+            <CommentForm postId={props.postId} refreshcoms={() => fetchComs()} /> 
                 {props.comment.map((comment) => {
                     return(
                         <Comment
                             comment={comment.content}
-                            id={comment._id}
+                            commentId={comment._id}
                             fetchComs={fetchComs}
                         />
                     );

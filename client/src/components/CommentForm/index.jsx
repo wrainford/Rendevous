@@ -8,7 +8,7 @@ const CommentForm = (props) => {
 
 	const handleSubmit = async () => {
 		let newComment = {content};
-		let res = await postService.createComment(props.id, newComment).then(() => {
+		let res = await postService.createComment(props.postId, newComment).then(() => {
 			setContent("");
 			props.refreshPosts();
 		});
