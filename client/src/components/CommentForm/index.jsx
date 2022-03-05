@@ -14,7 +14,7 @@ const CommentForm = (props) => {
 		let newComment = {content};
 		let res = await postService.createComment(props.id, newComment).then(() => {
 			setContent("");
-			console.log(newComment);
+			props.refreshPosts();
 		});
 
 		console.log(res);
@@ -22,21 +22,6 @@ const CommentForm = (props) => {
 			alert(`Yikes: ${res.status}`);
 		}
 	}
-
-	// const handleSubmit = async () => {
-	// 	const formData = new FormData();
-	// 	formData.append("content", content);
-	// 	let res = await postService.createComment(props.id, formData).then(() => {
-	// 		setContent("");
-	// 		props.refreshPosts();
-	// 	});
-
-	// 	console.log(res);
-	// 	// 201 = create
-	// 	if (!res === 201) {
-	// 		alert(`Yikes: ${res.status}`);
-	// 	}
-	// };
 
 	return (
 		<>
