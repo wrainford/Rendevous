@@ -109,7 +109,7 @@ const Home = () => {
                         }
                         ></Route>
 
-                        // ROUTE FOR PRIVACY 
+                        {/* // ROUTE FOR PRIVACY  */}
                         <Route path="privacy" element={<PrivacyPage />}></Route>
 
                         {/* // ROUTE FOR LOGOUT
