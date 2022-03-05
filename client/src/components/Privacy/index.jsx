@@ -1,7 +1,8 @@
 import React from 'react'
-
+import "./index.css"
 function Privacy() {
   return (
+    <body>
     <div className="privacyPolicy">
      
       <h1 className="policy">Rendevous Privacy Policy</h1>
@@ -18,11 +19,16 @@ function Privacy() {
       
      <i> Information You Provide to Us.</i>
 
-      We collect information you provide to us directly when you use the Services. This includes:
-      
+      We collect information you provide to us directly when you use the Services. 
+     
+      <p>
+      This includes:
+
+
       <i>Account information</i>
 
       If you create a Rendevous account, we may require you to provide a username and password. Your username is public, and it doesn’t have to be related to your real name. You may also provide other account information, like an email address, bio, or profile picture. We also store your user account preferences and settings.
+      </p>
       <br />
 
       <i>Content you submit</i>
@@ -102,16 +108,15 @@ function Privacy() {
 
         Rendevous Inc
         Attn: Rendevous - Privacy
-        2 Harrison St., # 175,
-        San Francisco, CA 94105
+        12 Snail St., # 0007,
+        Palo Alto, CA 94105
         USA
-        rendevouscomplicance@gmail.com
-
-
+        rendevous@gmail.com
 
   </p>
 
     </div>
+</body>
   )
 }
 
