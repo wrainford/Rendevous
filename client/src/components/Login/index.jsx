@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import * as authService from "../../api/auth.service"
 import "./index.css"
 import { LogInPage } from '../Styles/LogIn/LogInPage.styled';
@@ -9,13 +9,16 @@ import { SignUpButton } from '../Styles/LogIn/SignUpButton.styled';
 const Login = () => {
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
-   
+    let navigate = useNavigate();
     const handleSubmit = async(e) => {
         e.preventDefault();
         await authService.login(email, password).then(() => {
             setEmail = "";
             setPassword = "";
-
+            navigate("/");
+        })
+        .catch(() => {
+            alert('Log In Failed. Please try again');
         });
     };
   return (

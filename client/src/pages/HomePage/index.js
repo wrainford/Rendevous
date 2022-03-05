@@ -70,7 +70,7 @@ const Home = () => {
 	}, []);
 
 
-    if(isLoggedIn) {
+    // if(isLoggedIn) {
 
     return (	
             <div>
@@ -128,15 +128,15 @@ const Home = () => {
                     </Routes>
         
             </div> 
-        )} 
+        )};
         
-            else {
-                return (
-                    <div>
-                        <LoginPage />
-                    </div>
-                )
-            };	
-};
+            // else {
+            //     return (
+            //         <div>
+            //             <LoginPage />
+            //         </div>
+            //     )
+            // };	
+// };
 	
 export default Home;
