@@ -1,6 +1,7 @@
 import { useState } from "react";
 //import { func } from "prop-types";
 import * as postService from "../../api/post.service";
+import "./index.css"
 
 const PostForm = ({ refreshPosts }) => {
 	const [title, setTitle] = useState("");
@@ -28,7 +29,11 @@ const PostForm = ({ refreshPosts }) => {
 
 	return (
 		<div>
+            <br />
 			{/* Used for returning the form data */}
+            <div className="postform-container">
+            <h3>PostForm Component </h3>
+            <br />
 			<form encType="multipart/form-data">
 				<label>
 					Post Title:
@@ -40,6 +45,8 @@ const PostForm = ({ refreshPosts }) => {
 						placeholder="TITLE"
 					/>
 				</label>
+                <br />
+                <br />
 				<label>
 					Type something
 					<textarea
@@ -50,6 +57,8 @@ const PostForm = ({ refreshPosts }) => {
 						placeholder="BODY"
 					/>
 				</label>
+                <br />
+                <br />
 				<label>
 					Upload an image:
 					<input
@@ -59,7 +68,11 @@ const PostForm = ({ refreshPosts }) => {
 					/>
 				</label>
 			</form>
-			<button onClick={handleSubmit}> POST SOMETHING </button>
+            <br />
+            <div className="postbutton">
+			<button onClick={handleSubmit} className="post-button"> POST SOMETHING </button>
+            </div>
+            </div>
 		</div>
 	);
 };

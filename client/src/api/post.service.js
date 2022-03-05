@@ -4,6 +4,10 @@ const getAllPost = () => {
     return apiClient.get("/posts");
 }
 
+const showPost = (id) => {
+    return apiClient.get(`/posts/${id}`);
+}
+
 const createPost = (data) => {
     return apiClient.post("/posts", data);
 }
@@ -38,4 +42,4 @@ const addImage = (id) => {
 }
 
 
-export {getAllPost, createPost, updatePost, destroyPost, createComment, editComment, updateComment, deleteComment, addImage};
+export {getAllPost, showPost, createPost, updatePost, destroyPost, createComment, editComment, updateComment, deleteComment, addImage};
