@@ -1,5 +1,10 @@
 import {useState} from 'react'
+import { NavLink } from 'react-router-dom';
 import * as authService from "../../api/auth.service"
+import "./index.css"
+import { LogInPage } from '../Styles/LogIn/LogInPage.styled';
+import { FormComponent } from '../Styles/LogIn/FormContainer.styled';
+import { SignUpButton } from '../Styles/LogIn/SignUpButton.styled';
 
 const Login = () => {
     let [email, setEmail] = useState("");
@@ -13,13 +18,13 @@ const Login = () => {
 
         });
     };
-
-
   return (
-    <div>
+    <div className='LogInPage'>
+    <LogInPage>
+        <FormComponent>
         <form>
             <label htmlFor="email">
-                Email:
+               <h4> Email: </h4>
                 <input
                     onChange={(e) => setEmail(e.target.value)} 
                     value={email}
@@ -29,7 +34,7 @@ const Login = () => {
                 />
             </label>
             <label>
-                Enter Your Password:
+                <h4>Enter Your Password:</h4>
                 <input 
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
@@ -38,8 +43,12 @@ const Login = () => {
                     placeholder="Enter Your Password"
                 />
             </label>
+            <SignUpButton>
             <button onClick={handleSubmit}>Sign In</button>
+            </SignUpButton>
         </form>
+        </FormComponent>
+        </LogInPage>
     </div>
   )
 }
