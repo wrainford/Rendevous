@@ -3,10 +3,6 @@ import React, { useState } from "react";
 import * as postService from "../../api/post.service";
 import "./index.css"
 
-//import { string } from "prop-types";
-
-
-
 const CommentForm = (props) => {
 	const [content, setContent] = useState("");
 
@@ -42,15 +38,5 @@ const CommentForm = (props) => {
 		</>
 	);
 };
-
-// Post.propTypes = {
-// 	title: string.isRequired,
-// 	author: string.isRequired,
-// 	body: string.isRequired,
-// };
-
-// Post.defaultProps = {
-// 	author: "Teri London",
-// };
 
 export default CommentForm;
