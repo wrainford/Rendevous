@@ -83,7 +83,6 @@ const Home = () => {
                             <>
                                 {/* 2. PostForm Component  */}
                                 <PostForm refreshPosts={() => fetchPosts()}/>
-
                                 {/* 3. Post Component  */}
                                 {posts.map((post) => {
                                         return (
@@ -93,7 +92,7 @@ const Home = () => {
                                             comment = {post.comment}
                                             image={post.image}
                                             deletePosts = {() => deletePosts(post._id)}
-                                            key={[post._id]} 
+                                            id={post._id} 
                                         />
                                         )
                                 })}
