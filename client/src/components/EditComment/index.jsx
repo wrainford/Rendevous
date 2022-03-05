@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import * as postService from "../../api/post.service";
+import React from "react";
 import "./index.css";
 
 const EditComment = (props) => {

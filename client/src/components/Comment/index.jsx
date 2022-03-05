@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import * as postService from "../../api/post.service";
 import DelComment from "../DeleteComment";
-import EditComment from "../Edit Comment";
+import EditComment from "../EditComment";
 import "./index.css"
 
 const Comment = (props) => {
