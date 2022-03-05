@@ -11,24 +11,38 @@ const CommentForm = (props) => {
 	const [content, setContent] = useState("");
 
 	const handleSubmit = async () => {
-		const formData = new FormData();
-		formData.append("content", content);
-		let res = await postService.createComment(props.id, formData).then(() => {
+		let newComment = {content};
+		let res = await postService.createComment(props.id, newComment).then(() => {
 			setContent("");
-			props.refreshPosts();
+			console.log(newComment);
 		});
 
 		console.log(res);
-		// 201 = create
 		if (!res === 201) {
 			alert(`Yikes: ${res.status}`);
 		}
-	};
+	}
+
+	// const handleSubmit = async () => {
+	// 	const formData = new FormData();
+	// 	formData.append("content", content);
+	// 	let res = await postService.createComment(props.id, formData).then(() => {
+	// 		setContent("");
+	// 		props.refreshPosts();
+	// 	});
+
+	// 	console.log(res);
+	// 	// 201 = create
+	// 	if (!res === 201) {
+	// 		alert(`Yikes: ${res.status}`);
+	// 	}
+	// };
 
 	return (
 		<>
 			<div className="commentform-container">
-				<form encType="multipart/form-data"> 
+				<form encType="application/json">
+					{props.id} 
 					<input
 						onChange={(e) => setContent(e.target.value)}
 						value={content}
@@ -38,6 +52,7 @@ const CommentForm = (props) => {
 					/>
 					<button onClick={handleSubmit}>Post</button>
 				</form>
+				
 			</div>
 		</>
 	);
