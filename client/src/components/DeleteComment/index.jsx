@@ -1,11 +1,20 @@
+import { checkPropTypes } from "prop-types";
 import React, { useState } from "react";
 import * as postService from "../../api/post.service";
 import "./index.css";
 
-const DelComment = () => {
+const DelComment = (props) => {
+    const Delete = async () => {
+        let res = await postService.deleteComment(props.id).then(() => {
+            props.fetchComs();
+        });
+
+        console.log(res);
+    }
+
     return(
         <>
-            <button>Delete</button>
+            <button onClick={Delete}>Delete</button>
         </>
     )
 }

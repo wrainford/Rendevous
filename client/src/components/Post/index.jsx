@@ -37,7 +37,8 @@ const Post = (props) => {
                     return(
                         <Comment
                             comment={comment.content}
-                            key={comment._id}
+                            id={comment._id}
+                            fetchComs={fetchComs}
                         />
                     );
                 })}

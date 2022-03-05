@@ -23,7 +23,6 @@ const CommentForm = (props) => {
 		<>
 			<div className="commentform-container">
 				<form encType="application/json">
-					{props.id} 
 					<input
 						onChange={(e) => setContent(e.target.value)}
 						value={content}
