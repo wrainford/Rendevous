@@ -77,6 +77,7 @@ const updatePost = (req, res) => {
 
 const destroyPost = (req, res) => {
     db.Post.findByIdAndDelete(req.params.id, (err, deletedPost) =>{
+        console.log(req.params.id)
         if(err)
         return res.status(400).json({
             message: "Failed to delete post",

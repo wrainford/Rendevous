@@ -23,6 +23,8 @@ const reducer = (prevState, action) => {
 			return{...prevState, posts: action.payload}
 		case "isLoggedIn":
 			return {...prevState, isLoggedIn: action.payload}
+        case "deletePosts":
+            return { ...prevState, posts: prevState.posts.filter( p => p._id !== action.payload)}
 		default:
 			return prevState;
 	}
@@ -52,11 +54,19 @@ const Home = () => {
 			});
 		};
 
+        const deletePosts = async (id) => { 
+            //console.log("click")
+            await postService.destroyPost(id).then((res)=>{
+                //console.log(`post destroyed ${id}`)
+                dispatch({ type: "deletePosts", payload:id});
+            })
+        }
+
 	useEffect(() => {
 		userActive();
 		fetchPosts();
         fetchUsers();
-
+        
 	}, []);
 
 
@@ -81,7 +91,8 @@ const Home = () => {
                                             body={post.body}
                                             comment = {post.comment}
                                             image={post.image}
-                                            id={post._id}
+                                            deletePosts = {() => deletePosts(post._id)}
+                                            id={post._id} 
                                         />
                                         )
                                 })}
