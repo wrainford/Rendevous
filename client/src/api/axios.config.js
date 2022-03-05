@@ -9,7 +9,7 @@ const apiClient = axios.create({
     headers: {
         "Content-type": "multipart/form-data",
         "content-type": "application/json",
-        // authorization: `Bearer ${user}`,
+        authorization: `Bearer ${user}`,
     },
 
 });
