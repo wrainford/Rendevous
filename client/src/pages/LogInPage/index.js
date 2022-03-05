@@ -18,7 +18,7 @@ const reducer = (prevState, action) => {
 
 const LoginPage = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
-    const {isLoggedIn} = state;
+    // const {isLoggedIn} = state;
 
     const userActive = () => {
         if(authService.currentUser()) {
