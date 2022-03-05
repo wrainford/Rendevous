@@ -12,9 +12,16 @@ const CommentForm = (props) => {
 	// console.log(props.comment[0].content)
 	return (
 		<>
-        <div className="commentform-container">
-            <h3>CommentForm Component</h3>
-        </div>
+			<div className="commentform-container">
+				<form> 
+					<input
+						type="text"
+						name="content"
+						placeholder="Add a comment..."
+					/>
+					<button>Post</button>
+				</form>
+			</div>
 		</>
 	);
 };
