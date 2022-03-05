@@ -28,29 +28,20 @@ const Post = (props) => {
         <div className="post-container">
             <h3>Post Component</h3>
 			<h1>Title: {props.title}</h1>
-			<div>
+			
                 Image:
                 <img src = {`/uploads/postImages/${props.image}`} alt="..." style= {{width: "80%"}}/>
 				<p>Body: {props.body}</p>
                 
-
-					{/* {props.comment.map((comment) => {
-					return (
-                        <Comment comment={comment.content}/>
-						<h4>comment: {comment.content}</h4>
-					)
-					})} */}
-			</div>
-            <CommentForm refreshcoms={() => fetchComs()} />
-            <Comment /> 
-            {coms.map((comment) => {
-                return(
-                    <Comment
-                        comment={comment.content}
-                        key={comment._id}
-                    />
-                );
-            })}
+            <CommentForm refreshcoms={() => fetchComs()} /> 
+                {props.comment.map((comment) => {
+                    return(
+                        <Comment
+                            comment={comment.content}
+                            key={comment._id}
+                        />
+                    );
+                })}
             <p>Load More</p>
         </div>
 		</>
