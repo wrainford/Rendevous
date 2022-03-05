@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import * as postService from "../../api/post.service";
 import "./index.css";
 
-const DelComment = () => {
+const EditComment = () => {
     return(
         <>
-            <button>Delete</button>
+            <button>Edit</button>
         </>
     )
 }
 
-export default DelComment;
+export default EditComment

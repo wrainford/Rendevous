@@ -6,10 +6,9 @@ import "./index.css"
 const Comment = (props) => {
 	return (
 		<>
-        <div className="comment-container">
-		   <h4>comment: {props.comment} </h4>
-			
-        </div>
+			<div className="comment-container">
+				<h4>comment: {props.comment} </h4>
+			</div>
 		</>
 	);
 };
