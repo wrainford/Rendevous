@@ -3,8 +3,9 @@ import Post from "../../components/Post";
 import User from "../../components/User";
 import PostForm from "../../components/PostForm";
 import NavBar from "../../components/NavBar";
-import Privacy from "../../components/Privacy";
-import Login from "../../components/Login";
+import ProfilePage from "../ProfilePage";
+import PrivacyPage from "../PrivacyPage";
+import LoginPage from "../LogInPage";
 import LogOut from "../../components/LogOut";
 import * as postService from "../../api/post.service";
 import * as userService from "../../api/user.service";
@@ -32,24 +33,18 @@ const Home = () => {
 	const {posts, isLoggedIn} = state;
 	const [users, setUsers] = useState([]);
 
-	// const fetchPosts = async () => {
-	// 	await postService.getAllPost().then((res) => {
-	// 		console.log(res);
-	// 		setPosts(res.data.data.reverse());
-	// 	});
-	// };
-	const userActive = () => {
-		if(authService.currentUser()) {
-			dispatch({ type: "isLoggedIn", payload: true})
-		} else
-			dispatch({ type: "isLoggedIn", payload: false})
-	}
+        const userActive = () => {
+            if(authService.currentUser()) {
+                dispatch({ type: "isLoggedIn", payload: true})
+            } else
+                dispatch({ type: "isLoggedIn", payload: false})
+        }
 
 		const fetchPosts = async () => {
 		await postService.getAllPost().then((res) => {
 				dispatch({ type: "setPosts", payload: res.data.data.reverse()});
-		});
-	};
+		        });
+	    };
 	
 		const fetchUsers = async () => {
 			await userService.getAllUser().then((res) => {
@@ -65,64 +60,73 @@ const Home = () => {
 	}, []);
 
 
-if(isLoggedIn) {
+    if(isLoggedIn) {
 
-return (	
-        <div>
-            <NavBar />
-				<Routes>
+    return (	
+            <div>
+                <h1>This is our HomePage</h1> 
+                {/* 1. NAVBAR */}
+                <NavBar />
+                    <Routes>
+                        {/* ROUTE AND DATA FOR POSTS and since our homepage route is "/" it will render out the below */}
+                        <Route path="/" element={
+                            <>
+                                {/* 2. PostForm Component  */}
+                                <PostForm refreshPosts={() => fetchPosts()}/>
 
-				<Route path="/" element={
-					<>
-						<PostForm refreshPosts={() => fetchPosts()}/>
-						{posts.map((post) => {
-								return (
-							<Post
-							title={post.title}
-							body={post.body}
-							comment = {post.comment}
-							image={post.image}
-							key={[post._id]} 
-							/>
-							)
-							})}
-				</>
-			}
-></Route>
+                                {/* 3. Post Component  */}
+                                {posts.map((post) => {
+                                        return (
+                                        <Post
+                                            title={post.title}
+                                            body={post.body}
+                                            comment = {post.comment}
+                                            image={post.image}
+                                            key={[post._id]} 
+                                        />
+                                        )
+                                })}
+                            </>
+                        }
+                        ></Route>
 
-<Route path="users" element={
-	<>
-            {users.map((user) => {
-					return (
-			    <User
-                userName={user.userName}
-                name={user.name}
-                email={user.email}
-                project={user.project.title}
-                key={user._id} 
-				/>
+                        {/* ROUTE AND DATA FOR USERS once on /users */}
+                        <Route path="users" element={
+                            <>
+                                {/* User Component */}
+                                    {users.map((user) => {
+                                            return (
+                                            <ProfilePage
+                                                userName={user.userName}
+                                                name={user.name}
+                                                email={user.email}
+                                                project={user.project.title}
+                                                key={user._id} 
+                                            />
+                                            )
+                                    })}
+                            </>
+                        }
+                        ></Route>
+
+                        // ROUTE FOR PRIVACY 
+                        <Route path="privacy" element={<PrivacyPage />}></Route>
+
+                        {/* // ROUTE FOR LOGOUT
+                        <Route path="logout" element={<LogOut />}></Route> */} 
+
+                    </Routes>
+        
+            </div> 
+        )} 
+        
+            else {
+                return (
+                    <div>
+                        <LoginPage />
+                    </div>
                 )
-                })}
-			 </>
-}
-></Route>
-
-    <Route path="privacy" element={<Privacy />}></Route>
-    <Route path="logout" element={<LogOut />}></Route>
-
- </Routes>
-	
- 
-        </div> 
-    )} 
-	
-		else {
-			return (
-				<div>
-					<Login />
-				</div>
-			)
-		};	
+            };	
 };
 	
 export default Home;

@@ -1,6 +1,14 @@
-import { Routes, Route } from "react-router-dom";
+import Login from "../../components/Login"
 
-const LogIn = () => {
-
-    
+const LoginPage = () => {
+    return (
+        <div>
+            <h1>This is the LogInPage</h1>
+            <Login /> 
+        </div>
+        
+    )
 }
+
+
+export default LoginPage
