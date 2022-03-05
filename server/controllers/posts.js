@@ -29,11 +29,20 @@ const showPost = (req, res) => {
 };
 
 const createPost = (req, res) => {
-    const postData = {
-       title: req.body.title,
-       body: req.body.body,
-       image: req.file.originalname,
+    let postData;
+    if(req.file !== undefined) {
+        postData = {
+            title: req.body.title,
+            body: req.body.body,
+            image: req.file.originalname,
+        }
+    } else {
+        postData = {
+            title: req.body.title,
+            body: req.body.body, 
+        }
     }
+
     db.Post.create(postData, (err, savedPost) => {
         if(err)
             return res.status(400).json({
