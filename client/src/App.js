@@ -1,21 +1,24 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
-import Home from "./pages/HomePage"
+import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import Posts from "./pages/PostsPage"
 import LoginPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
+import LogOut from './components/LogOut'
+import ProfilePage from './pages/ProfilePage';
+import PrivacyPage from './pages/PrivacyPage';
 
 const App = () => {
   return (
     <div className="land-page">
       <Router>
-        <nav>
-          <Link to="/login">Log In</Link>
-          <Link to="signup">Sign Up</Link>
-        </nav>
-          <Routes>
-            <Route path="/" element={<Home />}>Home</Route>
-            <Route path="/login" element={<LoginPage />}> Log in</Route>
-            <Route path="/signup" element={<SignUpPage /> }>Sign Up</Route>
+            <Routes>
+            <Route path="/" element={<LoginPage />}></Route>
+            <Route path="/posts" element={< Posts />}></Route>
+            <Route path="/login" element={<LoginPage />}></Route>
+            <Route path="/users" element={<ProfilePage/>}></Route>
+            <Route path="/signup" element={<SignUpPage />}></Route>
+            <Route path="/privacy" element={<PrivacyPage/>}></Route>
+            <Route path="/logout" element={<LogOut/>}></Route>
           </Routes>
       </Router>
     </div>

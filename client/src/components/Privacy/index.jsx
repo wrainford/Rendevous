@@ -1,6 +1,6 @@
 import React from 'react'
 import "./index.css"
-function Privacy() {
+const Privacy = () => {
   return (
     <body>
     <div className="privacyPolicy">
@@ -120,4 +120,4 @@ function Privacy() {
   )
 }
 
-export default Privacy
+export default Privacy;
