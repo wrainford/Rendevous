@@ -18,6 +18,7 @@ const user = "/user";
                     console.log(res);
                     if(res.data.token){
                         localStorage.setItem("user", JSON.stringify(res.data.token));
+                        localStorage.setItem("id", JSON.stringify(res.data.foundUser._id));
                     }
                         return res.data.token
                 })
@@ -32,7 +33,8 @@ const user = "/user";
     }
 
     const getProfile = () => {
-        return apiClient.get(`${user}`);
+        let id = localStorage.getItem("id");
+        return JSON.parse(id);
     }
 
     const logout = () => {

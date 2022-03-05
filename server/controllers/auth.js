@@ -54,6 +54,7 @@ const login = async (req, res) => {
                     status: 200,
                     message: "Login credentials are valid. Welcome to Rendevous.",
                     token,
+                    foundUser
                 })
             } else {
                 return res.status(400).json({
