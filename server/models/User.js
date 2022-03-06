@@ -22,7 +22,7 @@ const userSchema = new Schema({
 },
    avatar: {
        type: String,
-    //    default: image filepath 
+       default: "defaultavatar.jpg",
 },
    userName: {
      type: String,
