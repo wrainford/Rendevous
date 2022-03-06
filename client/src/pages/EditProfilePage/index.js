@@ -1,4 +1,4 @@
-import User from '../../components/User';
+import EditUser from "../../components/EditUser";
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import NavBar from '../../components/NavBar';
@@ -23,9 +23,7 @@ const EditProfilePage = () => {
         <div>
             <NavBar />
                 <h1>Please edit your profile</h1>
-                    <User 
-                    props={user}
-                    /> 
+                <EditUser user={user}/>
         </div>
         
     )
