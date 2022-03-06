@@ -5,8 +5,10 @@ const LogOut = () => {
   
   return (
     <div>
-      <NavLink to="/">Sign In</NavLink>
-      You have successfully logged out. 
+      <nav className="LogInNav">
+          <NavLink className="link1" to="/login">Log In</NavLink>
+      </nav>
+      <h4>You have successfully logged out. </h4>
     </div>
   )
 }
