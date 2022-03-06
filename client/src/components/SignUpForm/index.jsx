@@ -38,6 +38,7 @@ const SignUpForm = (e)=>{
            })
          
           }
+          //working :)thanks D
           
 return(
      <div className="sighUpPage">
@@ -84,7 +85,7 @@ return(
                         value= {password}
                         password="password"
                         type="text"
-                        placeholder="Password"
+                        placeholder=""
                         />
                    </label>
                   
