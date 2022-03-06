@@ -31,39 +31,44 @@ const PostEdit = (props) => {
             <br />
 			{/* Used for returning the form data */}
             <div className="postform-container">
-            <h3>PostForm Component </h3>
+            <h3 className="editing">Editing...</h3>
             <br />
 			<form encType="multipart/form-data">
 				<label>
-					Post Title:
+					<div className="edit-title">
+					<h4>Title: </h4>
 					<input
 						onChange={(e) => setTitle(e.target.value)}
 						value={title}
 						type="text"
 						name="title"
 						placeholder="TITLE"
+						className="input-title"
 					/>
+					</div>
 				</label>
                 <br />
                 <br />
 				<label>
-					Type something
+					<h4>Post: </h4>
 					<textarea
 						onChange={(e) => setBody(e.target.value)}
 						value={body}
 						type="text"
 						name="body"
 						placeholder="BODY"
+						className="input-body"
 					/>
 				</label>
                 <br />
                 <br />
 				<label>
-					Upload an image:
+					<h4 className="add-image-text">Add image </h4>
 					<input
 						onChange={(e) => setImage(e.target.files[0])}
 						filename="image"
 						type="file"
+						className="add-image"
 					/>
 				</label>
 			</form>

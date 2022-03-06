@@ -1,0 +1,48 @@
+.parent{
+    text-align: center;
+ }
+
+.child1{
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1%;
+    text-align: center;
+}
+
+
+.commentform-container{
+    width: 90%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comment-form{
+    vertical-align: middle;
+}
+
+.comment-text{
+    width: 90%;
+    height: 45px;
+    /* padding: 12px 20px; */
+    /* box-sizing: border-box; */
+    /* border-radius: 5px 0 0 5px;  */
+    font-size: 20px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.comment-post-button{
+    /* left: -25px; */
+    height: 45px;
+    border: none;
+    /* border-radius: 0 5px 5px 0;  */
+    width: 10%;
+    box-shadow: none;
+    /* background-color: #66AFA4; */
+    /* font-weight: bold; */
+    /* font-size: 15px; */
+    color:white;
+    background-color: transparent;
+
+}
+
+

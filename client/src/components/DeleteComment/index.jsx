@@ -1,6 +1,10 @@
 import React from "react";
 import * as postService from "../../api/post.service";
 import "./index.css";
+import { FiEdit } from "react-icons/fi";
+import { FiTrash2 } from "react-icons/fi";
+import {GiCancel} from "react-icons/gi";
+
 
 const DelComment = (props) => {
     const Delete = async () => {
@@ -13,7 +17,7 @@ const DelComment = (props) => {
 
     return(
         <>
-            <button onClick={Delete}>Delete</button>
+            <button className="button-trash" onClick={Delete}> <FiTrash2 size={25} color="#5E5D5D"/></button>
         </>
     )
 }
