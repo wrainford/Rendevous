@@ -29,6 +29,7 @@ const PostView = (props) => {
             comment={props.comment}
             image={props.image}
             deletePosts={props.deletePosts}
+            refreshPosts={props.refreshPosts}
             postId={props.postId} 
         />)
 }
