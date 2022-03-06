@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as postService from "../../api/post.service"
+import "./index.css"
 
 const EditCommentForm = (props) => {
     const [content, setContent] = useState(props.body);
@@ -17,11 +18,12 @@ const EditCommentForm = (props) => {
         <>
             <form>
                 <input
+                    className = "com-edit-form"
                     onChange={(e) => setContent(e.target.value)}
                     type="text"
                     value={content}
                 />
-                <button onClick={HandleSubmit}>Submit</button>
+                <button className="com-edit-button" onClick={HandleSubmit}>Submit</button>
             </form>
         </>
     )

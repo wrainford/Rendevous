@@ -1,10 +1,29 @@
-.container{
-    border: 3px green solid;
+.post-container{
+    margin: 3% 10%;
+    background-color: #1A2B44;
+    padding: 1%;
+   
 }
 
 
 .post-buttons{
-    display:flex;
-    float:right;
+    display:flex; 
+    float: right;
+    margin-right: 3%;
+}
+
+.postview{
+    width: 100%; 
+    
+}
+
+.button-trash{
+    background: transparent;
+    border: none;
+}
+
+.button1{
+    background-color: transparent;
+    border: none;
 }
 

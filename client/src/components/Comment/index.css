@@ -1,0 +1,38 @@
+.com-div{
+   text-align: center;
+}
+.h4-comment-text{
+    padding-top: 2%;
+    font-size: 20px;
+    background: transparent;
+    color: black;
+    font-family: 'Inconsolata', monospace;
+    float: left;
+}
+
+.grid1 { 
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.comment-container{
+    display:inline-block;
+    vertical-align: middle;
+    background: #eeeded;
+    /* border: 2px black solid; */
+    padding:1%;
+    margin: 2%;
+    width: 90%; 
+    text-align: left;
+    border-radius: 5px;
+    padding-left: 3%;
+
+}
+
+.comment-buttons{
+    float: right; 
+}
+
+.com-edit-side{
+    text-align: center;
+}

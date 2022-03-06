@@ -29,18 +29,27 @@ const Post = (props) => {
 	return (
 		<>
         <div className="post-container">
-            <h3>Post Component</h3>
+           
             {/* <button onClick={props.deletePosts}>Delete</button> */}
 
 
-			<h1>Title: {props.title}</h1>
-                Image:
-                <img src = {`/uploads/postImages/${props.image}`} alt="..." style= {{width: "80%"}}/>
-				<p>Body: {props.body}</p>
-                <p> ID: {props.postId} </p>
+			<h2 className="post-title">{props.title}</h2>
+            <br />
+                <img src = {`/uploads/postImages/${props.image}`} alt="" style= {{width: "100%"}}/>
+				<br/>
+                <p className="post-body">{props.body}</p>
+                
+                <br/>
+                <br/>
+                <br/>
+
+                {/* <h3 className="comment-title">Comments:</h3> */}
+                
             <CommentForm postId={props.postId} refreshcoms={() => fetchComs()} /> 
+            <br/>
                 {props.comment.map((comment) => {
                     return(
+                        
                         <Comment
                             comment={comment.content}
                             id={comment._id}
@@ -48,7 +57,10 @@ const Post = (props) => {
                         />
                     );
                 })}
-            <p>Load More</p>
+            <div className="button-div">
+                <button className="loadmore">Load More</button>
+            </div>
+            
         </div>
 		</>
 	);

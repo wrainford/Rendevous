@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import * as postService from "../../api/post.service";
 import "./index.css"
+import { FiSend } from "react-icons/fi";
+import {BsPersonCircle} from "react-icons/bs"
 
 const CommentForm = (props) => {
 	const [content, setContent] = useState("");
@@ -21,19 +23,27 @@ const CommentForm = (props) => {
 
 	return (
 		<>
+		<div className="parent">
+		<div className="child1">
+				<BsPersonCircle size={30} />
+		</div>
+			
 			<div className="commentform-container">
-				<form encType="application/json">
+				<form encType="application/json" className="comment-form" >
 					<input
+						className="comment-text"
 						onChange={(e) => setContent(e.target.value)}
 						value={content}
 						type="text"
 						name="content"
 						placeholder="Add a comment..."
 					/>
-					<button onClick={handleSubmit}>Post</button>
+					<button className="comment-post-button" onClick={handleSubmit}>
+					<FiSend size={30} color="#66AFA4"/>
+					</button>
 				</form>
-				
 			</div>
+		</div>
 		</>
 	);
 };

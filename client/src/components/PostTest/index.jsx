@@ -50,24 +50,25 @@ const PostToggle = (props) => {
     }, []);
 
     const [isEdit, setIsEdit] = useState(false);
-    const [button, setButton] = useState(<FiEdit size={30}/>)
+    const [button, setButton] = useState(<FiEdit size={30} color="#66AFA4"/>)
 
     const handleClick = () => {
         console.log(isEdit)
         { !isEdit ? (setIsEdit(true)) : (setIsEdit(false))}
-        { !isEdit ? (setButton(<GiCancel size={30}/>)) : (setButton(<FiEdit size={30}/>))}
+        { !isEdit ? (setButton(<GiCancel size={30} color="#66AFA4"/> )) : (setButton(<FiEdit size={30} color="#66AFA4"/>))}
     }
 
     return(
-        <div className="container">
+        <div className="post-container">
             
             <br />
             <div className="post-buttons">
-            <button onClick={handleClick}>
+            <button onClick={handleClick} className="button1">
                 {button}
             </button>
-            <button onClick ={props.deletePosts}>
-                <FiTrash2 size={30} />
+            &nbsp;&nbsp;
+            <button onClick ={props.deletePosts} className="button-trash">
+                <FiTrash2 size={30} color="#66AFA4"/>
             </button>
             </div>
             <PostView 
@@ -77,7 +78,8 @@ const PostToggle = (props) => {
                 comment={props.comment}
                 image={props.image}
                 deletePosts={props.deletePosts}
-                postId={props.postId} />
+                postId={props.postId}
+                className="postview" />
 
         </div>
     )

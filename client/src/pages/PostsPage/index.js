@@ -86,8 +86,7 @@ const Posts = () => {
                                 {/* 2. PostForm Component  */}
                                 <PostForm refreshPosts={() => fetchPosts()}/>
                                 {/* 3. Post Component  */}
-                                <h2>What is this </h2>
-
+                            
                                 {posts.map((post) => {
                                         return (
                                         <PostTest
