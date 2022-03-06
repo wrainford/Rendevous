@@ -6,7 +6,7 @@ import * as userService from "../../api/user.service";
 
 
 const ProfilePage = () => {
-    const [user, setUser] = useState();
+    const [user, setUser] = useState("");
     let {id} = useParams();
 
     const getUser = async () => {
@@ -19,20 +19,13 @@ const ProfilePage = () => {
         getUser(id);
     }, []);
     
-    console.log(user);
     return (
         <div>
             <NavBar />
                 <h1>Welcome to your profile page.</h1>
-                
-                <h1>{user.userName}</h1>
-				{/* <p>{user.name}</p>
-				<p>{user.email}</p>
-                <p>{user.project}</p> */}
-			
-                    {/* <User 
+                    <User 
                     props={user}
-                    />  */}
+                    /> 
         </div>
         
     )
