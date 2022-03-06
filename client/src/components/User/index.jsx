@@ -1,15 +1,15 @@
-// Post Component
 import React from "react";
 
 
-function User(props) {
+const User = (props) => {
+	console.log(props);
 	return (
 		<>
-			<h1>{props.userName}</h1>
+			<h1>{props.props.userName}</h1>
 			<div>
-				<p>{props.name}</p>
-				<p>{props.email}</p>
-                <p>{props.project}</p>
+				<p>{props.props.name}</p>
+				<p>{props.props.email}</p>
+                <p>{props.props.project}</p>
 			</div>
 		</>
 	);

@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Posts from "./pages/PostsPage"
 import LoginPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
@@ -8,17 +8,18 @@ import ProfilePage from './pages/ProfilePage';
 import PrivacyPage from './pages/PrivacyPage';
 
 const App = () => {
+
   return (
     <div className="land-page">
       <Router>
             <Routes>
-            <Route path="/" element={<LoginPage />}></Route>
-            <Route path="/posts" element={< Posts />}></Route>
-            <Route path="/login" element={<LoginPage />}></Route>
-            <Route path="/users" element={<ProfilePage/>}></Route>
-            <Route path="/signup" element={<SignUpPage />}></Route>
-            <Route path="/privacy" element={<PrivacyPage/>}></Route>
-            <Route path="/logout" element={<LogOut/>}></Route>
+              <Route path="/" element={<LoginPage />}></Route>
+              <Route path="/posts" element={< Posts />}></Route>
+              <Route path="/login" element={<LoginPage />}></Route>
+              <Route path="/users/:id" element={<ProfilePage/>}></Route>
+              <Route path="/signup" element={<SignUpPage />}></Route>
+              <Route path="/privacy" element={<PrivacyPage/>}></Route>
+              <Route path="/logout" element={<LogOut/>}></Route>
           </Routes>
       </Router>
     </div>
