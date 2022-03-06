@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import Posts from "./pages/PostsPage"
 import LoginPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
@@ -17,8 +17,8 @@ const App = () => {
       <Router>
 
         <nav className="LogInNav">
-          <Link className="link1" to="/login">Log In</Link>
-          <Link  className="link1"to="signup">Sign Up</Link>
+          <NavLink className="link1" to="/login">Log In</NavLink>
+          <NavLink  className="link1"to="signup">Sign Up</NavLink>
         </nav>
             <Routes>
               <Route path="/" element={<LoginPage />}></Route>
