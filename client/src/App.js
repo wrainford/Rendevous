@@ -11,15 +11,9 @@ import PrivacyPage from './pages/PrivacyPage';
 
 
 const App = () => {
-
   return (
     <div className="land-page">
       <Router>
-
-        <nav className="LogInNav">
-          <NavLink className="link1" to="/login">Log In</NavLink>
-          <NavLink  className="link1"to="signup">Sign Up</NavLink>
-        </nav>
             <Routes>
               <Route path="/" element={<LoginPage />}></Route>
               <Route path="/posts" element={< Posts />}></Route>
@@ -28,6 +22,7 @@ const App = () => {
               <Route path="/signup" element={<SignUpPage />}></Route>
               <Route path="/privacy" element={<PrivacyPage/>}></Route>
               <Route path="/logout" element={<LogOut/>}></Route>
+              <Route path="*" element={<LoginPage />}></Route>
           </Routes>
       </Router>
     </div>
