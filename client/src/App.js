@@ -3,15 +3,23 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Posts from "./pages/PostsPage"
 import LoginPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
+
+import './index.css'
 import LogOut from './components/LogOut'
 import ProfilePage from './pages/ProfilePage';
 import PrivacyPage from './pages/PrivacyPage';
+
 
 const App = () => {
 
   return (
     <div className="land-page">
       <Router>
+
+        <nav className="LogInNav">
+          <Link className="link1" to="/login">Log In</Link>
+          <Link  className="link1"to="signup">Sign Up</Link>
+        </nav>
             <Routes>
               <Route path="/" element={<LoginPage />}></Route>
               <Route path="/posts" element={< Posts />}></Route>

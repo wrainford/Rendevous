@@ -5,7 +5,7 @@ import styled from "styled-components";
 import {MainContainer} from '../Styles/SignUp/MainContainer.styled'
 import {WelcomeText} from '../Styles/SignUp/MainContainer.styled'
 import {FormContainer} from'../Styles/SignUp/FormContainer.styled'
-import {ButtonContainer} from'../Styles/SignUp/Button.styled'
+
 
 // import * as authService from "../../api/auth.service"
 
@@ -25,11 +25,11 @@ return(
      <div className="sighUpPage">
           <MainContainer>
           {/* <InputContainer> */}
-          <WelcomeText>Welcome</WelcomeText>
+          <WelcomeText>Sign Up</WelcomeText>
           <FormContainer>
           <form>
               <label htmlFor="name">
-                   <h4>Name:</h4>
+                   
                    <input onChange={(e)=> setName(e.target.value)}
                        value={name}
                        type="text"
@@ -40,7 +40,7 @@ return(
                   
 
                    <label htmlFor="userName">
-                        <h4>Username:</h4>
+                       
                         <input onChange={(e)=> setUserName(e.target.value)}
                         value={userName}
                         type="text"
@@ -51,27 +51,26 @@ return(
 
 
                    <label htmlFor="email">
-                       <h4></h4> Email:
+                       
                     <input  onChange={(e)=>setEmail(e.currentTarget.value)}
                     value={email}
                     email="email"
                     type="text"
-                    placeholder="email"
+                    placeholder="Email"
                     />
                    </label>
 
                    <lable htmlFor="password">
-                        <h4>Password:</h4>
+                      
                         <input onChange={(e)=>setPassword(e.target.value)}
                         value= {password}
                         password="password"
                         type="text"
-                        placeholder="password"
+                        placeholder="Password"
                         />
                    </lable>
-                  < ButtonContainer>
-                   <button>Sing Up</button>
-                   </ButtonContainer>
+                  
+                   <button className="signUpnBtn">Sign Up</button> 
            </form> 
            
            </FormContainer>
