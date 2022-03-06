@@ -1,0 +1,16 @@
+.prof-container{
+    padding: 1% 3%;
+}
+
+.editprof-button {
+    text-decoration: none;
+    background-color: #979494;
+    color: white; 
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px; 
+    font-family: 'Jost', sans-serif;
+    margin-top: -45px;
+    font-weight: bold;
+    width: 10%;
+}

@@ -82,7 +82,7 @@ input[type=text]:focus {
     font-size: 16px;
     border-radius: 5px; 
     font-family: 'Jost', sans-serif;
-    margin-top: -45px;
+    margin-top: 5%;
     font-weight: bold;
-    float: left;
+    margin-left: -75%;
 }
