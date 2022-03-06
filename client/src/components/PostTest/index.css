@@ -1,0 +1,10 @@
+.container{
+    border: 3px green solid;
+}
+
+
+.post-buttons{
+    display:flex;
+    float:right;
+}
+

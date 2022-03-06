@@ -30,7 +30,7 @@ const Post = (props) => {
 		<>
         <div className="post-container">
             <h3>Post Component</h3>
-            <button onClick={props.deletePosts}>Delete</button>
+            {/* <button onClick={props.deletePosts}>Delete</button> */}
 
 
 			<h1>Title: {props.title}</h1>

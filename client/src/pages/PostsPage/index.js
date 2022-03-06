@@ -1,6 +1,8 @@
 import { useState, useEffect, useReducer } from "react";
-import Post from "../../components/Post";
+import PostToggle from "../../components/Post";
+import Post from "../../components/Post"
 import PostForm from "../../components/PostForm";
+import PostTest from "../../components/PostTest";
 import NavBar from "../../components/NavBar";
 import ProfilePage from "../ProfilePage";
 import PrivacyPage from "../PrivacyPage";
@@ -79,18 +81,22 @@ const Posts = () => {
                         {/* ROUTE AND DATA FOR POSTS and since our homepage route is "/" it will render out the below */}
                         <Route path="/" element={
                             <>
+                                
                                 {/* 2. PostForm Component  */}
                                 <PostForm refreshPosts={() => fetchPosts()}/>
                                 {/* 3. Post Component  */}
+                                <h2>What is this </h2>
+
                                 {posts.map((post) => {
                                         return (
-                                        <Post
+                                        <PostTest
                                             title={post.title}
                                             body={post.body}
                                             comment = {post.comment}
                                             image={post.image}
                                             deletePosts = {() => deletePosts(post._id)}
                                             postId={post._id} 
+                                            refreshPosts={() => fetchPosts()}
                                         />
                                         )
                                 })}
@@ -117,8 +123,7 @@ const Posts = () => {
                         }
                         ></Route>
 
-                        {/* // ROUTE FOR PRIVACY  */}
-                        <Route path="privacy" element={<PrivacyPage />}></Route>
+                       
 
                         {/* // ROUTE FOR LOGOUT
                         <Route path="logout" element={<LogOut />}></Route> */} 
