@@ -29,43 +29,44 @@ const PostForm = ({ refreshPosts }) => {
 
 	return (
 		<div>
-            <br />
 			{/* Used for returning the form data */}
             <div className="postform-container">
-            <h3>PostForm Component </h3>
-            <br />
+			<h2 className="create-post"> WHAT'S ON YOUR MIND </h2> 
 			<form encType="multipart/form-data">
 				<label>
-					Post Title:
 					<input
+						className="input-title"
 						onChange={(e) => setTitle(e.target.value)}
 						value={title}
 						type="text"
 						name="title"
-						placeholder="TITLE"
+						placeholder="Add title here"
 					/>
 				</label>
                 <br />
                 <br />
 				<label>
-					Type something
 					<textarea
+						className="input-body"
 						onChange={(e) => setBody(e.target.value)}
 						value={body}
 						type="text"
 						name="body"
-						placeholder="BODY"
+						placeholder="Type Something"
 					/>
 				</label>
                 <br />
                 <br />
 				<label>
-					Upload an image:
+					<div className="add-image">
+					<h4 className="add-image-text">Add image</h4>
+					&nbsp;&nbsp;&nbsp;
 					<input
 						onChange={(e) => setImage(e.target.files[0])}
 						filename="image"
 						type="file"
 					/>
+					</div>
 				</label>
 			</form>
             <br />

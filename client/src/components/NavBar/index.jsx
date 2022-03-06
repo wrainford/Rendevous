@@ -1,6 +1,7 @@
 import { useNavigate, NavLink, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as authService from "../../api/auth.service";
+import "./index.css"
 
 const NavBar = () => {
 
@@ -27,6 +28,9 @@ const NavBar = () => {
 
   return (
     <>
+
+    <div className='container'>
+      <h1 className='rendevous'>ren<span className='dev'>dev</span>ous</h1>
       <div>
          <NavLink to="/posts" className="link"
          style={({isActive})=>
@@ -45,6 +49,7 @@ const NavBar = () => {
            Log Out </NavLink>
 
 
+      </div>
       </div>
     </>
   )

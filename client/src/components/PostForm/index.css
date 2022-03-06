@@ -1,9 +1,63 @@
 .postform-container{
-    /* border: 2px solid black; */
-    padding: 3%;
+    /* border: 2px solid white; */
+    padding: 1% 3%;
 }
 
 
 .post-button{
    float:right;
 }
+
+.input-title{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 24px; 
+    padding-left: 22px; 
+    font-family: 'Inconsolata', monospace; 
+
+}
+
+.input-body{
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 10px; 
+    font-size: 24px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.add-image{
+    display: flex;
+}
+
+.add-image{
+    padding-left: 22px;
+}
+
+.post-button {
+    background-color: #979494;
+    color: white; 
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px; 
+    font-family: 'Jost', sans-serif;
+    margin-top: -45px;
+    font-weight: bold;
+}
+
+
+.post-button:hover {
+    background-color: #727070;
+}
+
+
+.create-post{
+    text-align: center;
+    margin-top: 3%;
+    padding-top: 4%; 
+    font-family: 'Jost', sans-serif;
+}
+

@@ -10,6 +10,7 @@ import * as postService from "../../api/post.service";
 import * as userService from "../../api/user.service";
 import * as authService from "../../api/auth.service";
 import { Routes, Route } from "react-router-dom";
+import "./index.css"
 
 const initialState = {
 	posts: [],
@@ -76,7 +77,7 @@ const Posts = () => {
                 
                 {/* 1. NAVBAR */}
                 <NavBar />
-                    <h1>This is our Posts Page</h1> 
+                   
                     <Routes>
                         {/* ROUTE AND DATA FOR POSTS and since our homepage route is "/" it will render out the below */}
                         <Route path="/" element={
