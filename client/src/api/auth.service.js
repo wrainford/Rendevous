@@ -40,6 +40,7 @@ const user = "/user";
 
     const logout = () => {
         localStorage.removeItem("user");
+        localStorage.removeItem("id");
     }
 
 
