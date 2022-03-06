@@ -6,9 +6,17 @@ const PostEdit = (props) => {
 	const [title, setTitle] = useState(props.title);
 	const [body, setBody] = useState(props.body);
 	const [image, setImage] = useState(props.image);
-
 	const handleSubmit = async () => {
-		
+        // This is not correct but pushing to save
+		const formData = new FormData();
+		formData.append("title", title);
+		formData.append("body", body);
+		formData.append("image", image);
+		let res = await postService.createPost(formData).then(() => {
+			setTitle("");
+			setBody("");
+			setImage("");
+			//refreshPosts();
 		});
 
 		console.log(res);
