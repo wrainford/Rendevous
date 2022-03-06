@@ -6,7 +6,7 @@ const LoginPage = () => {
         <div>
              <nav className="LogInNav">
             <NavLink className="link1" to="/login">Log In</NavLink>
-            <NavLink  className="link1"to="/signup">Sign Up</NavLink>
+            <NavLink  className="link1"to="/register">Sign Up</NavLink>
             </nav>
             <Login />
             </div>

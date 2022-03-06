@@ -2,12 +2,13 @@ import apiClient from "./axios.config";
 const auth = "/auth";
 const user = "/user";
 
-    const register = (email, password) => {
+    const register = (email, password, name, userName) => {
         return apiClient
-            .post(`${auth}/register`, {email, password})
+            .post(`${auth}/register`, {email, password, name, userName})
             .then((res) => {
                 console.log(res);
             });
+
     };
 
     const login = (email, password) => {

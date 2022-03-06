@@ -16,7 +16,7 @@ const Login = () => {
         await authService.login(email, password).then(() => {
             setEmail = "";
             setPassword = "";
-            navigate("/posts");
+            navigate("/posts"); 
         })
         .catch(() => {
             alert('Log In Failed. Please try again');

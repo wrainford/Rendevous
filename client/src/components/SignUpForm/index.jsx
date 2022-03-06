@@ -1,32 +1,50 @@
 import React from "react";
 import { useState } from "react";
 import "./index.css"
+import { useNavigate } from "react-router-dom";
+import * as authService from "../../api/auth.service"
 import styled from "styled-components";
 import {MainContainer} from '../Styles/SignUp/MainContainer.styled'
 import {WelcomeText} from '../Styles/SignUp/MainContainer.styled'
-import {FormContainer} from'../Styles/SignUp/FormContainer.styled'
+import {Container} from'../Styles/SignUp/Container.styled'
 
 
 // import * as authService from "../../api/auth.service"
 
-const SignUpForm = ()=>{
+const SignUpForm = (e)=>{
 
-     let [name, setName]= useState("");
-     let[ userName, setUserName]=useState("");
-     let[email, setEmail] = useState("");
-     let [password, setPassword]=useState("");
+     let [email, setEmail] = useState("");
+     let [password, setPassword] = useState("");
+     let [name, setName] = useState("");
+     let [userName, setUserName]= useState("");
+     const navigate = useNavigate();
 
-     // const handlerSubmit= async(e)=>{
-     //      e.preventDefault();
-     //      await authService. 
-     // }
-     
+     const handlerSubmit= async(e)=>{
+
+          // const formData = new FormData();
+          // formData.append("email", email);
+          // formData.append("password", password);
+          // formData.append("name", name);
+          // formData.append("userName", userName);
+           
+          e.preventDefault();
+          await authService.register(email, password, name, userName).then(()=>{ 
+           
+           navigate('/login')
+          })
+           .catch(()=>{
+                alert ("Register faild")
+
+           })
+         
+          }
+          
 return(
      <div className="sighUpPage">
           <MainContainer>
-          {/* <InputContainer> */}
+         
           <WelcomeText>Sign Up</WelcomeText>
-          <FormContainer>
+          
           <form>
               <label htmlFor="name">
                    
@@ -44,7 +62,7 @@ return(
                         <input onChange={(e)=> setUserName(e.target.value)}
                         value={userName}
                         type="text"
-                        userName='userName'
+                        name='userName'
                         placeholder="Enter your username"
                         />
                    </label>
@@ -52,7 +70,7 @@ return(
 
                    <label htmlFor="email">
                        
-                    <input  onChange={(e)=>setEmail(e.currentTarget.value)}
+                    <input onChange={(e)=>setEmail(e.target.value)}
                     value={email}
                     email="email"
                     type="text"
@@ -60,7 +78,7 @@ return(
                     />
                    </label>
 
-                   <lable htmlFor="password">
+                   <label htmlFor="password">
                       
                         <input onChange={(e)=>setPassword(e.target.value)}
                         value= {password}
@@ -68,12 +86,12 @@ return(
                         type="text"
                         placeholder="Password"
                         />
-                   </lable>
+                   </label>
                   
-                   <button className="signUpnBtn">Sign Up</button> 
+                   <button className="signUpnBtn" onClick={handlerSubmit}>Sign Up</button> 
            </form> 
            
-           </FormContainer>
+           
            </MainContainer>
        </div>
        
