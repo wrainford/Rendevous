@@ -9,6 +9,7 @@ import {WelcomeText} from '../Styles/SignUp/MainContainer.styled'
 import {Container} from'../Styles/SignUp/Container.styled'
 
 
+
 // import * as authService from "../../api/auth.service"
 
 const SignUpForm = (e)=>{
@@ -41,12 +42,16 @@ const SignUpForm = (e)=>{
           //working :)thanks D
           
 return(
+     <div className="sign-up-container">
+          <nav className=''>
+      <a href="/login"> <h1 className='rendevous'>ren<span className='dev'>dev</span>ous</h1> </a>
+       </nav>
      <div className="sighUpPage">
+          
           <MainContainer>
-         
           <WelcomeText>Sign Up</WelcomeText>
           
-          <form>
+          <form >
               <label htmlFor="name">
                    
                    <input onChange={(e)=> setName(e.target.value)}
@@ -80,12 +85,11 @@ return(
                    </label>
 
                    <label htmlFor="password">
-                      
                         <input onChange={(e)=>setPassword(e.target.value)}
                         value= {password}
                         password="password"
                         type="text"
-                        placeholder=""
+                        placeholder="Passsword"
                         />
                    </label>
                   
@@ -95,7 +99,7 @@ return(
            
            </MainContainer>
        </div>
-       
+       </div>
      )
 }
 

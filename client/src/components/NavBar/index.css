@@ -1,10 +1,11 @@
-.Navbar{
-     background-color:#1A2B44;
+.NavBar{
+     display: flex;
      width: 100%;
-     height: 60px;
+     height: 80px;
      font-family: Arial, Helvetica, sans-serif;
      display: flex;
-     box-shadow: black;
+     background:#1A2B44;
+     box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91);
 }
 
 .rendevous{
@@ -19,7 +20,7 @@
      display: flex;
 }
 
-/* .Navbar .leftSide{
+ /* .Navbar .leftSide{
      flex:50%;
      max-height: 70px;
      padding: 10px; 
@@ -100,4 +101,4 @@ button:hover{
    }
    .Navbar .leftSide #hidden{
         margin: 10px;
-   } */ 
+   }  */

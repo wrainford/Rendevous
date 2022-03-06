@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import * as authService from "../../api/auth.service";
 import "./index.css"
 
+
 const NavBar = () => {
 
   const [userId, setuserId] = useState("");
@@ -29,9 +30,11 @@ const NavBar = () => {
   return (
     <>
 
-    <div className='container'>
-      <h1 className='rendevous'>ren<span className='dev'>dev</span>ous</h1>
-      <div>
+    <div className='NavBar'>
+      <nav>
+      <a href="/posts"><h1 className='rendevous'>ren<span className='dev'>dev</span>ous</h1></a>
+      </nav>
+
          <NavLink to="/posts" className="link"
          style={({isActive})=>
         ({color: isActive ? "black" : "blue"})
@@ -48,8 +51,6 @@ const NavBar = () => {
          ({color: isActive ? "black" : "blue"})}>
            Log Out </NavLink>
 
-
-      </div>
       </div>
     </>
   )

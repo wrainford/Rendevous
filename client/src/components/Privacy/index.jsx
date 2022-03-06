@@ -1,10 +1,14 @@
 import React from 'react'
 import "./index.css"
+import { LogInPage } from '../Styles/LogIn/LogInPage.styled'
 const Privacy = () => {
   return (
-    <body>
+    
+    // <div className="main-container">
+
+   <div className=" main-privacy">
     <div className="privacyPolicy">
-     
+      <div className="text">
       <h1 className="policy">Rendevous Privacy Policy</h1>
       Effective March 4, 2022. 
       <br />
@@ -116,7 +120,8 @@ const Privacy = () => {
   </p>
 
     </div>
-</body>
+</div>
+</div>
   )
 }
 
