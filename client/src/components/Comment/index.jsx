@@ -10,8 +10,8 @@ const Comment = (props) => {
 		<>
 			<div className="comment-container">
 				<h4>comment: {props.comment} </h4>
-				<EditComment commentId={props.commentId}/>
-				<DelComment commentId={props.commentId} fetchComs={props.fetchComs}/>
+				<EditComment commentId={props.id} body={props.comment}/>
+				<DelComment commentId={props.id} fetchComs={props.fetchComs}/>
 				
 			</div>
 		</>

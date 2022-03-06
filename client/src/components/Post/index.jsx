@@ -43,7 +43,7 @@ const Post = (props) => {
                     return(
                         <Comment
                             comment={comment.content}
-                            commentId={comment._id}
+                            id={comment._id}
                             fetchComs={fetchComs}
                         />
                     );
