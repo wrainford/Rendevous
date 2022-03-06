@@ -1,0 +1,16 @@
+:root{
+    --darknavy: #081020;
+    --lightnavy: #1A2B44;
+    --gray: #BBBBBB;
+    --greensheen: #66AFA4;
+    --honeydew: #F1FAEE;
+  }
+
+
+body {
+    background-color: var(--darknavy);
+    color: white; 
+}
+
+
+

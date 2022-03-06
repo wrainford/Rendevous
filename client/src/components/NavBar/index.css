@@ -7,6 +7,18 @@
      box-shadow: black;
 }
 
+.rendevous{
+     font-family: 'Jost', sans-serif;
+     font-size: 48px;
+}
+.dev{
+     color: #66AFA4;
+}
+
+.container{
+     display: flex;
+}
+
 /* .Navbar .leftSide{
      flex:50%;
      max-height: 70px;
@@ -88,4 +100,4 @@ button:hover{
    }
    .Navbar .leftSide #hidden{
         margin: 10px;
-   } */ */
+   } */ 
