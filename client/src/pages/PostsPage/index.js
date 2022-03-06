@@ -90,7 +90,7 @@ const Posts = () => {
                                             comment = {post.comment}
                                             image={post.image}
                                             deletePosts = {() => deletePosts(post._id)}
-                                            id={post._id} 
+                                            postId={post._id} 
                                         />
                                         )
                                 })}
