@@ -53,6 +53,7 @@ const Login = () => {
                 <div >
                     <h4>Need an account? Sign Up</h4>
                 </div>
+                <a href="/signup">Sign Up</a>
             </FormComponent>
         </LogInPage>
     </div>

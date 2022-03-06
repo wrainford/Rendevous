@@ -24,9 +24,9 @@
      justify-content: center;
 }
 
-button:hover{
-          cursor:pointer;
-          background-color: #66AFA4; 
+.LogInBtn:hover{
+          /* cursor:pointer;
+          background-color: #66AFA4;  */
           box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91);
 }
 
@@ -53,3 +53,7 @@ nav.link1 {
    text-decoration: underline;
 }
    
+h4{
+     margin-top: 10%;
+     text-align: center;
+}
