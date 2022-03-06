@@ -57,9 +57,23 @@ const createPost = (req, res) => {
 }
 
 const updatePost = (req, res) => {
+    let postData; 
+    if(req.file !== undefined){
+        postData = { 
+            title: req.body.title,
+            body: req.body.body,
+            image: req.file.originalname,
+        }
+    } else {
+        postData = {
+            title: req.body.title,
+            body: req.body.body,
+        }
+    }
+
     db.Post.findByIdAndUpdate(
         req.params.id,
-        req.body,
+        postData,
         { new: true },
         (err, updatedPost) => {
             if(err)

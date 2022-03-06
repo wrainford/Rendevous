@@ -24,9 +24,9 @@ const CommentForm = (props) => {
 	return (
 		<>
 		<div className="parent">
-		<div className="child1">
-				<BsPersonCircle size={30} />
-		</div>
+			<div className="child1">
+					<BsPersonCircle size={30} />
+			</div>
 			
 			<div className="commentform-container">
 				<form encType="application/json" className="comment-form" >

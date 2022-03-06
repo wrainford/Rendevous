@@ -24,7 +24,7 @@ const upload = multer({
 
 router.get("/", posts.indexPost);
 router.post("/", upload.single("image"), posts.createPost);
-router.put("/:id", posts.updatePost);
+router.put("/:id", upload.single("image"), posts.updatePost);
 router.delete("/:id", posts.destroyPost);
 router.post("/:id/comments", posts.newComment);
 router.get("/:id/comments/:id/edit", posts.editComment);

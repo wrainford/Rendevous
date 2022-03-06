@@ -13,6 +13,7 @@ const PostForm = ({ refreshPosts }) => {
 		formData.append("title", title);
 		formData.append("body", body);
 		formData.append("image", image);
+		
 		let res = await postService.createPost(formData).then(() => {
 			setTitle("");
 			setBody("");
@@ -20,7 +21,6 @@ const PostForm = ({ refreshPosts }) => {
 			refreshPosts();
 		});
 
-		console.log(res);
 		// 201 = create
 		if (!res === 201) {
 			alert(`Yikes: ${res.status}`);
