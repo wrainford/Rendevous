@@ -1,12 +1,11 @@
-import { useParams, NavLink } from 'react-router-dom'
+import User from '../../components/User';
+import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import NavBar from '../../components/NavBar';
-import User from '../../components/User';
-import EditProfilePage from '../EditProfilePage';
 import * as userService from "../../api/user.service";
 
 
-const ProfilePage = () => {
+const EditProfilePage = () => {
     const [user, setUser] = useState("");
     let {id} = useParams();
 
@@ -23,8 +22,7 @@ const ProfilePage = () => {
     return (
         <div>
             <NavBar />
-            <NavLink to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit Profile</NavLink>
-                <h1>Welcome to your profile page.</h1>
+                <h1>Please edit your profile</h1>
                     <User 
                     props={user}
                     /> 
@@ -33,4 +31,4 @@ const ProfilePage = () => {
     )
 }
 
-export default ProfilePage
+export default EditProfilePage;
