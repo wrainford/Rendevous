@@ -5,7 +5,6 @@ const PrivacyPage = () => {
     return (
         <div>
             <NavBar />
-            <h3>This is the PrivacyPage</h3>
             <Privacy /> 
         </div>
         

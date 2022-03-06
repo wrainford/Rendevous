@@ -1,0 +1,88 @@
+.profileform-Container{
+    /* border: 2px solid white; */
+    padding: 1% 3%;
+    background-color: #1A2B44;
+    margin: 3%
+}
+.editprof-form {
+    /* border: 2px solid white; */
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text]:focus {
+    background-color: #66AFA4;
+    outline: none;
+}
+
+.editprof-title{
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 35px; 
+    padding-left: 22px; 
+    font-family: 'Inconsolata', monospace;
+}
+
+.editprof-username {
+    background-color: #BBBBBB;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 24px; 
+    padding-left: 22px; 
+    font-family: 'Inconsolata', monospace;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 4px;
+}
+
+.editprof-name {
+    background-color: #BBBBBB;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 24px; 
+    padding-left: 22px; 
+    font-family: 'Inconsolata', monospace; 
+    margin-bottom: 3%;
+    border-radius: 4px;
+}
+
+.editprof-email {
+    background-color: #BBBBBB;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 24px; 
+    padding-left: 22px; 
+    font-family: 'Inconsolata', monospace; 
+    border-radius: 4px;
+}
+
+.editprof-button {
+    background-color: #979494;
+    color: white; 
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px; 
+    font-family: 'Jost', sans-serif;
+    margin-top: -45px;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 75%;
+    width: 25%;
+}
+
+.editprof-delete {
+    background-color: #c04c4c;
+    color: white; 
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px; 
+    font-family: 'Jost', sans-serif;
+    margin-top: 5%;
+    font-weight: bold;
+    margin-left: -75%;
+}

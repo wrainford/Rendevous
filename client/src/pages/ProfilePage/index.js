@@ -4,6 +4,7 @@ import NavBar from '../../components/NavBar';
 import User from '../../components/User';
 import EditProfilePage from '../EditProfilePage';
 import * as userService from "../../api/user.service";
+import './index.css';
 
 
 const ProfilePage = () => {
@@ -23,11 +24,12 @@ const ProfilePage = () => {
     return (
         <div>
             <NavBar />
-            <NavLink to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit Profile</NavLink>
-                <h1>Welcome to your profile page.</h1>
-                    <User 
-                    props={user}
-                    /> 
+                 <div className="prof-container" >
+                        <h1>Welcome to your profile page.</h1> 
+                        <User props={user}/> 
+                        <NavLink className="editprof-button" to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit Profile</NavLink>
+                </div>
+            
         </div>
         
     )

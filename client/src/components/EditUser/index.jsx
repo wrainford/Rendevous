@@ -15,9 +15,12 @@ const EditUser = (props) => {
 
     return(
         <>
-            <form>
-                <label>User name:
-                    <input
+        <div className="profileform-Container">
+        <h1 className="editprof-title">Edit Your Profile</h1>
+            <form className="editprof-form">
+                <label>Username:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-username"
                         onChange={(e) => setUserName(e.target.value)}
                         type="text"
                         value={userName}
@@ -25,7 +28,8 @@ const EditUser = (props) => {
                 </label>
                 <br />
                 <label>Name:
-                    <input
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-name"
                         onChange={(e) => setName(e.target.value)}
                         type="text"
                         value={name}
@@ -33,15 +37,19 @@ const EditUser = (props) => {
                 </label>
                 <br />
                 <label>Email:
-                    <input
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-email"
                         onChange={(e) => setEmail(e.target.value)}
                         type="text"
                         value={email}
                     />
                 </label>
             </form>
-            <button onClick={HandleSubmit}>Submit</button>
+            <button onClick={HandleSubmit} className="editprof-button">Edit Your Profile Info</button>
+            <button onClick={HandleSubmit} className="editprof-delete">Delete Profile</button>
+            </div>
         </>
+    
     )
 };
 

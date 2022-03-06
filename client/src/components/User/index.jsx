@@ -1,15 +1,20 @@
 import React from "react";
+import './index.css';
 
 
 const User = (props) => {
 	console.log(props);
 	return (
 		<>
-			<h1>{props.props.userName}</h1>
-			<div>
-				<p>{props.props.name}</p>
-				<p>{props.props.email}</p>
-                <p>{props.props.project}</p>
+		
+			<div className="prof-container">
+			<img src = {`/uploads/postImages/${props.props.avatar}`} alt="..." style= {{width: "80%"}}/>
+			<h1 className="prof-username">{props.props.userName}</h1>
+				<h2 className="prof-name">{props.props.name}</h2>
+
+
+				{/* <h2>{props.props.languages}</h2>
+                <p>{props.props.project}</p> */}
 			</div>
 		</>
 	);

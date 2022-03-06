@@ -22,7 +22,6 @@ const EditProfilePage = () => {
     return (
         <div>
             <NavBar />
-                <h1>Please edit your profile</h1>
                 <EditUser user={user}/>
         </div>
         
