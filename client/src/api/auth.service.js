@@ -34,6 +34,7 @@ const user = "/user";
 
     const getProfile = () => {
         let id = localStorage.getItem("id");
+        // return apiClient.get(`${id}`);
         return JSON.parse(id);
     }
 

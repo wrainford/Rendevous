@@ -6,15 +6,17 @@ const NavBar = () => {
   const [userId, setuserId] = useState("");
 
   const fetchId = async () => {
-    //let id = JSON.parse(localStorage.getItem(id));
-    await authService.getProfile().then((res) => {
-        console.log(res);
-    })
+    let id = JSON.parse(localStorage.getItem("id"));
+    setuserId(id);
+    // await authService.getProfile().then((res) => {
+    //     console.log(res);
+    // })
   }
 
   useEffect(() => {
     fetchId();
   }, []);
+
 
   return (
     <>
@@ -24,7 +26,7 @@ const NavBar = () => {
         ({color: isActive ? "black" : "blue"})
       }>Home Page</NavLink>
 
-         <NavLink to={`/users/:id`} className="link" style={({isActive})=>
+         <NavLink to={`/users/${userId}`} className="link" style={({isActive})=>
          ({color: isActive ? "black" : "blue"})}
          >My Profile</NavLink>
 

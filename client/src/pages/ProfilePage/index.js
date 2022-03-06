@@ -11,28 +11,31 @@ const ProfilePage = () => {
 
     const getUser = async () => {
         await userService.showUser(id).then((res) => {
-           
             setUser(res.data.data);
         })
     }
     
-
-    useEffect (() => {
-        getUser();
+    useEffect(() => {
+        getUser(id);
     }, []);
     
-   
+    console.log(user);
     return (
         <div>
             <NavBar />
                 <h1>Welcome to your profile page.</h1>
-                    <User 
+                
+                <h1>{user.userName}</h1>
+				{/* <p>{user.name}</p>
+				<p>{user.email}</p>
+                <p>{user.project}</p> */}
+			
+                    {/* <User 
                     props={user}
-                    /> 
+                    />  */}
         </div>
         
     )
 }
-
 
 export default ProfilePage
