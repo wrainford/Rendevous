@@ -1,12 +1,9 @@
 import { useState, useEffect, useReducer } from "react";
 import Post from "../../components/Post";
-import User from "../../components/User";
 import PostForm from "../../components/PostForm";
 import NavBar from "../../components/NavBar";
 import ProfilePage from "../ProfilePage";
 import PrivacyPage from "../PrivacyPage";
-import LoginPage from "../LogInPage";
-import LogOut from "../../components/LogOut";
 import * as postService from "../../api/post.service";
 import * as userService from "../../api/user.service";
 import * as authService from "../../api/auth.service";
@@ -30,7 +27,7 @@ const reducer = (prevState, action) => {
 	}
 }
 
-const Home = () => {
+const Posts = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const {posts, isLoggedIn} = state;
 	const [users, setUsers] = useState([]);
@@ -70,13 +67,14 @@ const Home = () => {
 	}, []);
 
 
-    if(isLoggedIn) {
+    // if(isLoggedIn) {
 
     return (	
             <div>
-                <h1>This is our HomePage</h1> 
+                
                 {/* 1. NAVBAR */}
                 <NavBar />
+                    <h1>This is our Posts Page</h1> 
                     <Routes>
                         {/* ROUTE AND DATA FOR POSTS and since our homepage route is "/" it will render out the below */}
                         <Route path="/" element={
@@ -128,15 +126,15 @@ const Home = () => {
                     </Routes>
         
             </div> 
-        )} 
+        )};
         
-            else {
-                return (
-                    <div>
-                        <LoginPage />
-                    </div>
-                )
-            };	
-};
+            // else {
+            //     return (
+            //         <div>
+            //             <LoginPage />
+            //         </div>
+            //     )
+            // };	
+// };
 	
-export default Home;
+export default Posts;

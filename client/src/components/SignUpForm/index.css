@@ -1,0 +1,30 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+.sighUpPage{
+     font-family: 'Times New Roman', Times, serif;
+     background-color:#0E192D;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ 
+}
+.signUpnBtn{margin: 4rem 0 0rem 0;
+     width: 100%;
+     padding: 25px;
+     display: flex;
+     border-radius:15px;
+     border: none;
+     align-items: center;
+     justify-content: center;
+     font-size: medium;
+}
+button:hover{
+          cursor:pointer;
+          background: #1A2B44;
+          box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91);
+
+}
