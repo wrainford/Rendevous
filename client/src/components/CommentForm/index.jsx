@@ -28,8 +28,9 @@ const CommentForm = (props) => {
 					<BsPersonCircle size={30} />
 			</div>
 			
-			<div className="commentform-container">
+			
 				<form encType="application/json" className="comment-form" >
+				<div className="commentform-container">
 					<input
 						className="comment-text"
 						onChange={(e) => setContent(e.target.value)}
@@ -41,8 +42,9 @@ const CommentForm = (props) => {
 					<button className="comment-post-button" onClick={handleSubmit}>
 					<FiSend size={30} color="#66AFA4"/>
 					</button>
+					</div>
 				</form>
-			</div>
+			
 		</div>
 		</>
 	);

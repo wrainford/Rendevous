@@ -70,24 +70,17 @@ const Posts = () => {
         
 	}, []);
 
-
-    // if(isLoggedIn) {
-
     return (	
             <div>
                 
                 {/* 1. NAVBAR */}
-                <NavBar />
-                   
-                    <Routes>
-                        {/* ROUTE AND DATA FOR POSTS and since our homepage route is "/" it will render out the below */}
-                        <Route path="/" element={
+                   <NavBar/>
                             <>
                                 
                                 {/* 2. PostForm Component  */}
                                 <PostForm refreshPosts={() => fetchPosts()}/>
-                                {/* 3. Post Component  */}
-                            
+                              
+                               {/* 3. Post Component  */}
                                 {posts.map((post) => {
                                         return (
                                         <PostTest
@@ -101,47 +94,13 @@ const Posts = () => {
                                             refreshPosts={() => fetchPosts()}
                                         />
                                         )
-                                })}
+                                })} 
                             </>
-                        }
-                        ></Route>
 
-                        {/* ROUTE AND DATA FOR USERS once on /users */}
-                        <Route path="users" element={
-                            <>
-                                {/* User Component */}
-                                    {users.map((user) => {
-                                            return (
-                                            <ProfilePage
-                                                userName={user.userName}
-                                                name={user.name}
-                                                email={user.email}
-                                                project={user.project.title}
-                                                key={user._id} 
-                                            />
-                                            )
-                                    })}
-                            </>
-                        }
-                        ></Route>
-
-                       
-
-                        {/* // ROUTE FOR LOGOUT
-                        <Route path="logout" element={<LogOut />}></Route> */} 
-
-                    </Routes>
-        
             </div> 
         )};
         
-            // else {
-            //     return (
-            //         <div>
-            //             <LoginPage />
-            //         </div>
-            //     )
-            // };	
+      
 // };
 	
 export default Posts;
