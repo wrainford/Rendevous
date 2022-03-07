@@ -58,7 +58,7 @@ project:[projectSchema],
 
 post: [{
       type: Schema.Types.ObjectId, ref:"Post"
-     }],   
+    }],   
 });
 
 module.exports = mongoose.model("User", userSchema);
