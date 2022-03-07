@@ -3,12 +3,7 @@ import './index.css';
 import PostTest from '../../components/PostTest';
 
 const User = (props) => {
-	const [posts, setPosts] = useState([]);
-	
-	useEffect(() =>{
-		setPosts(props.user.post);
-	}, []);
-	
+
 	return (
 		<>
 			<div className="prof-container">
@@ -16,7 +11,7 @@ const User = (props) => {
 			<h1 className="prof-username">{props.user.userName}</h1>
 				<h2 className="prof-name">{props.user.name}</h2>
 			</div>
-					{/* {posts.map((post) => {
+					{props.userPost?.map((post) => {
 						return(
 							<PostTest 
 							title={post.title}
@@ -26,7 +21,7 @@ const User = (props) => {
 							postId={post._id} 
 							/>
 						)
-			})} */}
+			})}
 		</>
 	);
 }
