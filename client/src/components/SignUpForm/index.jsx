@@ -43,7 +43,7 @@ const SignUpForm = (e)=>{
           
 return(
      <div className="sign-up-container">
-          <nav className=''>
+          <nav className='sign-up-nav'>
       <a href="/login"> <h1 className='rendevous'>ren<span className='dev'>dev</span>ous</h1> </a>
        </nav>
      <div className="sighUpPage">

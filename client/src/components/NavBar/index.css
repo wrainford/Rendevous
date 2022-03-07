@@ -4,13 +4,14 @@
      height: 80px;
      font-family: Arial, Helvetica, sans-serif;
      display: flex;
-     background:#1A2B44;
+     background: #1A2B44;
      box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91);
 }
 
 .rendevous{
      font-family: 'Jost', sans-serif;
      font-size: 48px;
+     margin-right: 5px;
 }
 .dev{
      color: #66AFA4;
@@ -18,17 +19,107 @@
 
 .container{
      display: flex;
-}
+     
+} 
 
- /* .Navbar .leftSide{
-     flex:50%;
+
+ .NavBar .leftSide{
+     flex:30%;
      max-height: 70px;
      padding: 10px; 
      display: flex;
+     color: aliceblue;
      justify-content:left;
      align-items: center;
+     padding-right: 15px;
 }
-.Navbar .leftSide .link {
+
+.NavBar .rightSide{
+     flex: 70%;
+     display: flex;
+     align-items: center;
+     justify-content:center;
+     padding: 5px;
+     display: flex;
+     margin: 5px;
+     
+
+}
+.NavBar .rightSide .link{
+     margin-left: 25%;
+}
+.NavBar .rightSide .links{
+     font-size: 20px;
+     font-family: 'Jost', sans-serif; 
+     max-height: 80px;
+     margin: 15px ;
+     padding: 10px;
+     margin-left: 25px;
+     font-weight: 800;
+
+}
+.NavBar .rightSide .btn{
+     display: none;
+     margin-left: 80%;
+     
+ }
+ .NavBar .rightSide #hidden{
+    position: absolute;
+    height:230px;
+    right: 0%;
+    top: 80px;
+    height:260px;
+    width: 30%;
+    max-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1A2B44;
+    margin-right: 12%;
+    opacity: 0.9;
+ }
+ .NavBar .rightSide #hidden .links{
+      margin: 5px;
+
+ }
+@media only screen and (max-width: 1280px){
+     .NavBar .rightSide .link {
+          font-size: 10px;
+     }
+   }
+@media only screen and (max-width: 1024px){
+     .NavBar .rightSide .link {
+          font-size: 10px;
+     }
+   }
+@media only screen and (max-width: 950px){
+     .NavBar .rightSide .link {
+          font-size: 10px;
+     }
+   }
+   
+   @media only screen and (max-width: 850px){
+     .NavBar .rightSide .link {
+          display: none;
+     }
+   }
+
+   @media only screen and (max-width: 850px){
+     .NavBar .rightSide .btn{
+          display:flex;
+     }
+   }
+   @media only screen and (max-width: 650px){
+     .NavBar .rightSide .btn{
+          display:flex;
+     }
+   }
+   @media only screen and (max-width: 650px){
+     .NavBar .rightSide .link {
+          display: none;
+     }
+   }
+/* .Navbar .link {
      max-height: 80px;
      text-decoration: none;
      padding: 10px;
@@ -50,16 +141,9 @@
 }
 .Navbar .leftSide  #hidden{
      display: flex;
-}
-.rightSide input{
-     width: 210px;
-     height: 30px;
-     border: none;
-     border-radius: 15px;
-     font-size: 20px;
-     padding-left: 15px;
-}
-.rightSide button{
+} */
+
+/* .rightSide button{
      height: 33px;
      width:70px;
      font-size: 16px;

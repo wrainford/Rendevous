@@ -1,14 +1,15 @@
+
+.main-post-form{
+background-color: #0E192D;
+}
 .postform-container{
-    /* border: 2px solid white; */
     padding: 1% 3%;
-   
-    /* margin-left: 8%;
-    margin-right: 8%; */
-    /* margin: 3% 10%; */
     background-color: #1A2B44;
     padding: 3%;
     margin: 3% 10%;
     margin-bottom: 5%; 
+    margin-left: 8%;
+    margin-right: 8%;
     margin-top: 10%;
     background-color: #1A2B44;
 }
@@ -21,7 +22,7 @@
     font-size: 24px; 
     padding-left: 22px; 
     font-family: 'Inconsolata', monospace; 
-    width: 100%;
+    width: 80%;
 }
 
 .input-body{
@@ -34,9 +35,7 @@
     font-family: 'Inconsolata', monospace;
 }
 
-/* .add-image{
-    display: flex;
-} */
+
 
 .add-image-text{
     padding-left: 12px;
@@ -46,11 +45,12 @@
 .post-button {
     background-color: #979494;
     color: white; 
-    padding: 8px 12px;
+    padding: 10px 12px;
     font-size: 16px;
     border-radius: 5px; 
     font-family: 'Jost', sans-serif;
-    margin-top: -45px;
+    margin-left: -77%;
+    margin-top: -50px;
     font-weight: bold;
     float:right;
     box-shadow: none; 

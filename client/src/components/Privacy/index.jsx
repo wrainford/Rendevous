@@ -6,8 +6,10 @@ const Privacy = () => {
     
     // <div className="main-container">
 
-   <div className=" main-privacy">
+   <div className="main-privacy">
+
     <div className="privacyPolicy">
+
       <div className="text">
       <h1 className="policy">Rendevous Privacy Policy</h1>
       Effective March 4, 2022. 
@@ -104,12 +106,10 @@ const Privacy = () => {
 
      By submitting Your Content to the Services, you represent and warrant that you have all rights, power, and authority necessary to grant the rights to Your Content contained within these Terms. Because you alone are responsible for Your Content, you may expose yourself to liability if you post or share Content without all necessary rights.
    </p>
-  
-  <p>
+   <p>
     <h3>Contact Rendevous</h3>
+
     If you want to make a correction to your information, or you have any questions about our privacy policies, please get in touch with:
-    <br/>
-    <p>
         Rendevous Inc
         Attn: Rendevous - Privacy
         12 Snail St., # 0007,
@@ -117,9 +117,7 @@ const Privacy = () => {
         USA
         rendevous@gmail.com
       </p>
-  </p>
-
-    </div>
+ </div>
 </div>
 </div>
   )

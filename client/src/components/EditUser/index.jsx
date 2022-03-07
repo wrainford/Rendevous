@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import * as userService from "../../api/user.service";
 import * as authService from "../../api/auth.service";
 import "./index.css";
@@ -10,11 +10,12 @@ const EditUser = (props) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
+    let {id} = useParams();
 
     const HandleSubmit = async () => {
         let updatedUser = {userName, name, email}
-        let res = await userService.updateUser(props.user._id, updatedUser);
-        console.log(res);
+         await userService.updateUser(props.user._id, updatedUser);
+        navigate(`/users/${id}`);
     }
 
     const deleteProfile = async () => {
@@ -33,6 +34,7 @@ const EditUser = (props) => {
 
     return(
         <>
+        <div className="main-user-edit">
         <div className="profileform-Container">
         <h1 className="editprof-title">Edit Your Profile</h1>
             <form className="editprof-form">
@@ -63,8 +65,11 @@ const EditUser = (props) => {
                     />
                 </label>
             </form>
-            <button onClick={HandleSubmit} className="editprof-button">Edit Your Profile Info</button>
+
+            <button onClick={HandleSubmit} className="editprof-button">Edit</button>
             <button onClick={deleteProfile} className="editprof-delete">Delete Profile</button>
+
+            </div>
             </div>
         </>
     
