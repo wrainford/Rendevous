@@ -8,7 +8,7 @@ const commentSchema = new Schema({
      required:true,
 },
     user: {
-     type: mongoose.Schema.Types.ObjectId, ref:"User"
+     type: Schema.Types.ObjectId, ref:"User"
     },
 });
 
@@ -26,9 +26,9 @@ const postSchema = new Schema({
      type: [String],
 },
     //this one for the post "who made the post"
-    // user: {
-    //  type: mongoose.Schema.Types.ObjectId, ref:"User"
-    // },
+    user: {
+     type: Schema.Types.ObjectId, ref:"User"
+},
 
     comment: [commentSchema]
 });
