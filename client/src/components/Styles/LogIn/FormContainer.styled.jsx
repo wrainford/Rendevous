@@ -14,6 +14,7 @@ input{
      border-radius:20px
      background: white;
      background:white;
+     font-family:font-family: 'Inconsolata', monospace;
      
 }`
 
