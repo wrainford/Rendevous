@@ -52,4 +52,5 @@ import styled from "styled-components"
 `;
 
 export const WelcomeText = styled.h1`
-margin: 6rem 0rem 0;`;
+margin: 6rem 0rem 0;
+font-family: 'Inconsolata', monospace; `;

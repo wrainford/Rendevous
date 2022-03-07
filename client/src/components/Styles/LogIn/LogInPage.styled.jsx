@@ -8,14 +8,13 @@ height: 30vh;
 width: 30vw;
 background: #1A2B44;
 box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91);
-backdrop-filter: blur(8.5px);
 border-radius: 10px;
 color: white;
 text-transform: uppercase;
 letter-spacing: 0.4rem;
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 250px) {
   width: 80vw;
-  height: 90vh;
+  height: 10vh;
   hr {
     margin-bottom: 0.3rem;
   }
@@ -24,7 +23,7 @@ letter-spacing: 0.4rem;
 
   }
 }
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 300px) {
   width: 60vw;
   height: 50vh;
   h4 {
@@ -32,17 +31,21 @@ letter-spacing: 0.4rem;
   }
 }
 @media only screen and (min-width: 411px) {
-  width: 80vw;
-  height: 50vh;
+  width: 60vw;
+  height: 80vh;
 }
 
-@media only screen and (min-width: 768px) {
-  width: 50vw;
-  height: 60vh;
-}
+ @media only screen and (min-width: 860px) {
+  width: 80vw;
+   height: 70vh;
+ }
   @media only screen and (min-width: 1024px) {
-     width: 30vw;
-     height: 90vh;
+     width: 40vw;
+      height: 90vh;
+}
+@media only screen and (min-width: 1200px) {
+  width: 40vw;
+   height: 90vh;
 }
 @media only screen and (min-width: 1280px) {
   width: 30vw;
@@ -52,4 +55,6 @@ letter-spacing: 0.4rem;
 `;
 
 export const WelcomeText = styled.h1`
-margin: 6rem 0rem 0;`;
+margin: 6rem 0rem 0;
+font-family: 'Inconsolata', monospace;`;
+

@@ -4,7 +4,7 @@
      box-sizing: border-box;
 }
 .LogInPage{
-     font-family: 'Times New Roman', Times, serif;
+     font-family: 'Jost', sans-serif;
      background-color:#0E192D;
      display: flex;
      justify-content: center;
@@ -12,7 +12,8 @@
      height: 100vh;
  
 }
-.LogInBtn{margin: 4rem 0 0rem 0;
+.LogInBtn{
+     margin: 4rem 0 0rem 0;
      width: 100%;
      padding: 25px;
      display: flex;
@@ -20,34 +21,54 @@
      border: none;
      align-items: center;
      justify-content: center;
+     font-size: medium;
 }
-button:hover{
+.LogInBtn:hover{
           cursor:pointer;
           background: #1A2B44;
-          box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91);
+          box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91); 
 
 }
+.main-nav-dic{
+     background-color: aliceblue;
+}
 .LogInNav{
-     display: flex;
+       display: flex;
         width: 100%;
         height: 80px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Jost', sans-serif;
         display: flex;
         background: #1A2B44;
         box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91);
    }
-   nav .link1{
-margin-left: 15%;
+nav .link1{
+font-family: 'Inconsolata', monospace;
+margin-left: 50%;
    color: aliceblue;
    margin: 15px;
-   font-size: medium;
+   font-size: 25px;
    font-weight: 600;
    text-decoration: none;
+   margin-left: 2%;
+   
    }
    
    nav .link1:hover{
    text-decoration: underline;
    }
-   nav{
-
+   .signUpText{
+        margin: 5%;
+        padding: 10px;
+        align-content: center;
+        justify-content: center;
+        font-size: medium;
+        font-family: 'Jost', sans-serif; 
    }
+a{
+     color: white;
+     text-align: center;
+     align-items: center;
+     font-size: medium;
+     font-family: 'Jost', sans-serif; 
+}
+

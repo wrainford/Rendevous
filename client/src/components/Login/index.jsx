@@ -48,10 +48,13 @@ const Login = () => {
                 />
             </label>
            
-            <button  className="LogInBtn" onClick={handleSubmit}>Sign In</button> 
+            <button  className="LogInBtn" onClick={handleSubmit}>Sign In</button>      
         </form>
         </FormComponent>
+        <h4 className='signUpText'>Want to Sign Up ? </h4>
+        <a  href="/register">Sign Up</a>
         </LogInPage>
+        
     </div>
   )
 }
