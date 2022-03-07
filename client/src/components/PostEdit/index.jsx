@@ -3,23 +3,23 @@ import * as postService from "../../api/post.service";
 import "./index.css"
 
 const PostEdit = (props) => {
+	console.log(props);
+	//const refreshPosts = () => props.refreshPosts
 	const [title, setTitle] = useState(props.title);
 	const [body, setBody] = useState(props.body);
 	const [image, setImage] = useState(props.image);
 	const handleSubmit = async () => {
-        // This is not correct but pushing to save
-		const formData = new FormData();
-		formData.append("title", title);
-		formData.append("body", body);
-		formData.append("image", image);
-		let res = await postService.createPost(formData).then(() => {
+		const postData = new FormData();
+		postData.append("title", title);
+		postData.append("body", body);
+		postData.append("image", image);
+		let res = await postService.updatePost(props.postId,postData).then(() => {
 			setTitle("");
 			setBody("");
 			setImage("");
-			//refreshPosts();
 		});
 
-		console.log(res);
+		console.log(image);
 		// 201 = create
 		if (!res === 201) {
 			alert(`Yikes: ${res.status}`);

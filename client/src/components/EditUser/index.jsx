@@ -1,17 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import * as userService from "../../api/user.service";
+import * as authService from "../../api/auth.service";
 import "./index.css";
 
 const EditUser = (props) => {
-    const [userName, setUserName] = useState(props.user.userName);
-    const [name, setName] = useState(props.user.name);
-    const [email, setEmail] = useState(props.user.email);
+   
+    const [userName, setUserName] = useState("");
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const navigate = useNavigate();
 
     const HandleSubmit = async () => {
         let updatedUser = {userName, name, email}
         let res = await userService.updateUser(props.user._id, updatedUser);
         console.log(res);
     }
+
+    const deleteProfile = async () => {
+        let res = await userService.destroyUser(props.user._id).then(() => {
+            authService.logout();
+            navigate('/');
+        });
+        console.log(res);
+    }
+
+    useEffect(() => {
+        setUserName(props.user.userName);
+        setName(props.user.name);
+        setEmail(props.user.email);
+    }, [props]);
 
     return(
         <>
@@ -46,8 +64,10 @@ const EditUser = (props) => {
                     />
                 </label>
             </form>
+
             <button onClick={HandleSubmit} className="editprof-button">Edit</button>
-            <button onClick={HandleSubmit} className="editprof-delete">Delete Profile</button>
+            <button onClick={deleteProfile} className="editprof-delete">Delete Profile</button>
+
             </div>
             </div>
         </>

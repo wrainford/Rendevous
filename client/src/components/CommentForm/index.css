@@ -1,5 +1,13 @@
 .parent{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: -40%;
  }
 
 .child1{
@@ -7,26 +15,32 @@
     vertical-align: middle;
     padding-right: 1%;
     text-align: center;
+    /* width: 5%; */
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 
 .commentform-container{
-    width: 90%;
+    /* width: 80%; */
     display: inline-block;
     vertical-align: middle;
+    grid-area: 1 / 2 / 2 / 13;
 }
 
 .comment-form{
     vertical-align: middle;
+    width: 100%
 }
 
 .comment-text{
     width: 90%;
     height: 45px;
+    border-radius: 25px;
     /* padding: 12px 20px; */
     /* box-sizing: border-box; */
     /* border-radius: 5px 0 0 5px;  */
     font-size: 20px;
+    padding-left: 3%;
     font-family: 'Inconsolata', monospace;
 }
 
@@ -34,6 +48,7 @@
     /* left: -25px; */
     height: 45px;
     border: none;
+    vertical-align: center;
     /* border-radius: 0 5px 5px 0;  */
     width: 10%;
     box-shadow: none;

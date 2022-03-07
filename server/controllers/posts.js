@@ -1,7 +1,9 @@
 const db = require("../models")
 
 const indexPost = (req, res) => {
-    db.Post.find().exec((err, allPosts) => {
+    db.Post.find()
+    .populate("user")
+    .exec((err, allPosts) => {
         if(err)
             return res.status(400).json({
                 message: "Failed to get posts",
@@ -15,7 +17,9 @@ const indexPost = (req, res) => {
 };
 
 const showPost = (req, res) => {
-    db.Post.findById(req.params.id, (err, foundPost) => {
+    db.Post.findById(req.params.id)
+    .populate("user")
+    .exec((err, foundPost) => {
         if(err)
             return res.status(400).json({
                 message: "Failed to find a post",
@@ -28,18 +32,20 @@ const showPost = (req, res) => {
     });
 };
 
-const createPost = (req, res) => {
+const createPost = async (req, res) => {
     let postData;
     if(req.file !== undefined) {
         postData = {
             title: req.body.title,
             body: req.body.body,
             image: req.file.originalname,
+            user: req.userId
         }
     } else {
         postData = {
             title: req.body.title,
-            body: req.body.body, 
+            body: req.body.body,    
+            user: req.userId
         }
     }
 
@@ -49,17 +55,40 @@ const createPost = (req, res) => {
                 message: "Failed to create post",
                 error: err,
             });
+            db.User.findById(savedPost.user)
+            .exec((err, foundUser) => {
+                if(err) return res.status(400).json({
+                    message: "Failed to create a post",
+                    error: err,
+                })
+                foundUser.post.push(savedPost)
+                foundUser.save()
+            })
             return res.status(200).json({
-                message: "Success",
+                message: "Successfully created post",
                 data: savedPost,
             });
     });
 }
 
 const updatePost = (req, res) => {
+    let postData; 
+    if(req.file !== undefined){
+        postData = { 
+            title: req.body.title,
+            body: req.body.body,
+            image: req.file.originalname,
+        }
+    } else {
+        postData = {
+            title: req.body.title,
+            body: req.body.body,
+        }
+    }
+
     db.Post.findByIdAndUpdate(
         req.params.id,
-        req.body,
+        postData,
         { new: true },
         (err, updatedPost) => {
             if(err)
@@ -92,7 +121,12 @@ const destroyPost = (req, res) => {
 
 const newComment = (req, res) => {
     db.Post.findById(req.params.id, (err, com) => {
-        com.comment.push(req.body);
+        let commentData = {
+            content: req.body.content,
+            user: req.userId
+        }
+        console.log(commentData);
+        com.comment.push(commentData);
         com.save(function() {
             if(err)
                 return res.status(400).json({

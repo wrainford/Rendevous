@@ -24,7 +24,6 @@ const createComment = (id, data) => {
     return apiClient.post(`/posts/${id}/comments`, data);
 }
 
-//Unsure how to pass in 2 req.params.id - need to figure out later
 const editComment = (postId, commentId, data) => {
     return apiClient.get(`/posts/${postId}/comments/${commentId}/edit`, data);
 }

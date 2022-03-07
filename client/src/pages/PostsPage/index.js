@@ -25,7 +25,8 @@ const reducer = (prevState, action) => {
 			return {...prevState, isLoggedIn: action.payload}
         case "deletePosts":
             return { ...prevState, posts: prevState.posts.filter( p => p._id !== action.payload)}
-		default:
+		
+        default:
 			return prevState;
 	}
 }
