@@ -96,7 +96,8 @@ const Posts = () => {
                                             comment = {post.comment}
                                             image={post.image}
                                             deletePosts = {() => deletePosts(post._id)}
-                                            postId={post._id} 
+                                            postId={post._id}
+                                            poster={post.user}
                                             refreshPosts={() => fetchPosts()}
                                         />
                                         )
