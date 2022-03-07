@@ -30,7 +30,7 @@ const PostForm = ({ refreshPosts }) => {
 	return (
 		<div >
 			{/* Used for returning the form data */}
-			<div className="main-post-form">
+		<div className="main-post-form">
             <div className="postform-container">
 			<h2 className="create-post"> WHAT'S ON YOUR MIND </h2> 
 			<form encType="multipart/form-data">
@@ -70,11 +70,11 @@ const PostForm = ({ refreshPosts }) => {
 					</div>
 				</label>
 			</form>
-			</div>
             <br />
             <div className="postbutton">
 			<button onClick={handleSubmit} className="post-button"> POST SOMETHING </button>
             </div>
+		  </div>
             </div>
 		</div>
 	);

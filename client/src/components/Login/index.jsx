@@ -52,7 +52,7 @@ const Login = () => {
         </form>
         </FormComponent>
         <h4 className='signUpText'>Want to Sign Up ? </h4>
-        <a  href="/register">Sign Up</a>
+        <a className='reg' href="/register">Sign Up</a>
         </LogInPage>
         
     </div>

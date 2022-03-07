@@ -92,7 +92,7 @@ const PostToggle = (props) => {
         <div className="post-container">
             <br />
             <div className="post-buttons">
-            <Buttons/>
+            {/* <Buttons/> */}
             <Modal 
                 isOpen={modalIsOpen} 
                 onRequestClose={()=>setModalIsOpen(false)}

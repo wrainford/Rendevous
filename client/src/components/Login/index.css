@@ -71,4 +71,7 @@ a{
      font-size: medium;
      font-family: 'Jost', sans-serif; 
 }
+.reg:hover{
+     text-decoration: underline;
+}
 

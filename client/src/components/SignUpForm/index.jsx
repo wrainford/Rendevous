@@ -44,7 +44,7 @@ const SignUpForm = (e)=>{
 return(
      <div className="sign-up-container">
           <nav className='sign-up-nav'>
-      <a href="/login"> <h1 className='rendevous'>ren<span className='dev'>dev</span>ous</h1> </a>
+      <a href="/login"> <h1  id="rendevousSign"className='rendevous'>ren<span className='dev'>dev</span>ous</h1> </a>
        </nav>
      <div className="sighUpPage">
           
@@ -54,7 +54,7 @@ return(
           <form >
               <label htmlFor="name">
                    
-                   <input onChange={(e)=> setName(e.target.value)}
+                   <input className="name1" onChange={(e)=> setName(e.target.value)}
                        value={name}
                        type="text"
                        name="name"
@@ -65,7 +65,7 @@ return(
 
                    <label htmlFor="userName">
                        
-                        <input onChange={(e)=> setUserName(e.target.value)}
+                        <input className="name1" onChange={(e)=> setUserName(e.target.value)}
                         value={userName}
                         type="text"
                         name='userName'
@@ -76,7 +76,7 @@ return(
 
                    <label htmlFor="email">
                        
-                    <input onChange={(e)=>setEmail(e.target.value)}
+                    <input  className="name1"onChange={(e)=>setEmail(e.target.value)}
                     value={email}
                     email="email"
                     type="text"
@@ -85,7 +85,7 @@ return(
                    </label>
 
                    <label htmlFor="password">
-                        <input onChange={(e)=>setPassword(e.target.value)}
+                        <input  className="name1"onChange={(e)=>setPassword(e.target.value)}
                         value= {password}
                         password="password"
                         type="text"
