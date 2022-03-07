@@ -6,13 +6,13 @@ const LogOut = () => {
   
   return (
     <div>
-      <nav className="LogInNav">
-          <NavLink className="link1" to="/login">Log In</NavLink>
-      </nav>
-      <div className="LogOut">
-      <h4>You have successfully logged out. </h4>
-      <div></div>
-      </div>
+        <a href="/login"><h1 className='rendevous'>ren<span className='dev'>dev</span>ous</h1></a>
+          <div className="LogOut">
+            <h1>Thanks for using Rendevous</h1>
+            <h2>You have successfully logged out</h2>
+            <br></br>
+            <a href="/login" className="signback">Sign In Again</a>
+          </div>
     </div>
     
   )

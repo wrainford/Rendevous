@@ -28,54 +28,52 @@ const PostForm = ({ refreshPosts }) => {
 	};
 
 	return (
-		<div >
+		<div>
 			{/* Used for returning the form data */}
 		<div className="main-post-form">
             <div className="postform-container">
 			<h2 className="create-post"> DEBUG YOUR MIND </h2> 
 			<form encType="multipart/form-data">
-				<label>
-					<input
-						className="input-title"
-						onChange={(e) => setTitle(e.target.value)}
-						value={title}
-						type="text"
-						name="title"
-						placeholder="Add title here"
-					/>
-				</label>
+					<label>
+						<input
+							className="input-title"
+							onChange={(e) => setTitle(e.target.value)}
+							value={title}
+							type="text"
+							name="title"
+							placeholder="Add title here"
+						/>
+					</label>
                 <br />
-				<label>
-					<textarea
-						className="input-body"
-						onChange={(e) => setBody(e.target.value)}
-						value={body}
-						type="text"
-						name="body"
-						placeholder="Type Something"
-					/>
-				</label>
+					<label>
+						<textarea
+							className="input-body"
+							onChange={(e) => setBody(e.target.value)}
+							value={body}
+							type="text"
+							name="body"
+							placeholder="Type Something"
+						/>
+					</label>
                 <br />
                 <br />
-				<div className="add-img-container">
-					<div className="small-div">
-				<h4 className="add-image-text">Add image</h4>
-	
-					<input
-						onChange={(e) => setImage(e.target.files[0])}
-						filename="image"
-						type="file"
-						className="add-img-btn"
-					/>
-				 
-				 </div>
-					<button onClick={handleSubmit} className="button-81"> POST SOMETHING </button>
-
-				</div>
+						<div className="add-img-container">
+							<div className="small-div">
+								<h4 className="add-image-text">Add image</h4>
+									<input
+										onChange={(e) => setImage(e.target.files[0])}
+										filename="image"
+										type="file"
+										className="add-img-btn"
+									/>
+							</div>
+							<button onClick={handleSubmit} className="button-81"> POST SOMETHING </button>
+						</div>
 			</form>
-            <br />
+            	<br />
             </div>
 		</div>
+	</div>
 	);
 };
 
