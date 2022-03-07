@@ -7,6 +7,7 @@ import "./index.css";
 import { FiEdit } from "react-icons/fi";
 import { FiTrash2 } from "react-icons/fi";
 import {GiCancel} from "react-icons/gi";
+import { useParams } from "react-router-dom";
 Modal.setAppElement("#root");
 
 
@@ -37,9 +38,6 @@ const PostView = (props) => {
         />)
 }
 
-
-
-
 const PostToggle = (props) => {
     const [coms, setComs] = useState([]); 
     const fetchComs = async () => {
@@ -68,19 +66,33 @@ const PostToggle = (props) => {
        setModalIsOpen(false);
     }
 
+    let id = JSON.parse(localStorage.getItem("id"));
+
+    const Buttons = () => {
+        if(id == props.poster._id) {
+            return(
+                <>
+                    <button onClick={handleClick} className="button1">
+                        {button}
+                    </button>
+                    &nbsp;&nbsp;
+                    <button 
+                        className="openModalBtn" 
+                        onClick={()=>setModalIsOpen(true)}> 
+                        <FiTrash2 size={30} color="#66AFA4"/>
+                    </button>
+                </>
+            )
+        } else {
+            return(<></>);
+        }
+    }
+
     return(
         <div className="post-container">
             <br />
             <div className="post-buttons">
-            <button onClick={handleClick} className="button1">
-                {button}
-            </button>
-            &nbsp;&nbsp;
-            <button 
-                className="openModalBtn" 
-                onClick={()=>setModalIsOpen(true)}> 
-                <FiTrash2 size={30} color="#66AFA4"/>
-            </button>
+            <Buttons/>
             <Modal 
                 isOpen={modalIsOpen} 
                 onRequestClose={()=>setModalIsOpen(false)}
