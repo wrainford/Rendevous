@@ -121,7 +121,12 @@ const destroyPost = (req, res) => {
 
 const newComment = (req, res) => {
     db.Post.findById(req.params.id, (err, com) => {
-        com.comment.push(req.body);
+        let commentData = {
+            content: req.body.content,
+            user: req.userId
+        }
+        console.log(commentData);
+        com.comment.push(commentData);
         com.save(function() {
             if(err)
                 return res.status(400).json({

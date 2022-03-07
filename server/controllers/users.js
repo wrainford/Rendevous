@@ -11,7 +11,9 @@ const indexUser = (req, res) => {
 }
 
 const showUser = (req, res) => {
-    db.User.findById(req.params.id, (err, foundUser) => {
+    db.User.findById(req.params.id)
+        .populate("post")
+        .exec((err, foundUser) => {
         if(err)
             return res.status(400).json({
                 message: "Failed to find a user",

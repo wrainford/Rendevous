@@ -26,7 +26,7 @@ router.get("/", posts.indexPost);
 router.post("/", upload.single("image"), authRequired, posts.createPost);
 router.put("/:id", upload.single("image"), posts.updatePost);
 router.delete("/:id", posts.destroyPost);
-router.post("/:id/comments", posts.newComment);
+router.post("/:id/comments", authRequired, posts.newComment);
 router.get("/:id/comments/:id/edit", posts.editComment);
 router.put("/comments/:id", posts.updateComment);
 router.delete("/comments/:id", posts.deleteComment);

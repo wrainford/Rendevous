@@ -11,8 +11,8 @@ const ProfilePage = () => {
     const [user, setUser] = useState("");
     let {id} = useParams();
 
-    const getUser = async () => {
-        await userService.showUser(id).then((res) => {
+    const getUser = () => {
+         userService.showUser(id).then((res) => {
             setUser(res.data.data);
         })
     }
@@ -20,14 +20,14 @@ const ProfilePage = () => {
     useEffect(() => {
         getUser(id);
     }, []);
-    
+
     return (
         <div>
             <NavBar />
                  <div className="prof-container" >
                         <h1>Welcome to your profile page.</h1> 
-                        <User props={user}/> 
                         <NavLink className="editprof-button" to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit Profile</NavLink>
+                        <User user={user}/>   
                 </div>
             
         </div>
