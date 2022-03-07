@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import * as userService from "../../api/user.service";
 import * as authService from "../../api/auth.service";
 import "./index.css";
@@ -10,11 +10,12 @@ const EditUser = (props) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const navigate = useNavigate();
+    let {id} = useParams();
 
     const HandleSubmit = async () => {
         let updatedUser = {userName, name, email}
-        let res = await userService.updateUser(props.user._id, updatedUser);
-        console.log(res);
+         await userService.updateUser(props.user._id, updatedUser);
+        navigate(`/users/${id}`);
     }
 
     const deleteProfile = async () => {
