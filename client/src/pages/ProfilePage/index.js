@@ -24,12 +24,13 @@ const ProfilePage = () => {
     return (
         <div>
             <NavBar />
+           
                  <div className="prof-container" >
                         <h1>Welcome to your profile page.</h1> 
                         <User props={user}/> 
                         <NavLink className="editprof-button" to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit Profile</NavLink>
+    
                 </div>
-            
         </div>
         
     )
