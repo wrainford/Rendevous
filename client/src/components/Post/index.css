@@ -1,21 +1,26 @@
 .post-container{
     /* border: 2px solid purple; */
-   
+    border-radius: 10px;
+    /* border: 1px #314664 solid; */
 }
 
 .post-title{
     font-family: 'Jost', sans-serif;
     text-transform: uppercase;
+    /* border: 2px pink solid; */
 }
 
 .post-body{
     font-size: 20px;
     font-family: 'Inconsolata', monospace;
+    margin-bottom: 5%;
+    /* border: 2px green solid; */
 }
 
 .comment-title{
     font-family: 'Jost', sans-serif;
     padding-bottom: 2%;
+    /* border: 2px blue solid; */
 }
 
 .loadmore{
@@ -30,4 +35,10 @@
 
 .button-div{
     text-align: center;
+}
+
+.comment-box{
+    border: 1px #314664 solid;
+    border-radius: 10px;
+    padding:3%
 }

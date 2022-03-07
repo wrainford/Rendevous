@@ -4,6 +4,7 @@ import Post from "../../components/Post"
 import PostForm from "../../components/PostForm";
 import PostTest from "../../components/PostTest";
 import NavBar from "../../components/NavBar";
+import NavBar2 from "../../components/NavBar2";
 import ProfilePage from "../ProfilePage";
 import PrivacyPage from "../PrivacyPage";
 import * as postService from "../../api/post.service";
@@ -77,7 +78,7 @@ const Posts = () => {
             <div>
                 
                 {/* 1. NAVBAR */}
-                <NavBar />
+                <NavBar2 />
                    
                     <Routes>
                         {/* ROUTE AND DATA FOR POSTS and since our homepage route is "/" it will render out the below */}
@@ -102,8 +103,10 @@ const Posts = () => {
                                         />
                                         )
                                 })}
+                                
                             </>
                         }
+                      
                         ></Route>
 
                         {/* ROUTE AND DATA FOR USERS once on /users */}

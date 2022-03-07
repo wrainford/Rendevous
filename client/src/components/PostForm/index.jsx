@@ -32,7 +32,7 @@ const PostForm = ({ refreshPosts }) => {
 			{/* Used for returning the form data */}
 			<div className="main-post-form">
             <div className="postform-container">
-			<h2 className="create-post"> WHAT'S ON YOUR MIND </h2> 
+			<h2 className="create-post"> DEBUG YOUR MIND </h2> 
 			<form encType="multipart/form-data">
 				<label>
 					<input
@@ -44,7 +44,6 @@ const PostForm = ({ refreshPosts }) => {
 						placeholder="Add title here"
 					/>
 				</label>
-                <br />
                 <br />
 				<label>
 					<textarea
@@ -58,23 +57,29 @@ const PostForm = ({ refreshPosts }) => {
 				</label>
                 <br />
                 <br />
-				<label>
-					<div className="add-image">
-					<h4 className="add-image-text">Add image</h4>
-					&nbsp;&nbsp;&nbsp;
+				<div className="add-img-container">
+					<div className="small-div">
+				<h4 className="add-image-text">Add image</h4>
+	
 					<input
 						onChange={(e) => setImage(e.target.files[0])}
 						filename="image"
 						type="file"
+						className="add-img-btn"
 					/>
-					</div>
-				</label>
+				 
+				 {/* <div className="postbutton"> */}
+				 </div>
+					<button onClick={handleSubmit} className="button-81"> POST SOMETHING </button>
+			
+            	
+				{/* </div> */}
+				
+				</div>
 			</form>
 			</div>
             <br />
-            <div className="postbutton">
-			<button onClick={handleSubmit} className="post-button"> POST SOMETHING </button>
-            </div>
+    
             </div>
 		</div>
 	);
