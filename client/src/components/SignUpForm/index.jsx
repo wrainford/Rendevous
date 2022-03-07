@@ -88,7 +88,7 @@ return(
                         <input  className="name1"onChange={(e)=>setPassword(e.target.value)}
                         value= {password}
                         password="password"
-                        type="text"
+                        type="password"
                         placeholder="Passsword"
                         />
                    </label>
