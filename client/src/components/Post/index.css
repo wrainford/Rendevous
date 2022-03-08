@@ -1,7 +1,26 @@
 .post-container{
     /* border: 2px solid purple; */
     border-radius: 10px;
-    /* border: 1px #314664 solid; */
+    border: 1px #314664 solid;
+}
+
+.post-container-2{
+    padding: 5% 8%;
+    padding-top: 3%;
+}
+
+.user-info-bar{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    margin-top: -10px;
+    border-bottom: 1px solid #314664;
+}
+
+.user-icon{
+    border-radius: 50%;
 }
 
 .post-title{
@@ -14,6 +33,7 @@
     font-size: 20px;
     font-family: 'Inconsolata', monospace;
     margin-bottom: 5%;
+    margin-top: 5%;
     /* border: 2px green solid; */
 }
 

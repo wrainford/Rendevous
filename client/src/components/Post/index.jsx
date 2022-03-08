@@ -23,7 +23,12 @@ const Post = (props) => {
 
 	return (
 		<>
-        <div className="post-container">
+        <div className="user-info-bar">
+            <img src = {`/uploads/postImages/${props.avatar}`} alt="..." className= "user-icon" style= {{width: "5%"}}/>
+            <h4>{props.userName}</h4>
+        </div>
+    
+        <div className="post-container-2">
     
 			<h2 className="post-title">{props.title}</h2>
             <br />

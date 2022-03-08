@@ -122,9 +122,11 @@ const Posts = () => {
                                 {posts.map((post) => {
                                         return (
                                         <>
-                                        <img src = {`/uploads/postImages/${post.user.avatar}`} alt="..." style= {{width: "5%"}}/>
-                                        <h4>{post.user.name}</h4>
+                                        {/* <img src = {`/uploads/postImages/${post.user.avatar}`} alt="..." style= {{width: "5%"}}/> */}
+                                        {/* <h4>{post.user.name}</h4> */}
                                         <PostTest
+                                            avatar={post.user.avatar}
+                                            userName={post.user.name}
                                             title={post.title}
                                             body={post.body}
                                             comment = {post.comment}

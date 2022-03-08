@@ -33,7 +33,7 @@ const PostForm = ({ refreshPosts }) => {
 		<div className="main-post-form">
             <div className="postform-container">
 			<h2 className="create-post"> WHAT'S ON YOUR MIND </h2> 
-			<form encType="multipart/form-data">
+			<form encType="multipart/form-data" autocomplete="off">
 					<label>
 						<input
 							className="input-title"

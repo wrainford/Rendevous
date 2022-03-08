@@ -37,7 +37,7 @@ const EditUser = (props) => {
         <div className="main-user-edit">
         <div className="profileform-Container">
         <h1 className="editprof-title">Edit Your Profile</h1>
-            <form className="editprof-form">
+            <form className="editprof-form" autocomplete="off">
                 <label>Username:
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-username"

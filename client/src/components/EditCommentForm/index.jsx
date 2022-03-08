@@ -15,7 +15,7 @@ const EditCommentForm = (props) => {
 
     return(
         <>
-            <form>
+            <form autocomplete="off">
                 <input
                     className = "com-edit-form"
                     onChange={(e) => setContent(e.target.value)}
