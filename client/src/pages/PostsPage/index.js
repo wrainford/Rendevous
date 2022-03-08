@@ -81,7 +81,7 @@ const Posts = () => {
                             <>
                             <div className="meet-parent">
                             <div className="meet-div">
-                                <img src={"/uploads/meetmeatourspot.png"} alt="" className="meet" style={{width:"100%"}}/>
+                                <img src={"/uploads/rdvlogo.png"} alt="" className="meet" style={{width:"100%"}}/>
                             </div>
                             </div>
 
