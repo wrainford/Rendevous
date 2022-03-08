@@ -70,6 +70,9 @@ const Posts = () => {
         
 	}, []);
 
+    // console.log(posts[0].user.avatar);
+    // <img href={}
+   
     return (	
             <div>
                 
@@ -83,6 +86,9 @@ const Posts = () => {
                                {/* 3. Post Component  */}
                                 {posts.map((post) => {
                                         return (
+                                        <>
+                                        <img src = {`/uploads/postImages/${post.user.avatar}`} alt="..." style= {{width: "5%"}}/>
+                                        <h4>{post.user.name}</h4>
                                         <PostTest
                                             title={post.title}
                                             body={post.body}
@@ -93,6 +99,7 @@ const Posts = () => {
                                             poster={post.user}
                                             refreshPosts={() => fetchPosts()}
                                         />
+                                        </>
                                         )
                                 })} 
                             </>
