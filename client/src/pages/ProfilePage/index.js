@@ -33,7 +33,7 @@ const ProfilePage = () => {
                  <div className="prof-container" >
                     
                         <User user={user} userPost={userPost}/>  
-                        <NavLink className="editUser-button" to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit Profile</NavLink>
+                        <NavLink className="editUser-button" to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit </NavLink>
                         </div>      
              </>  
         
