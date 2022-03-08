@@ -1,4 +1,5 @@
 import { useState, useEffect, useReducer } from "react";
+import { useParams } from 'react-router-dom'
 import PostToggle from "../../components/Post";
 import Post from "../../components/Post"
 import PostForm from "../../components/PostForm";
@@ -11,6 +12,8 @@ import * as userService from "../../api/user.service";
 import * as authService from "../../api/auth.service";
 import { Routes, Route } from "react-router-dom";
 import "./index.css"
+
+
 
 const initialState = {
 	posts: [],
@@ -32,10 +35,11 @@ const reducer = (prevState, action) => {
 }
 
 const Posts = () => {
+    //let {id} = useParams();
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const {posts, isLoggedIn} = state;
 	const [users, setUsers] = useState([]);
-
+  
         const userActive = () => {
             if(authService.currentUser()) {
                 dispatch({ type: "isLoggedIn", payload: true})
@@ -49,12 +53,6 @@ const Posts = () => {
 		        });
 	    };
 	
-		const fetchUsers = async () => {
-			await userService.getAllUser().then((res) => {
-				setUsers(res.data.data);
-			});
-		};
-
         const deletePosts = async (id) => { 
             //console.log("click")
             await postService.destroyPost(id).then((res)=>{
@@ -63,11 +61,23 @@ const Posts = () => {
             })
         }
 
+        const fetchUsers = async () => {
+			await userService.getAllUser().then((res) => {
+				setUsers(res.data.data);
+			});
+		};
+
+        let myid = JSON.parse(localStorage.getItem("id"));
+
+       
+        
+
+        
 	useEffect(() => {
 		userActive();
 		fetchPosts();
         fetchUsers();
-        
+    
 	}, []);
 
 
@@ -105,9 +115,11 @@ const Posts = () => {
                                 {posts.map((post) => {
                                         return (
                                         <>
-                                        <img src = {`/uploads/postImages/${post.user.avatar}`} alt="..." style= {{width: "5%"}}/>
-                                        <h4>{post.user.name}</h4>
+                                        {/* <img src = {`/uploads/postImages/${post.user.avatar}`} alt="..." style= {{width: "5%"}}/> */}
+                                        {/* <h4>{post.user.name}</h4> */}
                                         <PostTest
+                                            avatar={post.user.avatar}
+                                            userName={post.user.name}
                                             title={post.title}
                                             body={post.body}
                                             comment = {post.comment}

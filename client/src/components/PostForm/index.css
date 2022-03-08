@@ -1,157 +1,161 @@
-
 .main-post-form {
-background-color: #0E192D;
-border: #0E192D 2px solid;
-}
-
-.postform-container{
-    background-color: #1A2B44;
-    padding: 3%;
-    margin: 3% 10%;
-    margin-bottom: 5%; 
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-top: 10%;
-    border-radius: 10px;
-    border: 1px #314664 solid;
-    /* box-shadow: 2px 2px 2px 1px #3f587c ; */
-}
-
-.input-title{
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-weight: bold;
-    font-size: 24px; 
-    padding-left: 22px; 
-    font-family: 'Inconsolata', monospace; 
-    width: 80%;
-    line-height: 0.8;
-}
-
-.input-body{
-    width: 80%;
-    height: 200px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border-radius: 10px; 
-    font-size: 24px;
-    font-family: 'Inconsolata', monospace;
-}
-
-
-
-.add-image-text{
-    padding-left: 15px;
-    padding-top: 4px;
-    /* border:white 2px solid; */
-    width: 20%;
-}
-
-.post-button {
-    background-color: #979494;
-    color: white; 
-    padding: 10px 12px;
-    font-size: 16px;
-    border-radius: 5px; 
-    font-family: 'Jost', sans-serif;
-    font-weight: bold;
-    box-shadow: none; 
-    height: 50%;
-    justify-self: flex-end;
-    border: none;
-    /* border:white 2px solid; */
-    
-}
-
-.add-image{
-    display:flex; 
-    /* border:white 2px solid; */
-    height: 100%;
-    
-
-}
-
-.post-button:hover {
-    background-color: #727070;
-    border: none;
-}
-
-
-.create-post{
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: -4%;
-    font-family: 'Jost', sans-serif;
-}
-
-
-
-@media only screen and (max-width: 600px) {
-    .post-button{
-        width: smaller;
+    background-color: #0E192D;
+    border: #0E192D 2px solid;
     }
-}
 
-.add-img-btn{
-    width: 35%;
-    height:fit-content;
-    cursor: pointer;
-    display:flex;
-    /* border:white 2px solid; */
-    align-self: flex-start;
-    margin-top: 0%;
+    .create-post-form{
+        padding-right: 5%;
+        padding-left: 5%;
+    }
     
-
-}
-
-.small-div{
-    /* border:pink 2px solid; */
-    width: 60%;
-    display:flex;
-}
-
-.add-img-container{
-    display:flex;
-    /* border:white 2px solid; */
-    align-content: flex-start;
-    justify-content: space-between;
-
-}
-
-
-.button-81 {
-  background-color: #fff;
-  border: 0 solid #e2e8f0;
-  border-radius: 1.5rem;
-  box-sizing: border-box;
-  color: #0d172a;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 0.8;
-  padding: 1rem 1.6rem;
-  text-align: center;
-  text-decoration: none #0d172a solid;
-  text-decoration-thickness: auto;
-  transition: all .1s cubic-bezier(.4, 0, .2, 1);
-  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-81:hover {
-  /* background-color: #1e293b; */
-  background-color: #66AFA4;
-  color: #fff;
-}
-
-@media (min-width: 768px) {
-  .button-81 {
-    font-size: 1.125rem;
-    padding: 1rem 2rem;
-  }
-}
+    .postform-container{
+        background-color: #1A2B44;
+        padding: 3%;
+        margin: 3% 10%;
+        margin-bottom: 3%; 
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 5%;
+        border-radius: 10px;
+        border: 1px #314664 solid;
+        /* box-shadow: 2px 2px 2px 1px #3f587c ; */
+    }
+    
+    .input-title{
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-weight: bold;
+        font-size: 24px; 
+        padding-left: 22px; 
+        font-family: 'Inconsolata', monospace; 
+        width: 80%;
+        line-height: 0.8;
+    }
+    
+    .input-body{
+        width: 80%;
+        height: 200px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border-radius: 10px; 
+        font-size: 24px;
+        font-family: 'Inconsolata', monospace;
+    }
+    
+    
+    
+    .add-image-text{
+        padding-left: 15px;
+        padding-top: 4px;
+        /* border:white 2px solid; */
+        width: 20%;
+    }
+    
+    .post-button {
+        background-color: #979494;
+        color: white; 
+        padding: 10px 12px;
+        font-size: 16px;
+        border-radius: 5px; 
+        font-family: 'Jost', sans-serif;
+        font-weight: bold;
+        box-shadow: none; 
+        height: 50%;
+        justify-self: flex-end;
+        border: none;
+        /* border:white 2px solid; */
+        
+    }
+    
+    .add-image{
+        display:flex; 
+        /* border:white 2px solid; */
+        height: 100%;
+        
+    
+    }
+    
+    .post-button:hover {
+        background-color: #727070;
+        border: none;
+    }
+    
+    
+    .create-post{
+        text-align: center;
+        margin-top: 3%;
+        margin-bottom: -4%;
+        font-family: 'Jost', sans-serif;
+    }
+    
+    
+    
+    @media only screen and (max-width: 600px) {
+        .post-button{
+            width: smaller;
+        }
+    }
+    
+    .add-img-btn{
+        width: 35%;
+        height:fit-content;
+        cursor: pointer;
+        display:flex;
+        border:white 2px solid;
+        align-self: flex-start;
+        margin-top: 0%;
+        
+    
+    }
+    
+    .small-div{
+        /* border:pink 2px solid; */
+        width: 60%;
+        display:flex;
+    }
+    
+    .add-img-container{
+        display:flex;
+        /* border:white 2px solid; */
+        align-content: flex-start;
+        justify-content: space-between;
+    
+    }
+    
+    
+    .button-81 {
+      background-color: #fff;
+      border: 0 solid #e2e8f0;
+      border-radius: 1.5rem;
+      box-sizing: border-box;
+      color: #0d172a;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 0.8;
+      padding: 1rem 1.6rem;
+      text-align: center;
+      text-decoration: none #0d172a solid;
+      text-decoration-thickness: auto;
+      transition: all .1s cubic-bezier(.4, 0, .2, 1);
+      box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    
+    .button-81:hover {
+      /* background-color: #1e293b; */
+      background-color: #66AFA4;
+      color: #fff;
+    }
+    
+    @media (min-width: 768px) {
+      .button-81 {
+        font-size: 1.125rem;
+        padding: 1rem 2rem;
+      }
+    }

@@ -31,7 +31,7 @@ const PostEdit = (props) => {
             <div className="postform-container">
             <h3 className="editing">Editing...</h3>
             <br />
-			<form encType="multipart/form-data">
+			<form encType="multipart/form-data" autocomplete="off">
 				<label>
 					<div className="edit-title">
 					<h4>Title: </h4>

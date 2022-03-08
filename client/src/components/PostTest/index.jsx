@@ -16,6 +16,8 @@ const PostView = (props) => {
         return (
         // console.log(props),
         <PostEdit 
+                avatar={props.avatar}
+                userName={props.userName}
                 title={props.title}
                 body={props.body}
                 comment={props.comment}
@@ -28,6 +30,8 @@ const PostView = (props) => {
     return (
       
         <Post 
+            avatar={props.avatar}
+            userName={props.userName}
             title={props.title}
             body={props.body}
             comment={props.comment}
@@ -119,6 +123,8 @@ const PostToggle = (props) => {
 
             </div>
             <PostView 
+                avatar={props.avatar}
+                userName={props.userName}
                 isEdit={isEdit}
                 title={props.title}
                 body={props.body}

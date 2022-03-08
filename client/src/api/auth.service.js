@@ -16,6 +16,7 @@ const user = "/user";
                     if(res.data.token){
                         localStorage.setItem("user", JSON.stringify(res.data.token));
                         localStorage.setItem("id", JSON.stringify(res.data.foundUser._id));
+                        localStorage.setItem("userName", JSON.stringify(res.data.foundUser.userName));
                     }
                         return res.data.token
                 })
@@ -35,9 +36,16 @@ const user = "/user";
         return JSON.parse(id);
     }
 
+    const getUserName = () => {
+        let userName = localStorage.getItem("userName");
+        return JSON.parse(userName);
+    }
+
+
     const logout = () => {
         localStorage.removeItem("user");
         localStorage.removeItem("id");
+        localStorage.removeItem("userName");
     }
 
 

@@ -29,7 +29,7 @@ const CommentForm = (props) => {
 			</div>
 			
 			
-				<form encType="application/json" className="comment-form" >
+				<form encType="application/json" className="comment-form" autocomplete="off">
 				<div className="commentform-container">
 					<input
 						className="comment-text"

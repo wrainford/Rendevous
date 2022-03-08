@@ -53,7 +53,9 @@ const EditUser = (props) => {
         <div className="profile-Edit-Container">
         <h1 className="editprof-title">Edit Your Profile</h1>
 
-            <form encType="multipart/form-data" className="editprof-form">
+
+            <form encType="multipart/form-data" className="editprof-form" autocomplete="off">
+
                 <label>Username:
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-username"
