@@ -39,7 +39,7 @@ const Posts = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
 	const {posts, isLoggedIn} = state;
 	const [users, setUsers] = useState([]);
-    const [me, setMe] = useState("")
+  
         const userActive = () => {
             if(authService.currentUser()) {
                 dispatch({ type: "isLoggedIn", payload: true})
@@ -67,24 +67,23 @@ const Posts = () => {
 			});
 		};
 
+        let myid = JSON.parse(localStorage.getItem("id"));
 
+       
         
-        // console.log({id})
-        // const getMe = async () => {
-        //     await userService.showUser(id).then((res) => {
-        //         setMe(res.data.data);
-        //         console.log(res.data.data)
-        //     })
-        // }
+
         
 	useEffect(() => {
 		userActive();
 		fetchPosts();
         fetchUsers();
-        //getMe({id});
-        
+    
 	}, []);
 
+
+
+    
+    console.log(users)
     // console.log(posts[0].user.avatar);
     // <img href={}
    

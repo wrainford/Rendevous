@@ -31,19 +31,23 @@ const Post = (props) => {
         <div className="post-container-2">
     
 			<h2 className="post-title">{props.title}</h2>
-            <br />
-                <img src = {`/uploads/postImages/${props.image}`} alt="" style= {{width: "100%"}}/>
-				<br/>
-                <p className="post-body">{props.body}</p>
+            <img src = {`/uploads/postImages/${props.image}`} alt="" style= {{width: "100%"}}/>
+            <p className="post-body">{props.body}</p>
                 
         
                 {/* <h3 className="comment-title">Comments:</h3> */}
             <div className="comment-box">  
-            <CommentForm postId={props.postId} refreshPosts={props.refreshPosts} /> 
+            <CommentForm 
+            avatar={props.avatar}
+            userName = {props.userName}
+            postId={props.postId} 
+            refreshPosts={props.refreshPosts} /> 
                 {props.comment.map((comment) => {
                     return(
                         
                         <Comment
+                            avatar={props.avatar}
+                            userName = {comment.user}
                             comment={comment.content}
                             id={comment._id}
                             refreshPosts={props.refreshPosts}

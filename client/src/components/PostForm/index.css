@@ -2,6 +2,11 @@
     background-color: #0E192D;
     border: #0E192D 2px solid;
     }
+
+    .create-post-form{
+        padding-right: 5%;
+        padding-left: 5%;
+    }
     
     .postform-container{
         background-color: #1A2B44;
@@ -97,7 +102,7 @@
         height:fit-content;
         cursor: pointer;
         display:flex;
-        /* border:white 2px solid; */
+        border:white 2px solid;
         align-self: flex-start;
         margin-top: 0%;
         
