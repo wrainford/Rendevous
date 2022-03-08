@@ -34,7 +34,7 @@ const PostEdit = (props) => {
 			<form encType="multipart/form-data" autocomplete="off">
 				<label>
 					<div className="edit-title">
-					<h4>Title: </h4>
+					<h4 className="title-title">Title: </h4>
 					<input
 						onChange={(e) => setTitle(e.target.value)}
 						value={title}
@@ -48,7 +48,7 @@ const PostEdit = (props) => {
                 <br />
                 <br />
 				<label>
-					<h4>Post: </h4>
+					<h4 className="body-post">Post: </h4>
 					<textarea
 						onChange={(e) => setBody(e.target.value)}
 						value={body}
@@ -69,11 +69,12 @@ const PostEdit = (props) => {
 						className="add-image"
 					/>
 				</label>
-			</form>
-            <br />
-            <div className="postbutton">
+				<div className="postbutton">
 			<button onClick={handleSubmit} className="post-button"> SAVE CHANGES </button>
             </div>
+			</form>
+            <br />
+           
             </div>
 		</div>
 	);

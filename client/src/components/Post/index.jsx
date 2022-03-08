@@ -51,6 +51,7 @@ const Post = (props) => {
                             comment={comment.content}
                             id={comment._id}
                             refreshPosts={props.refreshPosts}
+                            className="commentlists"
                         />
                     );
                 })}

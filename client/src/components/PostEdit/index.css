@@ -1,6 +1,14 @@
 .edit-title{
-    display: inline-block;
+    font-family: 'Jost', sans-serif; 
+    font-size: 24px;
+    
 }
+
+.body-post{
+    font-family: 'Jost', sans-serif; 
+    font-size: 24px;
+}
+
 
 .input-body{
     width: 100%;
@@ -31,8 +39,15 @@
 
 .add-image{
     margin-left:12px;
+    margin-bottom: -12px;
+
 }
 
 .editing{
     color: #66AFA4;
+    font-family: 'Jost', sans-serif; 
+    font-size: 36px;
+}
+.postbutton{
+    float:right;
 }

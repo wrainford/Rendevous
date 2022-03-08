@@ -15,16 +15,26 @@ const EditCommentForm = (props) => {
 
     return(
         <>
-            <form autocomplete="off">
+        <div className="edit-container">
+
+    
+            <form autoComplete="off" className="edit-form">
                 <input
                     className = "com-edit-form"
                     onChange={(e) => setContent(e.target.value)}
                     type="text"
                     value={content}
                 />
-                <button className="com-edit-button" onClick={HandleSubmit}>Submit</button>
+                <div className="submit-div">
+                    <button className="com-edit-button" onClick={HandleSubmit}>Submit</button>
+                </div>
+                
+                
+                
             </form>
+        </div>
         </>
+    
     )
 }
 

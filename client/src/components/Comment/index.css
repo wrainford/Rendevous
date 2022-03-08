@@ -43,7 +43,8 @@
 .comment-container{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 5%;
 }
 
 .user-icon{
@@ -67,6 +68,7 @@
     display:inline-flex;
     width: 90%;
     font-family: 'Inconsolata', monospace;
+    font-size: 24px;
 
 }
 
