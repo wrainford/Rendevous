@@ -17,7 +17,15 @@ const EditUser = (props) => {
     let {id} = useParams();
 
     const HandleSubmit = async () => {
-        let updatedUser = {userName, name, email, bio, gitHub, youTube, avatar}
+        const updatedUser = new FormData();
+        updatedUser.append("userName", userName);
+        updatedUser.append("name", name);
+        updatedUser.append("email", email);
+        updatedUser.append("bio", bio);
+        updatedUser.append("gitHub", gitHub);
+        updatedUser.append("youTube", youTube);
+        updatedUser.append("avatar", avatar);
+        //{userName, name, email, bio, gitHub, youTube, avatar}
          await userService.updateUser(props.user._id, updatedUser);
         navigate(`/users/${id}`);
     }
@@ -101,7 +109,7 @@ const EditUser = (props) => {
                 <br />
                 <label>Avatar:
                 &nbsp;&nbsp;&nbsp;
-                    <input className="editprof-youtube"
+                    <input
                         onChange={(e) => setAvatar(e.target.files[0])}
                         filename="image"
                         type="file"
