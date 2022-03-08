@@ -1,17 +1,19 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
+import './index.css'
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Posts from "./pages/PostsPage"
 import LoginPage from './pages/LogInPage';
 import SignUpPage from './pages/SignUpPage';
-
-import './index.css'
-import LogOut from './components/LogOut'
 import ProfilePage from './pages/ProfilePage';
 import PrivacyPage from './pages/PrivacyPage';
 import EditProfilePage from './pages/EditProfilePage';
-
+import LogOut from './components/LogOut'
 
 const App = () => {
+ const [isLoggedIn, setIsLoggedIn] = useState();
+
+
   return (
     <div className="land-page">
       <Router>
