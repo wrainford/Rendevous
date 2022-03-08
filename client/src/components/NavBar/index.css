@@ -24,7 +24,7 @@
 
 
  .NavBar .leftSide{
-     flex:30%;
+     flex:5%;
      max-height: 70px;
      padding: 10px; 
      display: flex;
@@ -79,22 +79,23 @@
     opacity: 0.9;
  }
  .NavBar .rightSide #hidden .links{
-      margin: 5px;
+     font-size: 15px;
+
 
  }
 @media only screen and (max-width: 1280px){
      .NavBar .rightSide .link {
-          font-size: 10px;
+          font-size: 5px;
      }
    }
 @media only screen and (max-width: 1024px){
      .NavBar .rightSide .link {
-          font-size: 10px;
+          display: none;
      }
    }
 @media only screen and (max-width: 950px){
      .NavBar .rightSide .link {
-          font-size: 10px;
+          display: none;
      }
    }
    
@@ -119,70 +120,3 @@
           display: none;
      }
    }
-/* .Navbar .link {
-     max-height: 80px;
-     text-decoration: none;
-     padding: 10px;
-     margin-left: 15px;
-}
-
-.Navbar .rightSide{
-     flex: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     padding: 5px;
-     margin-left: -50px;
-}
-
-.Navbar .leftSide button{
-     display: none ;
-     margin-right: 30px;
-}
-.Navbar .leftSide  #hidden{
-     display: flex;
-} */
-
-/* .rightSide button{
-     height: 33px;
-     width:70px;
-     font-size: 16px;
-}
-button:hover{
-     cursor:pointer
-   }
-   @media only screen and (max-width: 880px){
-     .Navbar .leftSide .link {
-          font-size: 20px;
-     }
-   }
-   @media only screen and (max-width: 750px){
-     .Navbar .leftSide .link {
-          font-size: 15px;
-     }
-   }
-   @media only screen and (max-width: 650px){
-     .Navbar .leftSide button {
-          display:flex;
-     }
-   }
-   @media only screen and (max-width: 750px){
-     .Navbar .leftSide .link {
-          display: none;
-     }
-   }
-   .Navbar .leftSide #hidden{
-        position: absolute;
-        left: 0px;
-        top: 80px;
-        height: 200;
-        max-height: 200px;
-        width:20%;
-        background-color: #1A2B44;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-   }
-   .Navbar .leftSide #hidden{
-        margin: 10px;
-   }  */

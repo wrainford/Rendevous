@@ -1,6 +1,15 @@
+.mainUser{
+    display: flex;
+    margin: 1px;
+    width: 100%;
+    padding: 5px;
+    /* border: 2px solid white;  */
+}
+
 .prof-container-user{
-        /* border: 2px solid white;  */
+        /* border: 2px solid white;   */
         padding: 1% 3%;
+        border: 1px #314664 solid;
         margin-top:15px;
         display: flex;
         background: #1A2B44;
@@ -8,10 +17,11 @@
         width: 100%;
         display: flex;
         flex: 70%;
-        flex:30%;
-    
 }
-
+.User-name{
+    width: 25%; 
+    /* border: 2px solid white;  */
+}
 .profiles {
     background: antiquewhite;
     display: flex;
@@ -21,7 +31,7 @@
     /* align-items: flex-end; */
     margin-bottom: 25%;
 }
-.prof-username{
+/* .input{
     display:block;
     flex-direction: column;
     color: white;
@@ -31,14 +41,16 @@
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-}
+} */
 
 .my-nick-name{
-    display: block;
-    margin-left:-60%;
+    display: flex;
+     margin-left:-70%;
     margin-top:15%;
+    font-family:Jost, sans-serif; ;
 }
 img{
 border-radius: 80%;
 width:25%
 }
+

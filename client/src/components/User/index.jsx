@@ -5,30 +5,30 @@ import PostTest from '../../components/PostTest';
 const User = (props) => {
 
 	return (
-		<>
 
-			<div className="prof-container-user">
+		<>
+	
+		<div className="mainUser"> 
+		<div className="prof-container-user">
           <div className="img-profile">
             <img className="img"src = {`/uploads/postImages/${props.user.avatar}`} alt="..." />
           </div>
-			<h1 className="prof-username">{props.user.userName}</h1>
+		<div className="User-name">
+			<br />
 				<h2 className="prof-name">{props.user.name}</h2>
+				<br />
 				<h3>Git Hub: {props.user.gitHub}</h3>
+				<br />
 				<h3>YouTube: {props.user.youTube}</h3>
+				<br />
 				<h3>Bio:</h3>
+				<br />
 				<p>{props.user.bio}</p>
-
-			</div>
-			<div className="prof-username">
-			<h3>{props.user.userName}</h3>
-			<h3>Sarah, Will, Nelia, Denzel</h3>
-			<h3>Sarah, Will, Nelia, Denzel</h3>
-			<h3>Sarah, Will, Nelia, Denzel</h3>
-			</div>
+			</div>	
 			<div className="my-nick-name">
-			<h2 className="my-nick-name" >{props.user.name}</h2>
+			<h2 className="nickName-h1" >{props.user.name}</h2>
 			</div>
-			
+			</div>
 					{props.userPost?.map((post) => {
 						return(
 							<PostTest 
@@ -40,7 +40,7 @@ const User = (props) => {
 							/>
 						)
 			})}
-			
+		</div>
 		</>
 	);
 }
