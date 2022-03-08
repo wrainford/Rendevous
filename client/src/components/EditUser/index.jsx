@@ -53,10 +53,8 @@ const EditUser = (props) => {
         <div className="profile-Edit-Container">
         <h1 className="editprof-title">Edit Your Profile</h1>
 
-
             <form encType="multipart/form-data" className="editprof-form" autocomplete="off">
-
-                <label>Username:
+                <label><h2 className="editprof-headers">Username:</h2>
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-username"
                         onChange={(e) => setUserName(e.target.value)}
@@ -65,7 +63,7 @@ const EditUser = (props) => {
                     />
                 </label>
                 <br />
-                <label>Name:
+                <label><h2 className="editprof-headers">Name:</h2>
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-name"
                         onChange={(e) => setName(e.target.value)}
@@ -74,7 +72,7 @@ const EditUser = (props) => {
                     />
                 </label>
                 <br />
-                <label>Email:
+                <label><h2 className="editprof-headers">Email:</h2>
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-email"
                         onChange={(e) => setEmail(e.target.value)}
@@ -83,7 +81,7 @@ const EditUser = (props) => {
                     />
                 </label>
                 <br />
-                <label>Bio:
+                <label><h2 className="editprof-headers">Bio:</h2>
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-bio"
                         onChange={(e) => setBio(e.target.value)}
@@ -92,7 +90,7 @@ const EditUser = (props) => {
                     />
                 </label>
                 <br />
-                <label>GitHub link:
+                <label><h2 className="editprof-headers">GitHub:</h2>
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-github"
                         onChange={(e) => setGitHub(e.target.value)}
@@ -101,7 +99,7 @@ const EditUser = (props) => {
                     />
                 </label>
                 <br />
-                <label>YouTube link:
+                <label><h2 className="editprof-headers">YouTube:</h2>
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-youtube"
                         onChange={(e) => setYouTube(e.target.value)}
@@ -110,7 +108,7 @@ const EditUser = (props) => {
                     />
                 </label>
                 <br />
-                <label>Avatar:
+                <label><h2 className="editprof-headers">Avatar</h2>
                 &nbsp;&nbsp;&nbsp;
                     <input
                         onChange={(e) => setAvatar(e.target.files[0])}

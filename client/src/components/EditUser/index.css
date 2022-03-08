@@ -88,6 +88,41 @@ input[type=text]:focus {
       cursor: pointer;
  
 }
+
+
+.editprof-bio {
+    background-color: #BBBBBB;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 20px; 
+    padding-left: 22px; 
+    font-family: 'Jost', sans-serif; 
+    border-radius: 4px;
+}
+
+.editprof-github {
+    background-color: #BBBBBB;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 24px; 
+    padding-left: 22px; 
+    font-family: 'Jost', sans-serif;
+    border-radius: 4px;
+}
+
+.editprof-youtube {
+    background-color: #BBBBBB;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 24px; 
+    padding-left: 22px; 
+    font-family: 'Jost', sans-serif;
+    border-radius: 4px;
+}
+
 .editprof-delete {
     background-color: #c04c4c;
     color: white; 
@@ -98,6 +133,16 @@ input[type=text]:focus {
     font-weight: bold;
     margin-left: -80%;
 }
+
+.editprof-headers {
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 30px; 
+    font-family: 'Inconsolata', monospace;
+    display: inline-flex;
+}
+
 .editprof-delete:hover{
     background-color: #e32222; 
     cursor: pointer;

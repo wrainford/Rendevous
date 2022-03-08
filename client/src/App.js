@@ -13,7 +13,7 @@ import * as authService from './api/auth.service';
 
 const App = () => {
  const [isLoggedIn, setIsLoggedIn] = useState();
-  const userActive = () => {
+  const userActive = async () => {
     if(authService.currentUser()){
       setIsLoggedIn(true);
     } else {
