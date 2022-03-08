@@ -23,8 +23,12 @@ letter-spacing: 0.4rem;
 
   }
 }
+@media only screen and (min-width: 200px) {
+  width: 80vw;
+  height: 80vh;
+}
 @media only screen and (min-width: 300px) {
-  width: 60vw;
+  width: 80vw;
   height: 50vh;
   h4 {
     font-size: small;
@@ -40,8 +44,9 @@ letter-spacing: 0.4rem;
    height: 70vh;
  }
   @media only screen and (min-width: 1024px) {
+
      width: 60vw;
-      height: 60vh;
+     height: 60vh;
 }
 @media only screen and (min-width: 1200px) {
   width: 40vw;
@@ -49,7 +54,7 @@ letter-spacing: 0.4rem;
 }
 @media only screen and (min-width: 1280px) {
   width: 30vw;
-  height: 55vh;
+  height: 80vh;
 }
 
 `;

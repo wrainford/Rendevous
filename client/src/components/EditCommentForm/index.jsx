@@ -10,7 +10,6 @@ const EditCommentForm = (props) => {
         let res = await postService.updateComment(props.commentId, updatedComment).then(() => {
             props.submit();
         })
-
         console.log(res);
     }
 
