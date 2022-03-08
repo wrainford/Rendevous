@@ -26,17 +26,18 @@ const App = () => {
   }, []);
 
   console.log(isLoggedIn);
+  
   return (
     <div className="land-page">
       <Router>
             <Routes>
               <Route path="/" element={<LoginPage />}></Route>
-              <Route path="/posts/*" element={< Posts />}></Route>
+              <Route path="/posts/*" element={isLoggedIn ? < Posts /> : <SignUpPage />}></Route>
               <Route path="/login" element={<LoginPage />}></Route>
-              <Route path="/users/:id" element={<ProfilePage/>}></Route>
+              <Route path="/users/:id" element={isLoggedIn ? <ProfilePage/> : <SignUpPage />}></Route>
               <Route path="/register" element={<SignUpPage />}></Route>
-              <Route path="/users/:id/edit" element={<EditProfilePage/>}></Route>
-              <Route path="/privacy" element={<PrivacyPage/>}></Route>
+              <Route path="/users/:id/edit" element={isLoggedIn ? <EditProfilePage/> : <SignUpPage />}></Route>
+              <Route path="/privacy" element={isLoggedIn ? <PrivacyPage/> : <SignUpPage />}></Route>
               <Route path="/logout" element={<LogOut/>}></Route>
               <Route path="*" element={<LoginPage />}></Route>
           </Routes>
