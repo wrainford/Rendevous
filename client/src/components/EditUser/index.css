@@ -136,11 +136,9 @@ input[type=text]:focus {
 
 .editprof-headers {
     color: white;
-    /* margin-top: %; */
     border: none;
     font-weight: bold;
     font-size: 30px; 
-    /* padding-left: 22px;  */
     font-family: 'Inconsolata', monospace;
     display: inline-flex;
 }
