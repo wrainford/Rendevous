@@ -29,14 +29,14 @@ const ProfilePage = () => {
     return (
         <div>
             <NavBar />
-           
+           <div className='prof-main'>
                  <div className="prof-container" >
 
                         <h1>Welcome to your profile page.</h1> 
                         <User user={user} userPost={userPost}/>  
-                        <NavLink className="editprof-button" to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit Profile</NavLink>
-                         
+                        <NavLink className="editprof-button" to={`/users/${id}/edit`} element={<EditProfilePage/>}>Edit Profile</NavLink> 
                 </div>
+             </div>  
         </div>
         
     )
