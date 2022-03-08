@@ -32,7 +32,6 @@ input[type=text]:focus {
     font-size: 35px; 
     padding-left: 22px; 
     font-family: 'Inconsolata', monospace;
-    display: inline-flex;
 }
 
 .editprof-username {
@@ -90,13 +89,13 @@ input[type=text]:focus {
  
 }
 
-/* increased text field */
+
 .editprof-bio {
     background-color: #BBBBBB;
     color: white;
     border: none;
     font-weight: bold;
-    font-size: 24px; 
+    font-size: 20px; 
     padding-left: 22px; 
     font-family: 'Jost', sans-serif; 
     border-radius: 4px;
@@ -140,7 +139,7 @@ input[type=text]:focus {
     /* margin-top: %; */
     border: none;
     font-weight: bold;
-    font-size: 35px; 
+    font-size: 30px; 
     /* padding-left: 22px;  */
     font-family: 'Inconsolata', monospace;
     display: inline-flex;
