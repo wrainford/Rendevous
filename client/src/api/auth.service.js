@@ -5,10 +5,6 @@ const user = "/user";
     const register = (email, password, name, userName) => {
         return apiClient
             .post(`${auth}/register`, {email, password, name, userName})
-            .then((res) => {
-                console.log(res);
-            });
-
     };
 
     const login = (email, password) => {

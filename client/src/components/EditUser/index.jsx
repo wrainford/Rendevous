@@ -49,9 +49,10 @@ const EditUser = (props) => {
     console.log(props.user)
     return(
         <>
-        <div className="main-user-edit">
         <div className="profileform-Container">
+        <div className="profile-Edit-Container">
         <h1 className="editprof-title">Edit Your Profile</h1>
+
             <form encType="multipart/form-data" className="editprof-form">
                 <label>Username:
                 &nbsp;&nbsp;&nbsp;
@@ -116,12 +117,10 @@ const EditUser = (props) => {
                     />
                 </label>
             </form>
-
             <button onClick={HandleSubmit} className="editprof-button">Edit</button>
             <button onClick={deleteProfile} className="editprof-delete">Delete Profile</button>
-
-            </div>
-            </div>
+        </div>
+        </div>
         </>
     
     )

@@ -3,8 +3,7 @@ import * as postService from "../../api/post.service";
 import "./index.css"
 
 const PostEdit = (props) => {
-	console.log(props);
-	//const refreshPosts = () => props.refreshPosts
+
 	const [title, setTitle] = useState(props.title);
 	const [body, setBody] = useState(props.body);
 	const [image, setImage] = useState(props.image);
@@ -17,9 +16,8 @@ const PostEdit = (props) => {
 			setTitle("");
 			setBody("");
 			setImage("");
+			props.refreshPosts();
 		});
-
-		console.log(image);
 		// 201 = create
 		if (!res === 201) {
 			alert(`Yikes: ${res.status}`);

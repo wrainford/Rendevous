@@ -70,15 +70,33 @@ const Posts = () => {
         
 	}, []);
 
-    // console.log(posts[0].user.avatar);
-    // <img href={}
-   
+
     return (	
             <div>
                 
                 {/* 1. NAVBAR */}
                    <NavBar/>
                             <>
+                            <div className="meet-parent">
+                            <div className="meet-div">
+                                <img src={"/uploads/rdvlogo.png"} alt="" className="meet" style={{width:"100%"}}/>
+                            </div>
+                            </div>
+
+                            <div className="usercontainer">
+                            {users.slice(1,9).map((user)=>{
+                                return (
+                                    <img src = {`/uploads/postImages/${user.avatar}`} alt="..." 
+                                    className="users"
+                                    />
+                                )
+                            })}
+                            </div>
+
+
+
+
+
                                 
                                 {/* 2. PostForm Component  */}
                                 <PostForm refreshPosts={() => fetchPosts()}/>
@@ -96,7 +114,7 @@ const Posts = () => {
                                             image={post.image}
                                             deletePosts = {() => deletePosts(post._id)}
                                             postId={post._id}
-                                            poster={post.user}
+                                            poster={post.user._id}
                                             refreshPosts={() => fetchPosts()}
                                         />
                                         </>

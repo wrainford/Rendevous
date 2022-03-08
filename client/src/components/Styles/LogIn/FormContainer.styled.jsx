@@ -6,11 +6,11 @@ input{
      flex-direction: column;
      justify-content: space-around;
      align-items: center;
-     height:30%;
+     height:20%;
      width: 25rem;  
      border:none;
      margin: 3rem 0rem 0;
-     padding: 25px;
+     padding: 20px;
      border-radius:20px
      background: white;
      background:white;
