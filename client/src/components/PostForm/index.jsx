@@ -71,7 +71,7 @@ const PostForm = ({ refreshPosts }) => {
 						</div>
 			</form>
             	<br />
-            </div>
+          </div>
 		</div>
 	</div>
 	);
