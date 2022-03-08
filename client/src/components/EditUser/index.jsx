@@ -9,11 +9,14 @@ const EditUser = (props) => {
     const [userName, setUserName] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [bio, setBio] = useState("");
+    const [gitHub, setGitHub] = useState("");
+    const [youTube, setYouTube] = useState("");
     const navigate = useNavigate();
     let {id} = useParams();
 
     const HandleSubmit = async () => {
-        let updatedUser = {userName, name, email}
+        let updatedUser = {userName, name, email, bio, gitHub, youTube}
          await userService.updateUser(props.user._id, updatedUser);
         navigate(`/users/${id}`);
     }
@@ -30,8 +33,11 @@ const EditUser = (props) => {
         setUserName(props.user.userName);
         setName(props.user.name);
         setEmail(props.user.email);
+        setBio(props.user.bio);
+        setGitHub(props.user.gitHub);
+        setYouTube(props.user.youTube);
     }, [props]);
-
+    console.log(props.user)
     return(
         <>
         <div className="main-user-edit">
@@ -62,6 +68,42 @@ const EditUser = (props) => {
                         onChange={(e) => setEmail(e.target.value)}
                         type="text"
                         value={email}
+                    />
+                </label>
+                <br />
+                <label>Username:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-username"
+                        onChange={(e) => setUserName(e.target.value)}
+                        type="text"
+                        value={userName}
+                    />
+                </label>
+                <br />
+                <label>Bio:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-bio"
+                        onChange={(e) => setBio(e.target.value)}
+                        type="text"
+                        value={bio}
+                    />
+                </label>
+                <br />
+                <label>GitHub link:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-github"
+                        onChange={(e) => setGitHub(e.target.value)}
+                        type="text"
+                        value={gitHub}
+                    />
+                </label>
+                <br />
+                <label>YouTube link:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-youtube"
+                        onChange={(e) => setYouTube(e.target.value)}
+                        type="text"
+                        value={youTube}
                     />
                 </label>
             </form>

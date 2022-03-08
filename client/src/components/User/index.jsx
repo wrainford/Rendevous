@@ -10,6 +10,10 @@ const User = (props) => {
 			<img src = {`/uploads/postImages/${props.user.avatar}`} alt="..." style= {{width: "25%"}}/>
 			<h1 className="prof-username">{props.user.userName}</h1>
 				<h2 className="prof-name">{props.user.name}</h2>
+				<h3>Git Hub: {props.user.gitHub}</h3>
+				<h3>YouTube: {props.user.youTube}</h3>
+				<h3>Bio:</h3>
+				<p>{props.user.bio}</p>
 			</div>
 					{props.userPost?.map((post) => {
 						return(
