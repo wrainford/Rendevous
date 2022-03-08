@@ -28,7 +28,6 @@ const User = (props) => {
 			<div className="my-nick-name">
 			<h2 className="my-nick-name" >{props.user.name}</h2>
 			</div>
-			</div>
 			
 					{props.userPost?.map((post) => {
 						return(
