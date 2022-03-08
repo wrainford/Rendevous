@@ -28,9 +28,31 @@ const showUser = (req, res) => {
 
 
 const updateUser = (req, res) => {
+    let userData;
+    if(req.file !== undefined){
+        userData = { 
+            name: req.body.name,
+            userName: req.body.userName,
+            email: req.body.email,
+            bio: req.body.bio,
+            gitHub: req.body.gitHub,
+            youTube: req.body.youTube,
+            avatar: req.file.originalname,
+        }
+    } else {
+        userData = {
+            name: req.body.name,
+            userName: req.body.userName,
+            email: req.body.email,
+            bio: req.body.bio,
+            gitHub: req.body.gitHub,
+            youTube: req.body.youTube,
+        }
+    }
+
     db.User.findByIdAndUpdate(
         req.params.id,
-        req.body,
+        userData,
         { new: true },
         (err, updatedUser) => {
             if(err)

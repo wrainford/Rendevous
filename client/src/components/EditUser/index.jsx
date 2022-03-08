@@ -9,11 +9,23 @@ const EditUser = (props) => {
     const [userName, setUserName] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [bio, setBio] = useState("");
+    const [gitHub, setGitHub] = useState("");
+    const [youTube, setYouTube] = useState("");
+    const [avatar, setAvatar] = useState("");
     const navigate = useNavigate();
     let {id} = useParams();
 
     const HandleSubmit = async () => {
-        let updatedUser = {userName, name, email}
+        const updatedUser = new FormData();
+        updatedUser.append("userName", userName);
+        updatedUser.append("name", name);
+        updatedUser.append("email", email);
+        updatedUser.append("bio", bio);
+        updatedUser.append("gitHub", gitHub);
+        updatedUser.append("youTube", youTube);
+        updatedUser.append("avatar", avatar);
+        //{userName, name, email, bio, gitHub, youTube, avatar}
          await userService.updateUser(props.user._id, updatedUser);
         navigate(`/users/${id}`);
     }
@@ -30,14 +42,20 @@ const EditUser = (props) => {
         setUserName(props.user.userName);
         setName(props.user.name);
         setEmail(props.user.email);
+        setBio(props.user.bio);
+        setGitHub(props.user.gitHub);
+        setYouTube(props.user.youTube);
     }, [props]);
-
+    console.log(props.user)
     return(
         <>
-        <div className="main-user-edit">
         <div className="profileform-Container">
+        <div className="profile-Edit-Container">
         <h1 className="editprof-title">Edit Your Profile</h1>
-            <form className="editprof-form" autocomplete="off">
+
+
+            <form encType="multipart/form-data" className="editprof-form" autocomplete="off">
+
                 <label>Username:
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-username"
@@ -64,13 +82,47 @@ const EditUser = (props) => {
                         value={email}
                     />
                 </label>
+                <br />
+                <label>Bio:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-bio"
+                        onChange={(e) => setBio(e.target.value)}
+                        type="text"
+                        value={bio}
+                    />
+                </label>
+                <br />
+                <label>GitHub link:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-github"
+                        onChange={(e) => setGitHub(e.target.value)}
+                        type="text"
+                        value={gitHub}
+                    />
+                </label>
+                <br />
+                <label>YouTube link:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-youtube"
+                        onChange={(e) => setYouTube(e.target.value)}
+                        type="text"
+                        value={youTube}
+                    />
+                </label>
+                <br />
+                <label>Avatar:
+                &nbsp;&nbsp;&nbsp;
+                    <input
+                        onChange={(e) => setAvatar(e.target.files[0])}
+                        filename="image"
+                        type="file"
+                    />
+                </label>
             </form>
-
             <button onClick={HandleSubmit} className="editprof-button">Edit</button>
             <button onClick={deleteProfile} className="editprof-delete">Delete Profile</button>
-
-            </div>
-            </div>
+        </div>
+        </div>
         </>
     
     )

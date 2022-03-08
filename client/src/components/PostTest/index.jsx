@@ -13,7 +13,6 @@ Modal.setAppElement("#root");
 
 const PostView = (props) => {
     if (props.isEdit) {
-       
         return (
         // console.log(props),
         <PostEdit 
@@ -44,19 +43,6 @@ const PostView = (props) => {
 }
 
 const PostToggle = (props) => {
-   
-    const [coms, setComs] = useState([]); 
-    const fetchComs = async () => {
-        await postService.showPost().then((res) => {
-            //console.log(res.data.data) 
-            setComs(res.data.data);
-
-        });
-    };
-    useEffect(() => {
-        fetchComs();
-    }, []);
-
     const [isEdit, setIsEdit] = useState(false);
     const [button, setButton] = useState(<FiEdit size={30} color="#66AFA4"/>)
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -73,9 +59,8 @@ const PostToggle = (props) => {
     }
 
     let id = JSON.parse(localStorage.getItem("id"));
-
     const Buttons = () => {
-        if(id == props.poster._id) {
+        if(id == props.poster) {
             return(
                 <>
                     <button onClick={handleClick} className="button1">
@@ -98,7 +83,7 @@ const PostToggle = (props) => {
         <div className="post-container">
             <br />
             <div className="post-buttons">
-            {/* <Buttons/> */}
+            <Buttons/>
             <Modal 
                 isOpen={modalIsOpen} 
                 onRequestClose={()=>setModalIsOpen(false)}
