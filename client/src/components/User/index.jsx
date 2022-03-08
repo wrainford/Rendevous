@@ -6,10 +6,18 @@ const User = (props) => {
 
 	return (
 		<>
+
 			<div className="prof-container-user">
-				
-			<div className="img-profile">
-				<img className="img"src = {`/uploads/postImages/${props.user.avatar}`} alt="..." />
+          <div className="img-profile">
+            <img className="img"src = {`/uploads/postImages/${props.user.avatar}`} alt="..." />
+          </div>
+			<h1 className="prof-username">{props.user.userName}</h1>
+				<h2 className="prof-name">{props.user.name}</h2>
+				<h3>Git Hub: {props.user.gitHub}</h3>
+				<h3>YouTube: {props.user.youTube}</h3>
+				<h3>Bio:</h3>
+				<p>{props.user.bio}</p>
+
 			</div>
 			<div className="prof-username">
 			<h3>{props.user.userName}</h3>
