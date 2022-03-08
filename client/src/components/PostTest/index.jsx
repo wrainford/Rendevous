@@ -13,7 +13,6 @@ Modal.setAppElement("#root");
 
 const PostView = (props) => {
     if (props.isEdit) {
-       
         return (
         // console.log(props),
         <PostEdit 
@@ -40,19 +39,6 @@ const PostView = (props) => {
 }
 
 const PostToggle = (props) => {
-   
-    const [coms, setComs] = useState([]); 
-    const fetchComs = async () => {
-        await postService.showPost().then((res) => {
-            //console.log(res.data.data) 
-            setComs(res.data.data);
-
-        });
-    };
-    useEffect(() => {
-        fetchComs();
-    }, []);
-
     const [isEdit, setIsEdit] = useState(false);
     const [button, setButton] = useState(<FiEdit size={30} color="#66AFA4"/>)
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -94,7 +80,7 @@ const PostToggle = (props) => {
         <div className="post-container">
             <br />
             <div className="post-buttons">
-            {/* <Buttons/> */}
+            <Buttons/>
             <Modal 
                 isOpen={modalIsOpen} 
                 onRequestClose={()=>setModalIsOpen(false)}
