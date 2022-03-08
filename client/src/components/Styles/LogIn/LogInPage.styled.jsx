@@ -4,7 +4,7 @@ export const LogInPage = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
-height: 30vh;
+height: 80vh;
 width: 30vw;
 background: #1A2B44;
 box-shadow: 0 8px 32px 0 rgba(102, 175, 164, 0.91);
@@ -35,8 +35,8 @@ letter-spacing: 0.4rem;
   }
 }
 @media only screen and (min-width: 411px) {
-  width: 60vw;
-  height: 80vh;
+  width: 70vw;
+  height: 60vh;
 }
 
  @media only screen and (min-width: 860px) {
@@ -44,12 +44,13 @@ letter-spacing: 0.4rem;
    height: 70vh;
  }
   @media only screen and (min-width: 1024px) {
-     width: 80vw;
-      height: 60vh;
+
+     width: 60vw;
+     height: 60vh;
 }
 @media only screen and (min-width: 1200px) {
   width: 40vw;
-   height: 90vh;
+   height: 60vh;
 }
 @media only screen and (min-width: 1280px) {
   width: 30vw;
@@ -59,6 +60,6 @@ letter-spacing: 0.4rem;
 `;
 
 export const WelcomeText = styled.h1`
-margin: 6rem 0rem 0;
+margin: 3rem 0rem 0;
 font-family: 'Inconsolata', monospace;`;
 
