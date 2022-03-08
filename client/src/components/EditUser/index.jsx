@@ -12,11 +12,12 @@ const EditUser = (props) => {
     const [bio, setBio] = useState("");
     const [gitHub, setGitHub] = useState("");
     const [youTube, setYouTube] = useState("");
+    const [avatar, setAvatar] = useState("");
     const navigate = useNavigate();
     let {id} = useParams();
 
     const HandleSubmit = async () => {
-        let updatedUser = {userName, name, email, bio, gitHub, youTube}
+        let updatedUser = {userName, name, email, bio, gitHub, youTube, avatar}
          await userService.updateUser(props.user._id, updatedUser);
         navigate(`/users/${id}`);
     }
@@ -43,7 +44,7 @@ const EditUser = (props) => {
         <div className="main-user-edit">
         <div className="profileform-Container">
         <h1 className="editprof-title">Edit Your Profile</h1>
-            <form className="editprof-form">
+            <form encType="multipart/form-data" className="editprof-form">
                 <label>Username:
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-username"
@@ -71,15 +72,6 @@ const EditUser = (props) => {
                     />
                 </label>
                 <br />
-                <label>Username:
-                &nbsp;&nbsp;&nbsp;
-                    <input className="editprof-username"
-                        onChange={(e) => setUserName(e.target.value)}
-                        type="text"
-                        value={userName}
-                    />
-                </label>
-                <br />
                 <label>Bio:
                 &nbsp;&nbsp;&nbsp;
                     <input className="editprof-bio"
@@ -104,6 +96,15 @@ const EditUser = (props) => {
                         onChange={(e) => setYouTube(e.target.value)}
                         type="text"
                         value={youTube}
+                    />
+                </label>
+                <br />
+                <label>Avatar:
+                &nbsp;&nbsp;&nbsp;
+                    <input className="editprof-youtube"
+                        onChange={(e) => setAvatar(e.target.files[0])}
+                        filename="image"
+                        type="file"
                     />
                 </label>
             </form>
