@@ -7,6 +7,7 @@ import {GiCancel} from "react-icons/gi";
 
 
 const DelComment = (props) => {
+    let id = JSON.parse(localStorage.getItem("id"));
     
     const Delete = async () => {
         let res = await postService.deleteComment(props.commentId).then(() => {
@@ -16,11 +17,17 @@ const DelComment = (props) => {
         console.log(res);
     }
 
-    return(
-        <>
-            <button className="button-trash" onClick={Delete}> <FiTrash2 size={25} color="#5E5D5D"/></button>
-        </>
-    )
+    if(id == props.commenterId){
+        return(
+            <>
+                <button className="button-trash" onClick={Delete}> <FiTrash2 size={25} color="#5E5D5D"/></button>
+            </>
+        )
+    } else {
+        return(<></>)
+    }
+
+
 }
 
 export default DelComment;
