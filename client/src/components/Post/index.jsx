@@ -31,7 +31,7 @@ const Post = (props) => {
         <div className="post-container-2">
     
 			<h2 className="post-title">{props.title}</h2>
-            <img src = {`/uploads/postImages/${props.image}`} alt="" style= {{width: "100%"}}/>
+            <img src = {`/uploads/postImages/${props.image}`} alt="" style= {{width: "100%"}} className="postimg"/>
             <p className="post-body">{props.body}</p>
                 
         

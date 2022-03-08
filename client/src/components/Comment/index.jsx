@@ -7,6 +7,7 @@ import "./index.css"
 
 
 
+
 const Comment = (props) => {
 	const [commentName, setCommentName] = useState("");
 	const [commentAvatar, setCommentAvatar] = useState("");
@@ -41,5 +42,6 @@ const Comment = (props) => {
 		</>
 	);
 };
+
 
 export default Comment;

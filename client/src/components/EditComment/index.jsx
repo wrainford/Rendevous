@@ -25,12 +25,19 @@ const EditComment = (props) => {
         }
     }
 
-    return(
+    let id = JSON.parse(localStorage.getItem("id"));
+    if(id==props.commenterId){
+        return(
         <>
             <button className="button-edit" onClick={HandleClick}>{button}</button>
             {child}
         </>
     )
+} else {
+    return (
+        <></>
+    )
+}
 }
 
 export default EditComment;

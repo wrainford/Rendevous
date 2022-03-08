@@ -47,8 +47,8 @@
 }
 
 .user-icon{
-    display:inline-flex;
-    width: 10%;
+    display:block;
+    border-radius: 50%;
 }
 
 .text-container{
@@ -60,14 +60,13 @@
 .h4-username{
     font-weight: bold;
     font-size: larger;
-    font-family: 'Inconsolata', monospace;
+    font-family: 'Jost', sans-serif; 
 }
 
 .h4-comment-text{
     display:inline-flex;
     width: 90%;
     font-family: 'Inconsolata', monospace;
-    
 
 }
 
@@ -76,8 +75,3 @@
     margin-left: 8%;
 }
 
-.delete-btn-div{
-    display: inline-flex;
-    background-color: transparent; 
-    cursor: pointer;
-}
