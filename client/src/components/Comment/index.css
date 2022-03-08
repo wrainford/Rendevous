@@ -68,12 +68,14 @@
     display:inline-flex;
     width: 90%;
     font-family: 'Inconsolata', monospace;
-    font-size: 24px;
+    font-size: 20px;
 
 }
 
 .comment-buttons{
     display:inline-flex;
     margin-left: 8%;
+    margin-top: 3%;
+    width: 100%;
 }
 

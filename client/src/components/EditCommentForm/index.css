@@ -1,7 +1,8 @@
 .edit-container{
     display: flex;
-    margin-top: -10%;
-    width: 100%;
+    flex-direction: column;
+    margin-top: -3%;
+    width: 80%;
 }
 
 .submit-div{
@@ -15,6 +16,8 @@
     /* border-radius: 5px 0 0 5px;  */
     font-size: 20px;
     font-family: 'Inconsolata', monospace;
+    width: 100%;
+
     /* border: none; */
 }
 

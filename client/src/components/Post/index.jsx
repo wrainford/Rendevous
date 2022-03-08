@@ -36,12 +36,19 @@ const Post = (props) => {
                 
         
                 {/* <h3 className="comment-title">Comments:</h3> */}
-            <div className="comment-box">  
+            <div className="comment-box">  <div>
+
+            
             <CommentForm 
             avatar={props.avatar}
             userName = {props.userName}
             postId={props.postId} 
             refreshPosts={props.refreshPosts} /> 
+            </div>
+
+            <div>
+
+            
                 {props.comment.map((comment) => {
                     return(
                         
@@ -55,6 +62,7 @@ const Post = (props) => {
                         />
                     );
                 })}
+                </div>
             </div>  
             {/* <div className="button-div">
                 <button className="loadmore">Load More</button>
