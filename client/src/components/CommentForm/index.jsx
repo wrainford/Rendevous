@@ -21,33 +21,33 @@ const CommentForm = (props) => {
 		}
 	}
 
-	return (
-		<>
-		<div className="parent">
-			<div className="child1">
-					<BsPersonCircle size={30} />
+		return (
+			<>
+			<div className="parent">
+				<div className="child1">
+						<BsPersonCircle size={30} />
+				</div>
+				
+				
+					<form encType="application/json" className="comment-form" autoComplete="off">
+					<div className="commentform-container">
+						<input
+							className="comment-text"
+							onChange={(e) => setContent(e.target.value)}
+							value={content}
+							type="text"
+							name="content"
+							placeholder="Add a comment..."
+						/>
+						<button className="comment-post-button" onClick={handleSubmit}>
+						<FiSend size={30} color="#66AFA4"/>
+						</button>
+						</div>
+					</form>
+				
 			</div>
-			
-			
-				<form encType="application/json" className="comment-form" autocomplete="off">
-				<div className="commentform-container">
-					<input
-						className="comment-text"
-						onChange={(e) => setContent(e.target.value)}
-						value={content}
-						type="text"
-						name="content"
-						placeholder="Add a comment..."
-					/>
-					<button className="comment-post-button" onClick={handleSubmit}>
-					<FiSend size={30} color="#66AFA4"/>
-					</button>
-					</div>
-				</form>
-			
-		</div>
-		</>
-	);
+			</>
+		);
 };
 
 export default CommentForm;

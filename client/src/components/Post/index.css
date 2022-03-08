@@ -30,6 +30,10 @@
     /* border: 2px pink solid; */
 }
 
+.postimg{
+    border-radius: 3%
+}
+
 .post-body{
     font-size: 20px;
     font-family: 'Inconsolata', monospace;
