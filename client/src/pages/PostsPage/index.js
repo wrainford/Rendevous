@@ -70,12 +70,35 @@ const Posts = () => {
         
 	}, []);
 
+    // console.log(posts[0].user.avatar);
+    // <img href={}
+   
     return (	
             <div>
                 
                 {/* 1. NAVBAR */}
                    <NavBar/>
                             <>
+                            <div className="meet-parent">
+                            <div className="meet-div">
+                                <img src={"/uploads/rdvlogo.png"} alt="" className="meet" style={{width:"100%"}}/>
+                            </div>
+                            </div>
+
+                            <div className="usercontainer">
+                            {users.slice(1,9).map((user)=>{
+                                return (
+                                    <img src = {`/uploads/postImages/${user.avatar}`} alt="..." 
+                                    className="users"
+                                    />
+                                )
+                            })}
+                            </div>
+
+
+
+
+
                                 
                                 {/* 2. PostForm Component  */}
                                 <PostForm refreshPosts={() => fetchPosts()}/>
@@ -83,6 +106,9 @@ const Posts = () => {
                                {/* 3. Post Component  */}
                                 {posts.map((post) => {
                                         return (
+                                        <>
+                                        <img src = {`/uploads/postImages/${post.user.avatar}`} alt="..." style= {{width: "5%"}}/>
+                                        <h4>{post.user.name}</h4>
                                         <PostTest
                                             title={post.title}
                                             body={post.body}
@@ -93,6 +119,7 @@ const Posts = () => {
                                             poster={post.user}
                                             refreshPosts={() => fetchPosts()}
                                         />
+                                        </>
                                         )
                                 })} 
                             </>

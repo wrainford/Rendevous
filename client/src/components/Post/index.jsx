@@ -9,17 +9,17 @@ import "./index.css"
 
 
 const Post = (props) => {
-    const [coms, setComs] = useState([]); 
-    const fetchComs = async () => {
-        await postService.showPost().then((res) => {
-            //console.log(res.data.data) 
-            setComs(res.data.data);
-
-        });
-    };
-    useEffect(() => {
-        fetchComs();
-    }, []);
+    
+    // const [coms, setComs] = useState([]); 
+    // const fetchComs = async () => {
+    //     await postService.showPost().then((res) => {
+    //         // setComs(res.data.data);
+    //     });
+    // };
+    // useEffect(() => {
+    //     fetchComs();
+       
+    // }, []);
 
 	return (
 		<>
@@ -34,14 +34,14 @@ const Post = (props) => {
         
                 {/* <h3 className="comment-title">Comments:</h3> */}
             <div className="comment-box">  
-            <CommentForm postId={props.postId} refreshcoms={() => fetchComs()} /> 
+            <CommentForm postId={props.postId} refreshPosts={props.refreshPosts} /> 
                 {props.comment.map((comment) => {
                     return(
                         
                         <Comment
                             comment={comment.content}
                             id={comment._id}
-                            fetchComs={fetchComs}
+                            refreshPosts={props.refreshPosts}
                         />
                     );
                 })}
