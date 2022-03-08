@@ -27,7 +27,7 @@ const Login = () => {
     <LogInPage>
     <WelcomeText>Welcome</WelcomeText>
         <FormComponent>
-        <form autocomplete="off">
+        <form autoComplete="off">
             <label htmlFor="email">
             
                 <input

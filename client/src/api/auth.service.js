@@ -1,6 +1,5 @@
 import apiClient from "./axios.config";
 const auth = "/auth";
-const user = "/user";
 
     const register = (email, password, name, userName) => {
         return apiClient
@@ -32,7 +31,6 @@ const user = "/user";
 
     const getProfile = () => {
         let id = localStorage.getItem("id");
-        // return apiClient.get(`${id}`);
         return JSON.parse(id);
     }
 
