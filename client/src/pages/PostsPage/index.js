@@ -70,9 +70,7 @@ const Posts = () => {
         
 	}, []);
 
-    // console.log(posts[0].user.avatar);
-    // <img href={}
-   
+
     return (	
             <div>
                 
@@ -116,7 +114,7 @@ const Posts = () => {
                                             image={post.image}
                                             deletePosts = {() => deletePosts(post._id)}
                                             postId={post._id}
-                                            poster={post.user}
+                                            poster={post.user._id}
                                             refreshPosts={() => fetchPosts()}
                                         />
                                         </>

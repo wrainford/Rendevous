@@ -55,9 +55,8 @@ const PostToggle = (props) => {
     }
 
     let id = JSON.parse(localStorage.getItem("id"));
-
     const Buttons = () => {
-        if(id == props.poster._id) {
+        if(id == props.poster) {
             return(
                 <>
                     <button onClick={handleClick} className="button1">
