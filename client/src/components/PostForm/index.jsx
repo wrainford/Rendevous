@@ -36,57 +36,61 @@ const PostForm = ({ refreshPosts }) => {
 	};
 
 	return (
-		<div>
-			{/* Used for returning the form data */}
-		<div className="main-post-form">
-            <div className="postform-container">
-			<h2 className="create-post"> WHAT'S ON YOUR MIND </h2> 
+		<div className="flexbox-container">
+			<div className="whatsonyourmind">
+				<h2 className="create-post"> WHAT'S ON YOUR MIND </h2> 
+			</div>
+
 			<form encType="multipart/form-data" autocomplete="off" className="create-post-form">
+				<div className="addtitle">
 					<label>
-						<input
-							className="input-title"
-							onChange={(e) => setTitle(e.target.value)}
-							value={title}
-							type="text"
-							name="title"
-							placeholder="Add title here"
-						/>
+							<input
+								className="input-title"
+								onChange={(e) => setTitle(e.target.value)}
+								value={title}
+								type="text"
+								name="title"
+								placeholder="Add title here (required)"
+							/>
 					</label>
-                <br />
+				</div>
+
+				<div className="addbody">
 					<label>
-						<textarea
+							<textarea
 							className="input-body"
 							onChange={(e) => setBody(e.target.value)}
 							value={body}
 							type="text"
 							name="body"
-							placeholder="Type Something"
-						/>
+							placeholder="Type Something (required)"
+							/>
 					</label>
-                <br />
-                <br />
-				<div className="add-img-container">
-							<div className="small-div">
-								<h4 className="add-image-text">Add image</h4>
-									<input
-										onChange={(e) => setImage(e.target.files[0])}
-										filename="image"
-										type="file"
-										className="add-img-btn"
-									/>
-							</div>
-							<button onClick={handleSubmit} className="button-81"> POST SOMETHING </button>
+				</div>
+
+				<div className="imagebox">
+					<div className="addimage">
+						
+							<input
+								onChange={(e) => setImage(e.target.files[0])}
+								filename="image"
+								type="file"
+								className="input-image"
+							/>
+					</div>
+					<div className="postbutton">
+						<div className="buttonbox">
+						<button onClick={handleSubmit} className="button-81"> POST </button>
 						</div>
+						
+					</div>
+
+				</div>
 			</form>
-            	<br />
-          </div>
 		</div>
-	</div>
+
 	);
 };
 
-// PostForm.propTypes = {
-// 	refreshPosts: func,
-// };
 
 export default PostForm;

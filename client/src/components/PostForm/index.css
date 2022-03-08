@@ -1,130 +1,93 @@
-.main-post-form {
-    background-color: #0E192D;
-    border: #0E192D 2px solid;
-    }
 
-    .create-post-form{
-        padding-right: 5%;
-        padding-left: 5%;
-    }
-    
-    .postform-container{
-        background-color: #1A2B44;
-        padding: 3%;
-        margin: 3% 10%;
-        margin-bottom: 3%; 
-        margin-left: 8%;
-        margin-right: 8%;
-        margin-top: 5%;
-        border-radius: 10px;
-        border: 1px #314664 solid;
-        /* box-shadow: 2px 2px 2px 1px #3f587c ; */
-    }
-    
-    .input-title{
-        background-color: transparent;
-        color: white;
-        border: none;
-        font-weight: bold;
-        font-size: 24px; 
-        padding-left: 22px; 
-        font-family: 'Inconsolata', monospace; 
-        width: 80%;
-        line-height: 0.8;
-    }
-    
-    .input-body{
-        width: 80%;
-        height: 200px;
-        padding: 12px 20px;
-        box-sizing: border-box;
-        border-radius: 10px; 
-        font-size: 24px;
-        font-family: 'Inconsolata', monospace;
-    }
-    
-    
-    
-    .add-image-text{
-        padding-left: 15px;
-        padding-top: 4px;
-        /* border:white 2px solid; */
-        width: 20%;
-    }
-    
-    .post-button {
-        background-color: #979494;
-        color: white; 
-        padding: 10px 12px;
-        font-size: 16px;
-        border-radius: 5px; 
-        font-family: 'Jost', sans-serif;
-        font-weight: bold;
-        box-shadow: none; 
-        height: 50%;
-        justify-self: flex-end;
-        border: none;
-        /* border:white 2px solid; */
-        
-    }
-    
-    .add-image{
-        display:flex; 
-        /* border:white 2px solid; */
-        height: 100%;
-        
-    
-    }
-    
-    .post-button:hover {
-        background-color: #727070;
-        border: none;
-    }
-    
-    
-    .create-post{
-        text-align: center;
-        margin-top: 3%;
-        margin-bottom: -4%;
-        font-family: 'Jost', sans-serif;
-    }
-    
-    
-    
-    @media only screen and (max-width: 600px) {
-        .post-button{
-            width: smaller;
-        }
-    }
-    
-    .add-img-btn{
-        width: 35%;
-        height:fit-content;
-        cursor: pointer;
-        display:flex;
-        border:white 2px solid;
-        align-self: flex-start;
-        margin-top: 0%;
-        
-    
-    }
-    
-    .small-div{
-        /* border:pink 2px solid; */
-        width: 60%;
-        display:flex;
-    }
-    
-    .add-img-container{
-        display:flex;
-        /* border:white 2px solid; */
-        align-content: flex-start;
-        justify-content: space-between;
-    
-    }
-    
-    
+.flexbox-container{
+    display: flex;
+    flex-direction: column;
+    margin: 3% 8%;
+    justify-content: center;
+    padding: 3%;
+    background-color: #1A2B44;
+    border: 1px #314664 solid;
+    border-radius: 10px;
+    padding-bottom: 5%;
+}
+
+
+
+.whatsonyourmind{
+    margin-top: 2%;
+    text-align: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+}
+
+.addtitle{ 
+    /* margin-top: -30px; */
+    width: 80%;
+    margin-left: 10%;
+}
+
+.input-title{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 24px; 
+    padding-left: 22px; 
+    font-family: 'Inconsolata', monospace; 
+    width: 80%;
+    line-height: 0.8;
+}
+
+.addbody{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2%;
+
+}
+
+.input-body{
+    width: 80%;
+    height: 200px;
+    padding: 12px 22px;
+    border-radius: 10px; 
+    font-size: 24px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.imagebox{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: -4%;
+}
+
+.addimage{
+    width: 50%;
+    display: inline-flex;
+}
+
+.input-image{
+    height: fit-content;
+    width: 100%;
+    color: white;
+    font-family: 'Jost', sans-serif;
+}
+
+.postbutton{
+    float: right;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.buttonbox{
+    width: 40%;
+    margin-bottom: 2%;
+}
+
     .button-81 {
+      align-self: center;
       background-color: #fff;
       border: 0 solid #e2e8f0;
       border-radius: 1.5rem;
@@ -135,7 +98,7 @@
       font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
       font-size: 1.1rem;
       font-weight: 600;
-      line-height: 0.8;
+      line-height: 0.4;
       padding: 1rem 1.6rem;
       text-align: center;
       text-decoration: none #0d172a solid;
@@ -145,6 +108,7 @@
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;
+      float: right;
     }
     
     .button-81:hover {
@@ -159,3 +123,4 @@
         padding: 1rem 2rem;
       }
     }
+

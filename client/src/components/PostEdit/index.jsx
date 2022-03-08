@@ -25,30 +25,27 @@ const PostEdit = (props) => {
 	};
 
 	return (
-		<div>
-            <br />
-			{/* Used for returning the form data */}
-            <div className="postform-container">
-            <h3 className="editing">Editing...</h3>
-            <br />
-			<form encType="multipart/form-data" autocomplete="off">
+		<div className="editcontainer">
+			<div className="editingdiv">
+				<h3 className="editing">Editing...</h3>
+			</div>
+			<form encType="multipart/form-data" autoComplete="off">
+			<div className="titleedit">
 				<label>
-					<div className="edit-title">
-					<h4>Title: </h4>
-					<input
-						onChange={(e) => setTitle(e.target.value)}
-						value={title}
-						type="text"
-						name="title"
-						placeholder="TITLE"
-						className="input-title"
-					/>
-					</div>
+						<h4 className="title-title">Title: </h4>
+						<input
+							onChange={(e) => setTitle(e.target.value)}
+							value={title}
+							type="text"
+							name="title"
+							placeholder="TITLE"
+							className="input-title"
+						/>
 				</label>
-                <br />
-                <br />
+			</div>
+			<div className="bodyedit">
 				<label>
-					<h4>Post: </h4>
+					<h4 className="body-post">Post: </h4>
 					<textarea
 						onChange={(e) => setBody(e.target.value)}
 						value={body}
@@ -58,29 +55,25 @@ const PostEdit = (props) => {
 						className="input-body"
 					/>
 				</label>
-                <br />
-                <br />
-				<label>
-					<h4 className="add-image-text">Add image </h4>
-					<input
-						onChange={(e) => setImage(e.target.files[0])}
-						filename="image"
-						type="file"
-						className="add-image"
-					/>
-				</label>
+			</div>
+			<div className="imageedit">
+				<div className="imgbox">
+						<input
+							onChange={(e) => setImage(e.target.files[0])}
+							filename="image"
+							type="file"
+							className="add-image"
+						/>
+				</div>
+				<div className="savebutton">
+					<div className="buttonbox">
+						<button onClick={handleSubmit} className="button-81"> SAVE </button>
+					</div>	
+				</div>
+			</div>
 			</form>
-            <br />
-            <div className="postbutton">
-			<button onClick={handleSubmit} className="post-button"> SAVE CHANGES </button>
-            </div>
-            </div>
 		</div>
 	);
 };
-
-// PostForm.propTypes = {
-// 	refreshPosts: func,
-// };
 
 export default PostEdit;

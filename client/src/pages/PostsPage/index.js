@@ -109,7 +109,8 @@ const Posts = () => {
 
                                 
                                 {/* 2. PostForm Component  */}
-                                <PostForm refreshPosts={() => fetchPosts()}/>
+                                <PostForm 
+                                    refreshPosts={() => fetchPosts()}/>
                               
                                {/* 3. Post Component  */}
                                 {posts.map((post) => {
