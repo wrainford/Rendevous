@@ -79,6 +79,26 @@ const Posts = () => {
                 {/* 1. NAVBAR */}
                    <NavBar/>
                             <>
+                            <div className="meet-parent">
+                            <div className="meet-div">
+                                <img src={"/uploads/rdvlogo.png"} alt="" className="meet" style={{width:"100%"}}/>
+                            </div>
+                            </div>
+
+                            <div className="usercontainer">
+                            {users.slice(1,9).map((user)=>{
+                                return (
+                                    <img src = {`/uploads/postImages/${user.avatar}`} alt="..." 
+                                    className="users"
+                                    />
+                                )
+                            })}
+                            </div>
+
+
+
+
+
                                 
                                 {/* 2. PostForm Component  */}
                                 <PostForm refreshPosts={() => fetchPosts()}/>
