@@ -1,6 +1,6 @@
 import './App.css';
 import './index.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Posts from "./pages/PostsPage"
 import LoginPage from './pages/LogInPage';
@@ -9,11 +9,23 @@ import ProfilePage from './pages/ProfilePage';
 import PrivacyPage from './pages/PrivacyPage';
 import EditProfilePage from './pages/EditProfilePage';
 import LogOut from './components/LogOut'
+import * as authService from './api/auth.service';
 
 const App = () => {
  const [isLoggedIn, setIsLoggedIn] = useState();
+  const userActive = () => {
+    if(authService.currentUser()){
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }
 
+  useEffect(() => {
+    userActive();
+  }, []);
 
+  console.log(isLoggedIn);
   return (
     <div className="land-page">
       <Router>
