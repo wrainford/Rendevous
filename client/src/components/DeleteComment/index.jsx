@@ -7,9 +7,10 @@ import {GiCancel} from "react-icons/gi";
 
 
 const DelComment = (props) => {
+    
     const Delete = async () => {
         let res = await postService.deleteComment(props.commentId).then(() => {
-            props.fetchComs();
+            props.refreshPosts();
         });
 
         console.log(res);

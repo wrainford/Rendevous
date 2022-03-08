@@ -13,6 +13,7 @@ Modal.setAppElement("#root");
 
 const PostView = (props) => {
     if (props.isEdit) {
+       
         return (
         // console.log(props),
         <PostEdit 
@@ -26,7 +27,7 @@ const PostView = (props) => {
         />)
     }
     return (
-        // console.log(props),
+      
         <Post 
             title={props.title}
             body={props.body}
@@ -39,6 +40,7 @@ const PostView = (props) => {
 }
 
 const PostToggle = (props) => {
+   
     const [coms, setComs] = useState([]); 
     const fetchComs = async () => {
         await postService.showPost().then((res) => {
@@ -138,6 +140,7 @@ const PostToggle = (props) => {
                 comment={props.comment}
                 image={props.image}
                 deletePosts={props.deletePosts}
+                refreshPosts={props.refreshPosts}
                 postId={props.postId}
                 className="postview" />
 
