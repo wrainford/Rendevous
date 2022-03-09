@@ -16,9 +16,8 @@ Rendevous is a social media platform that provides a space to share content for 
 
 
 
-
 ## Get Started
-See our deployed app here: 
+See our deployed app here: https://rendevousss.herokuapp.com/
 
 ## Brainstorming
 Our UX survey research revealed that our target users are primarily younger developers starting out in their career who already have social media integrated into their lives. Users showed interest in sharing their GitHub or Youtube links (or their other portfolios), seeing different code tips and tricks, and a reliable privacy policy. With the most popular type of media content being photo, our app utilizes upload image function to easily share visualizations.
@@ -50,10 +49,21 @@ Our UX survey research revealed that our target users are primarily younger deve
 - Express
 - React
 - Node.js
+- Mongoose
+- CSS
+- React Modal
 - Axios
 - JsonWebToken
 - Bcrypt
+- Multer
 
 ## Unsolved Problems:
+- Inconsistent image updates across editing user and post
 
 ## Future Enhancements:
+- Post filtering to match specific tags (ex. #React, #JS, #C++)
+- Feature to see other users' profiles and projects
+- Allow users to list down their own projects created in their profile page
+- Allow users to like and unlike posts 
+- Theme Toggling 
+- Mobile Responsiveness 
