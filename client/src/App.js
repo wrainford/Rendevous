@@ -29,7 +29,7 @@ const App = () => {
     <div className="land-page">
       <Router>
             <Routes>
-              <Route path="/" element={isLoggedIn ? <Posts /> : <SignUpPage/>}/>
+              <Route path="/" element={isLoggedIn ? <Posts /> : <LoginPage/>}/>
               <Route path="/posts/*" element={<Posts />}/>
               <Route path="/login" element={isLoggedIn ? <Posts /> : <LoginPage />}/>
               <Route path="/users/:id" element={isLoggedIn ? <ProfilePage/> : <SignUpPage />}/>
