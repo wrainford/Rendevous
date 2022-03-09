@@ -26,7 +26,10 @@ const Comment = (props) => {
 	return (
 		<>
 			<div className="comment-container">
-			<img src = {`/uploads/postImages/${commentAvatar}`} alt="..." className= "user-icon" style= {{width: "5%"}}/>
+				<div className="circle">
+				<img src = {`/uploads/postImages/${commentAvatar}`} alt="..." className= "user-icon"/>
+				</div>
+			
 			<div className="text-container">
 			<h4 className="h4-username">{commentName}</h4>
 			<h4 className="h4-comment-text"> {props.comment} </h4>

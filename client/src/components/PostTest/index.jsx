@@ -48,7 +48,6 @@ const PostToggle = (props) => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const handleClick = () => {
-        console.log(isEdit)
         { !isEdit ? (setIsEdit(true)) : (setIsEdit(false))}
         { !isEdit ? (setButton(<GiCancel size={30} color="#66AFA4"/> )) : (setButton(<FiEdit size={30} color="#66AFA4"/>))}
     }

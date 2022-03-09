@@ -24,7 +24,9 @@ const Post = (props) => {
 	return (
 		<>
         <div className="user-info-bar">
-            <img src = {`/uploads/postImages/${props.avatar}`} alt="..." className= "user-icon" style= {{width: "5%"}}/>
+            <div className="circle">
+                 <img src = {`/uploads/postImages/${props.avatar}`} alt="..." className= "user-icon" />
+            </div>
             <h4>{props.userName}</h4>
         </div>
     

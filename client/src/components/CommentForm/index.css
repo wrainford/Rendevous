@@ -67,7 +67,29 @@
     color:white;
     background-color: transparent;
     /* border: 8px yellow solid; */
-    margin-top: 11%;
+    margin-top: 10%;
+    padding-top:0.8%;
+    cursor: pointer;
+}
+
+.comment-post-button:hover{
+    /* left: -25px; */
+    color: white;
+
 }
 
 
+.circle{
+    border-radius: 50%; 
+    width: 30px;
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.user-icon{
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}

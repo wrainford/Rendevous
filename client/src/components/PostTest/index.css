@@ -19,11 +19,13 @@
 .openModalBtn{
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .button1{
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -73,6 +75,10 @@
   cursor: not-allowed;
   background: rgba(0, 0, 0, .08);
   color: rgba(0, 0, 0, .3);
+}
+
+.modal-text {
+  margin-top: 3%;
 }
 
 .modal-close {
