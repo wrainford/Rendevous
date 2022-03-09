@@ -3,6 +3,7 @@ import * as postService from "../../api/post.service"
 import "./index.css"
 
 const EditCommentForm = (props) => {
+    
     const [content, setContent] = useState(props.body);
 
     const HandleSubmit = async () => {

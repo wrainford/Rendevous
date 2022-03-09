@@ -3,10 +3,11 @@
     background:#0E192D;
     display: flex;
     margin-bottom: auto;
+  
 
 }
 .editUser-button{
-    display: flex;
+    display: inline-flex;
     background-color: #979494;
     justify-content: center;
     color: white; 
@@ -17,10 +18,12 @@
     font-weight: bold;
     box-shadow: none; 
     height: 50%;
-    justify-self: flex-end;
+    justify-self: flex-start;
     border: none;
     margin: 1%;
-    width: 7%;
+    width: 10%;
+    
+ 
 
 }
 
