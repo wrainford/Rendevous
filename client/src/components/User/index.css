@@ -1,13 +1,80 @@
-.mainUser{
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 120%;
+    margin-right: -6%;
+}
+
+
+.top{
+    border: 1px #314664 solid;
+    padding: 5%;
+    display: flex;
+    border-radius: 10px;
+    width: 84%;
+    margin-left: 8%;
+    
+}
+
+.img-profile2{
+    width: 30%;
+    border: pink 2px solid;
+    display: flex; 
+    flex-direction: column;
+}
+.user-icon2{
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.bigcircle{
+    border-radius: 50%; 
+    width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.username{
+    width: 70%;
+    padding: 2%; 
+    padding-left: 5%; 
+    font-family:Jost, sans-serif;
+}
+
+.prof-name{
+    font-size: 36px;
+}
+
+.my-nick-name{
+   padding-left: 5%;
+}
+
+.nickName-h1{
+    font-family:Jost, sans-serif;
+    color: #66AFA4;
+    text-align: center;
+    font-size: 30px;
+}
+
+.yourposts{
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-bottom: -2%;
+    font-family: 'Inconsolata', monospace;
+}
+
+/* .mainUser{
     display: flex;
     margin: 1px;
     width: 100%;
     padding: 5px;
-    /* border: 2px solid white;  */
 }
 
 .prof-container-user{
-        /* border: 2px solid white;   */
+        
         padding: 1% 3%;
         border: 1px #314664 solid;
         margin-top:15px;
@@ -20,7 +87,6 @@
 }
 .User-name{
     width: 25%; 
-    /* border: 2px solid white;  */
 }
 .profiles {
     background: antiquewhite;
@@ -28,20 +94,8 @@
     justify-content: center;
     width: 30%;
     height: 15vh;
-    /* align-items: flex-end; */
     margin-bottom: 25%;
 }
-/* .input{
-    display:block;
-    flex-direction: column;
-    color: white;
-    border: none;
-    padding-left: 22px; 
-    font-family: 'Jost', sans-serif;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-} */
 
 .my-nick-name{
     display: flex;
@@ -53,4 +107,4 @@ img{
 border-radius: 80%;
 width:25%
 }
-
+ */

@@ -43,8 +43,9 @@ const CommentForm = (props) => {
 				<div className="child1">
 					<div className="circle">
 						<img src = {`/uploads/postImages/${yourAvatar}`} alt="..." className= "user-icon"/>
-					</div>
 						{/* <BsPersonCircle size={30} /> */}
+					</div>
+					
 					
 				</div>
 				
