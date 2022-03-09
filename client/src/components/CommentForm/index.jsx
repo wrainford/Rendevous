@@ -1,12 +1,26 @@
 // Post Component
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as postService from "../../api/post.service";
+import * as userService from "../../api/user.service";
 import "./index.css"
 import { FiSend } from "react-icons/fi";
 import {BsPersonCircle} from "react-icons/bs"
 
 const CommentForm = (props) => {
 	const [content, setContent] = useState("");
+	const [yourAvatar, setYourAvatar] = useState("");
+
+	let me = JSON.parse(localStorage.getItem("id"));
+	const userQuery = async (id) => {
+		await userService.showUser(id).then((res)=>{
+			setYourAvatar(res.data.data.avatar)
+		})
+	} 
+
+	useEffect(() =>{
+		userQuery(me);
+	},[])
+
 
 	const handleSubmit = async () => {
 		let newComment = {content};
@@ -14,6 +28,8 @@ const CommentForm = (props) => {
 			setContent("");
 			props.refreshPosts();
 		});
+
+
 
 		console.log(res);
 		if (!res === 201) {
@@ -25,7 +41,11 @@ const CommentForm = (props) => {
 			<>
 			<div className="parent">
 				<div className="child1">
-						<BsPersonCircle size={30} />
+					<div className="circle">
+						<img src = {`/uploads/postImages/${yourAvatar}`} alt="..." className= "user-icon"/>
+					</div>
+						{/* <BsPersonCircle size={30} /> */}
+					
 				</div>
 				
 				
